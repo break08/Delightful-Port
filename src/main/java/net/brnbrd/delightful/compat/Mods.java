@@ -1,0 +1,39 @@
+package net.brnbrd.delightful.compat;
+
+import net.brnbrd.delightful.Delightful;
+import net.brnbrd.delightful.Util;
+import net.neoforged.fml.ModList;
+import vectorwing.farmersdelight.FarmersDelight;
+import org.jetbrains.annotations.NotNull;
+
+public class Mods {
+    public static boolean stringLoaded(@NotNull String stringId) {
+        return (
+                stringId.equals(Delightful.MODID) ||
+                        stringId.equals(FarmersDelight.MODID) ||
+                        stringId.equals(Util.MC) ||
+                        ModList.get().isLoaded(stringId)
+        );
+    }
+
+    // Can check for a single mod (strategy ignored) or multiple mods
+    public static boolean loaded(Strategy strategy, @NotNull Modid... modids) {
+        if (modids.length < 1) return true;
+        return switch (strategy) {
+            case AND -> { // All must be loaded
+                for (Modid mod : modids) if (!mod.loaded()) yield false;
+                yield true;
+            }
+            case OR -> { // Only one must be loaded
+                for (Modid mod : modids) if (mod.loaded()) yield true;
+                yield false;
+            }
+        };
+    }
+
+    public static boolean loaded(@NotNull Modid... modids) {
+        return loaded(Strategy.AND, modids);
+    }
+
+    public enum Strategy { AND, OR }
+}
