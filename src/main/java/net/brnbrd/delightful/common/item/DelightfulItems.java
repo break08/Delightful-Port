@@ -1,8 +1,9 @@
 package net.brnbrd.delightful.common.item;
 
 import net.brnbrd.delightful.Delightful;
+import net.brnbrd.delightful.common.item.food.BowlFoodItem;
 import net.brnbrd.delightful.common.item.food.DConsumableItem;
-import net.minecraft.core.registries.Registries;
+import net.brnbrd.delightful.common.item.food.Nutrition;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -12,7 +13,6 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Supplier;
 
-import static net.minecraft.world.item.Items.registerItem;
 
 public class DelightfulItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Delightful.MODID);
