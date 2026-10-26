@@ -1,0 +1,46 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "source_berry_gummy"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "ars_nouveau"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:fruits/sourceberry"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "cookingtime": 200,
+        "experience": 1.0,
+        "ingredients": [
+          {
+            "tag": "forge:fruits/sourceberry"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "item": "minecraft:honey_bottle"
+          },
+          {
+            "item": "minecraft:kelp"
+          }
+        ],
+        "result": {
+          "item": "delightful:source_berry_gummy"
+        }
+      }
+    }
+  ]
+}

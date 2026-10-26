@@ -1,0 +1,34 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "additionaladditions:honeyed_apple"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:mod_loaded",
+            "modid": "buzzier_bees"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "minecraft:honey_bottle"
+          },
+          {
+            "tag": "forge:fruits/apple"
+          }
+        ],
+        "result": {
+          "item": "additionaladditions:honeyed_apple"
+        }
+      }
+    }
+  ]
+}

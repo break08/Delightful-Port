@@ -1,0 +1,40 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "casualness_delight:cheese_wheel"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "casualness_delight:cheese_wheel_slice"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "casualness_delight:cheese_wheel"
+          }
+        ],
+        "result": [
+          {
+            "count": 7,
+            "item": "casualness_delight:cheese_wheel_slice"
+          }
+        ],
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "knife_dig"
+          },
+          {
+            "tag": "forge:tools/knives"
+          }
+        ]
+      }
+    }
+  ]
+}

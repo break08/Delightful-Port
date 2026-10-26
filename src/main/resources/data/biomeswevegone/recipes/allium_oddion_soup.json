@@ -1,0 +1,37 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "biomeswevegone:allium_oddion_soup"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "biomeswevegone:oddion_bulb"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:bowl"
+        },
+        "cookingtime": 200,
+        "experience": 1.0,
+        "ingredients": [
+          {
+            "item": "biomeswevegone:oddion_bulb"
+          },
+          {
+            "item": "biomeswevegone:oddion_bulb"
+          }
+        ],
+        "recipe_book_tab": "meals",
+        "result": {
+          "item": "biomeswevegone:allium_oddion_soup"
+        }
+      }
+    }
+  ]
+}

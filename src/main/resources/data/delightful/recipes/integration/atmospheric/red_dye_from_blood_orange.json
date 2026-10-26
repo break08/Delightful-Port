@@ -1,0 +1,25 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "item": "atmospheric:blood_orange",
+          "type": "forge:item_exists"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "atmospheric:blood_orange"
+          }
+        ],
+        "result": {
+          "item": "minecraft:red_dye",
+          "count": 1
+        }
+      }
+    }
+  ]
+}

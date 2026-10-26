@@ -1,0 +1,31 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "neapolitan:banana_bread"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "food",
+        "ingredients": [
+          {
+            "tag": "forge:dough"
+          },
+          {
+            "item": "neapolitan:banana"
+          },
+          {
+            "item": "minecraft:sugar"
+          }
+        ],
+        "result": {
+          "item": "neapolitan:banana_bread"
+        }
+      }
+    }
+  ]
+}

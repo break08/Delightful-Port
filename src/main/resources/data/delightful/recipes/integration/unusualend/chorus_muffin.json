@@ -1,0 +1,39 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "chorus_muffin"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "unusualend:ender_firefly_egg"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "unusualend:chorus_petal"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "tag": "forge:fruits/chorus"
+          },
+          {
+            "item": "unusualend:ender_firefly_egg"
+          },
+          {
+            "item": "unusualend:chorus_petal"
+          }
+        ],
+        "result": {
+          "item": "delightful:chorus_muffin"
+        }
+      }
+    }
+  ]
+}

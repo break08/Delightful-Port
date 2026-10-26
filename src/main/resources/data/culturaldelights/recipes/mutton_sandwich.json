@@ -1,0 +1,34 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "culturaldelights:mutton_sandwich"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "tag": "forge:bread"
+          },
+          {
+            "tag": "forge:cooked_mutton"
+          },
+          {
+            "tag": "forge:cooked_eggs"
+          },
+          {
+            "tag": "forge:crops/beetroot"
+          }
+        ],
+        "result": {
+          "item": "culturaldelights:mutton_sandwich"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "immersiveengineering"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "vintagedelight"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "vintagedelight:peanut"
+        }
+      ],
+      "recipe": {
+        "type": "immersiveengineering:squeezer",
+        "energy": 6400,
+        "fluid": {
+          "amount": 80,
+          "fluid": "immersiveengineering:plantoil"
+        },
+        "input": {
+          "item": "vintagedelight:peanut"
+        }
+      }
+    }
+  ]
+}

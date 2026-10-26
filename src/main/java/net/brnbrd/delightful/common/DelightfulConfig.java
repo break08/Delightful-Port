@@ -4,14 +4,13 @@ import com.google.common.collect.ImmutableList;
 import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.DelightfulItems;
+import net.brnbrd.delightful.common.item.knife.Knives;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.ModConfigSpec;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 // An example config class. This is not required, but it's a good idea to have one to keep your config organized.
 // Demonstrates how to use Neo's config APIs
@@ -29,6 +28,7 @@ public class DelightfulConfig {
     );
 
     private static final ImmutableList<String> BAKED_GOODS = ImmutableList.of(
+            /*
             Util.name(DelightfulItems.BLUEBERRY_PIE_SLICE),
             Util.name(DelightfulItems.GREEN_APPLE_PIE_SLICE),
             Util.name(DelightfulItems.GLOOMGOURD_PIE_SLICE),
@@ -37,6 +37,8 @@ public class DelightfulConfig {
             Util.name(DelightfulItems.MULBERRY_PIE_SLICE),
             Util.name(DelightfulItems.PASSION_FRUIT_TART_SLICE),
             Util.name(DelightfulItems.MUTTON_PIE_SLICE)
+
+             */
     );
     public static ModConfigSpec.BooleanValue CRAFT_NUT_MILK;
     public static ModConfigSpec.BooleanValue COOK_CLOVER_HONEY;

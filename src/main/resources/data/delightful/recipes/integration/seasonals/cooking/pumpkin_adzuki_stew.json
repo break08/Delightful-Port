@@ -1,0 +1,53 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "seasonals:pumpkin_puree"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "seasonals:pumpkin_adzuki_stew"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "neapolitan"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "ingredients": [
+          {
+            "item": "seasonals:pumpkin_puree"
+          },
+          {
+            "item": "neapolitan:adzuki_beans"
+          },
+          {
+            "item": "neapolitan:adzuki_beans"
+          },
+          {
+            "tag": "forge:crops/beetroot"
+          },
+          {
+            "tag": "forge:crops/tomato"
+          },
+          {
+            "item": "minecraft:brown_mushroom"
+          }
+        ],
+        "recipe_book_tab": "meals",
+        "result": {
+          "item": "seasonals:pumpkin_adzuki_stew"
+        },
+        "experience": 1.0,
+        "cookingtime": 200,
+        "container": {
+          "item": "minecraft:bowl"
+        }
+      }
+    }
+  ]
+}

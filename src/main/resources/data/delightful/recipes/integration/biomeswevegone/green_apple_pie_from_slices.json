@@ -1,0 +1,37 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "green_apple_pie_slice"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "biomeswevegone:green_apple_pie"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "delightful:green_apple_pie_slice"
+          },
+          {
+            "item": "delightful:green_apple_pie_slice"
+          },
+          {
+            "item": "delightful:green_apple_pie_slice"
+          },
+          {
+            "item": "delightful:green_apple_pie_slice"
+          }
+        ],
+        "result": {
+          "item": "biomeswevegone:green_apple_pie"
+        }
+      }
+    }
+  ]
+}

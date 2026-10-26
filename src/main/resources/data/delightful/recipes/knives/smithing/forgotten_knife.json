@@ -1,0 +1,50 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "forgotten_knife"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "undergarden"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:ingots/forgotten_metal"
+          }
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:mod_loaded",
+            "modid": "undergardendelight"
+          }
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "undergarden:forgotten_upgrade_smithing_template"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smithing_transform",
+        "addition": {
+          "tag": "forge:ingots/forgotten_metal"
+        },
+        "base": {
+          "item": "delightful:cloggrum_knife"
+        },
+        "result": {
+          "item": "delightful:forgotten_knife"
+        },
+        "template": {
+          "item": "undergarden:forgotten_upgrade_smithing_template"
+        }
+      }
+    }
+  ]
+}

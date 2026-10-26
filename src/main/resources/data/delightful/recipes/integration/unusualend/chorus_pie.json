@@ -1,0 +1,52 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "unusualend:chorus_pie"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "unusualend:ender_firefly_egg"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "unusualend:chorus_petal"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "#": {
+            "tag": "forge:grain/wheat"
+          },
+          "a": {
+            "tag": "forge:fruits/chorus"
+          },
+          "m": {
+            "item": "unusualend:ender_firefly_egg"
+          },
+          "p": {
+            "item": "unusualend:chorus_petal"
+          },
+          "O": {
+            "item": "farmersdelight:pie_crust"
+          },
+          "x": {
+            "item": "minecraft:sugar"
+          }
+        },
+        "pattern": [
+          "###",
+          "map",
+          "xOx"
+        ],
+        "result": {
+          "item": "unusualend:chorus_pie"
+        }
+      }
+    }
+  ]
+}

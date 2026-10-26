@@ -1,0 +1,40 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "mynethersdelight:chilidog"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "mynethersdelight:hotdog"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "mynethersdelight:hotdog"
+        },
+        "cookingtime": 200,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "tag": "delightful:hot_spices"
+          },
+          {
+            "tag": "forge:raw_pork"
+          },
+          {
+            "tag": "forge:crops/cactus"
+          }
+        ],
+        "recipe_book_tab": "meals",
+        "result": {
+          "item": "mynethersdelight:chilidog"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "undergardendelight:frosteel_knife"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:ingots/froststeel"
+          }
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "undergarden"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "equipment",
+        "key": {
+          "m": {
+            "tag": "forge:ingots/froststeel"
+          },
+          "s": {
+            "tag": "forge:rods/wooden"
+          }
+        },
+        "pattern": [
+          "m",
+          "s"
+        ],
+        "result": {
+          "item": "undergardendelight:frosteel_knife"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

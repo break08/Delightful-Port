@@ -1,0 +1,56 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "quark:mud_pillar"
+        },
+        {
+          "type": "quark:flag",
+          "flag": "more_mud_blocks"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "environmental:chiseled_mud_bricks"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "minecraft:packed_mud"
+        },
+        "result": "quark:mud_pillar",
+        "count": 1
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "quark:mud_pillar"
+        },
+        {
+          "type": "quark:flag",
+          "flag": "more_mud_blocks"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:item_exists",
+            "item": "environmental:chiseled_mud_bricks"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "minecraft:mud_bricks"
+        },
+        "result": "quark:mud_pillar",
+        "count": 1
+      }
+    }
+  ]
+}

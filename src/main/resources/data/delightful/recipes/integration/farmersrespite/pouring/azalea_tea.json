@@ -1,0 +1,35 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "azalea_tea"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "minecraft:flowers/azalea"
+          }
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "farmersrespite"
+        }
+      ],
+      "recipe": {
+        "type": "farmersrespite:kettle_pouring",
+        "amount": 250,
+        "container": {
+          "item": "minecraft:glass_bottle"
+        },
+        "fluid": "delightful:azalea_tea",
+        "output": {
+          "item": "delightful:azalea_tea"
+        }
+      }
+    }
+  ]
+}

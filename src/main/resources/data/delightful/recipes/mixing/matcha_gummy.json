@@ -1,0 +1,41 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "matcha_gummy"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "create"
+        }
+      ],
+      "recipe": {
+        "type": "create:mixing",
+        "heatRequirement": "heated",
+        "ingredients": [
+          {
+            "tag": "forge:matcha"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "item": "minecraft:honey_block"
+          },
+          {
+            "item": "minecraft:kelp"
+          }
+        ],
+        "results": [
+          {
+            "count": 9,
+            "item": "delightful:matcha_gummy"
+          }
+        ]
+      }
+    }
+  ]
+}

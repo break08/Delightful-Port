@@ -1,0 +1,74 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "vampiresdelight:bat_taco"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:tortilla"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "tag": "forge:tortilla"
+          },
+          {
+            "tag": "forge:cooked_bat"
+          },
+          {
+            "tag": "forge:salad_ingredients"
+          },
+          {
+            "tag": "forge:crops/tomato"
+          }
+        ],
+        "result": {
+          "item": "vampiresdelight:bat_taco"
+        }
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "vampiresdelight:bat_taco"
+        },
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:tortilla"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "tag": "forge:bread"
+          },
+          {
+            "tag": "forge:cooked_bat"
+          },
+          {
+            "tag": "forge:salad_ingredients"
+          },
+          {
+            "tag": "forge:crops/tomato"
+          }
+        ],
+        "result": {
+          "item": "vampiresdelight:bat_taco"
+        }
+      }
+    }
+  ]
+}

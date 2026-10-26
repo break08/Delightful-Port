@@ -1,0 +1,40 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "casualness_delight:stargazy_pie"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "casualness_delight:stargazy_pie_slice"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "casualness_delight:stargazy_pie"
+          }
+        ],
+        "result": [
+          {
+            "count": 4,
+            "item": "casualness_delight:stargazy_pie_slice"
+          }
+        ],
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "knife_dig"
+          },
+          {
+            "tag": "forge:tools/knives"
+          }
+        ]
+      }
+    }
+  ]
+}

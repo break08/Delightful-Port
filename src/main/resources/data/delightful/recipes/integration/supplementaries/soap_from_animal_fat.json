@@ -1,0 +1,56 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "animal_fat"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "supplementaries:soap"
+        },
+        {
+          "type": "supplementaries:flag",
+          "flag": "soap"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          [
+            {
+              "tag": "forge:water"
+            },
+            {
+              "count": 1,
+              "type": "forge:nbt",
+              "item": "minecraft:potion",
+              "nbt": "{Potion:\"minecraft:water\"}"
+            }
+          ],
+          {
+            "tag": "forge:ash"
+          },
+          {
+            "tag": "forge:ash"
+          },
+          {
+            "tag": "forge:ash"
+          },
+          {
+            "tag": "forge:ash"
+          },
+          {
+            "item": "delightful:animal_fat"
+          }
+        ],
+        "result": {
+          "item": "supplementaries:soap",
+          "count": 6
+        }
+      }
+    }
+  ]
+}

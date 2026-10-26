@@ -4,6 +4,7 @@ import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.DelightfulConfig;
+import net.brnbrd.delightful.common.block.old.ModMelonBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -40,7 +41,7 @@ import vectorwing.farmersdelight.common.tag.ModTags;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class SlicedMiniMelonBlock extends Block implements ISliceable {
+public class SlicedMiniMelonBlock extends ModMelonBlock implements ISliceable {
     public static final MapCodec<SlicedMiniMelonBlock> CODEC = RecordCodecBuilder.mapCodec(inst -> inst.group(
             propertiesCodec(),
             BuiltInRegistries.ITEM.byNameCodec().fieldOf("slice_item").forGetter(b -> b.sliceItem.get()),

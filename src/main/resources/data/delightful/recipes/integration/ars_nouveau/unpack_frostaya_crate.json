@@ -1,0 +1,36 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "ars_nouveau:frostaya_pod"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "frostaya_crate"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:mod_loaded",
+            "modid": "arsdelight"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "delightful:frostaya_crate"
+          }
+        ],
+        "result": {
+          "count": 9,
+          "item": "ars_nouveau:frostaya_pod"
+        }
+      }
+    }
+  ]
+}

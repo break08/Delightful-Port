@@ -1,0 +1,28 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "some_assembly_required:burger_bun"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "food",
+        "ingredients": [
+          {
+            "tag": "forge:dough"
+          },
+          {
+            "tag": "forge:seeds"
+          }
+        ],
+        "result": {
+          "item": "some_assembly_required:burger_bun"
+        }
+      }
+    }
+  ]
+}

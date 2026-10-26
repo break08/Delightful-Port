@@ -1,0 +1,37 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "upgrade_aquatic:beachgrass"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "upgrade_aquatic:beachgrass"
+          }
+        ],
+        "result": [
+          {
+            "chance": 0.15,
+            "count": 1,
+            "item": "farmersdelight:straw"
+          }
+        ],
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "knife_dig"
+          },
+          {
+            "tag": "forge:tools/knives"
+          }
+        ]
+      }
+    }
+  ]
+}

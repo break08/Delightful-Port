@@ -1,0 +1,24 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "seasonals:pumpkin_adzuki_stew"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "this_item:does_not_exist"
+          }
+        ],
+        "result": {
+          "item": "this_item:does_not_exist"
+        }
+      }
+    }
+  ]
+}

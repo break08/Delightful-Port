@@ -1,0 +1,36 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "biomesoplenty:orange_cosmos"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "biomesoplenty:orange_cosmos"
+          }
+        ],
+        "result": [
+          {
+            "item": "minecraft:orange_dye",
+            "count": 2
+          }
+        ],
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "knife_dig"
+          },
+          {
+            "tag": "forge:tools/knives"
+          }
+        ]
+      }
+    }
+  ]
+}

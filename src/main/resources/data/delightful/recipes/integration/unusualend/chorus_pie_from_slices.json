@@ -1,0 +1,37 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "chorus_pie_slice"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "unusualend:chorus_pie"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "delightful:chorus_pie_slice"
+          },
+          {
+            "item": "delightful:chorus_pie_slice"
+          },
+          {
+            "item": "delightful:chorus_pie_slice"
+          },
+          {
+            "item": "delightful:chorus_pie_slice"
+          }
+        ],
+        "result": {
+          "item": "unusualend:chorus_pie"
+        }
+      }
+    }
+  ]
+}

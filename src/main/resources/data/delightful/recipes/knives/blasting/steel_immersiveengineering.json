@@ -1,0 +1,26 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "value": "steel_knife",
+          "type": "delightful:enabled"
+        },
+        {
+          "item": "immersiveengineering:nugget_steel",
+          "type": "forge:item_exists"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:blasting",
+        "ingredient": {
+          "item": "delightful:steel_knife"
+        },
+        "result": "immersiveengineering:nugget_steel",
+        "experience": 0.1,
+        "cookingtime": 100
+      }
+    }
+  ]
+}

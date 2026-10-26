@@ -1,0 +1,74 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "casualness_delight:donkey_burger"
+        },
+        {
+          "type": "forge:tag_empty",
+          "tag": "forge:burger_bun"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "tag": "forge:bread"
+          },
+          {
+            "item": "casualness_delight:cooked_donkey_meat"
+          },
+          {
+            "tag": "forge:salad_ingredients"
+          },
+          {
+            "tag": "forge:crops/onion"
+          }
+        ],
+        "result": {
+          "item": "casualness_delight:donkey_burger"
+        }
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "casualness_delight:donkey_burger"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:burger_bun"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "tag": "forge:burger_bun"
+          },
+          {
+            "item": "casualness_delight:cooked_donkey_meat"
+          },
+          {
+            "tag": "forge:salad_ingredients"
+          },
+          {
+            "tag": "forge:crops/onion"
+          }
+        ],
+        "result": {
+          "item": "casualness_delight:donkey_burger"
+        }
+      }
+    }
+  ]
+}

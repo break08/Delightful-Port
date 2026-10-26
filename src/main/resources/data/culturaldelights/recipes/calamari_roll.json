@@ -1,0 +1,41 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "culturaldelights:calamari_roll"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:raw_fishes/squid/tentacles"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "tag": "forge:raw_fishes/squid/tentacles"
+          },
+          {
+            "tag": "forge:raw_fishes/squid/tentacles"
+          },
+          {
+            "item": "farmersdelight:cooked_rice"
+          },
+          {
+            "item": "minecraft:dried_kelp"
+          }
+        ],
+        "result": {
+          "item": "culturaldelights:calamari_roll",
+          "count": 2
+        }
+      }
+    }
+  ]
+}

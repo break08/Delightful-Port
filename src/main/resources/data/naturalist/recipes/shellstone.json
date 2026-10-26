@@ -1,0 +1,39 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "naturalist:shellstone"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "forge:snail_shells"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "C": {
+            "item": "minecraft:calcite"
+          },
+          "S": {
+            "tag": "forge:snail_shells"
+          }
+        },
+        "pattern": [
+          "CS",
+          "SC"
+        ],
+        "result": {
+          "count": 8,
+          "item": "naturalist:shellstone"
+        }
+      }
+    }
+  ]
+}

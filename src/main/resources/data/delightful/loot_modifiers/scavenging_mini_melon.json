@@ -1,0 +1,18 @@
+{
+  "type": "farmersdelight:replace_item",
+  "conditions": [
+    {
+      "condition": "minecraft:match_tool",
+      "predicate": {
+        "tag": "forge:tools/knives"
+      }
+    },
+    {
+      "condition": "block_state_property",
+      "block": "delightful:mini_melon"
+    }
+  ],
+  "removed_item": "delightful:mini_melon",
+  "added_item": "minecraft:melon_slice",
+  "count": 4
+}

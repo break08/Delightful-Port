@@ -1,5 +1,6 @@
 package net.brnbrd.delightful.common.block;
 
+import net.brnbrd.delightful.common.block.old.ModMelonBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
@@ -9,7 +10,8 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
-public class MiniBlock extends Block {
+
+public class MiniBlock extends ModMelonBlock {
     private static final VoxelShape SHAPE = Block.box(3D, 0D, 3D, 13D, 10D, 13D);
 
     public MiniBlock(Properties pProperties) {

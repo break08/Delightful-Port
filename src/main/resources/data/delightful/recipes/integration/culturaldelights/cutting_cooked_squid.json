@@ -1,0 +1,40 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "culturaldelights:cooked_squid"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "culturaldelights:cooked_calamari"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "culturaldelights:cooked_squid"
+          }
+        ],
+        "result": [
+          {
+            "count": 2,
+            "item": "culturaldelights:cooked_calamari"
+          }
+        ],
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "knife_dig"
+          },
+          {
+            "tag": "forge:tools/knives"
+          }
+        ]
+      }
+    }
+  ]
+}

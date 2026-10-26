@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "corn_delight:taco"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "tag": "forge:tortilla"
+          },
+          {
+            "tag": "forge:salad_ingredients"
+          },
+          {
+            "tag": "forge:crops/onion"
+          },
+          {
+            "tag": "forge:foods/meat/cooked"
+          }
+        ],
+        "result": {
+          "item": "corn_delight:taco"
+        }
+      }
+    }
+  ]
+}

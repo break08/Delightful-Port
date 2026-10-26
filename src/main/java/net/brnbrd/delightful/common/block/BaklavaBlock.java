@@ -10,7 +10,6 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 import vectorwing.farmersdelight.common.block.PieBlock;
 
-import java.util.Properties;
 import java.util.function.Supplier;
 
 public class BaklavaBlock extends PieBlock {

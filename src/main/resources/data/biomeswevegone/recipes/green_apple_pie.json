@@ -1,0 +1,74 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "green_apple_pie_slice"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "biomeswevegone:green_apple_pie"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "#": {
+            "tag": "forge:grain/wheat"
+          },
+          "O": {
+            "item": "farmersdelight:pie_crust"
+          },
+          "a": {
+            "tag": "forge:fruits/green_apple"
+          },
+          "x": {
+            "item": "minecraft:sugar"
+          }
+        },
+        "pattern": [
+          "###",
+          "aaa",
+          "xOx"
+        ],
+        "result": {
+          "item": "biomeswevegone:green_apple_pie"
+        }
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "delightful:enabled",
+            "value": "green_apple_pie_slice"
+          }
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "biomeswevegone:green_apple_pie"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "tag": "forge:fruits/green_apple"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "tag": "forge:eggs"
+          }
+        ],
+        "result": {
+          "item": "biomeswevegone:green_apple_pie"
+        }
+      }
+    }
+  ]
+}

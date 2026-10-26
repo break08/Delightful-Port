@@ -1,0 +1,25 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "item": "atmospheric:orange",
+          "type": "forge:item_exists"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "atmospheric:orange"
+          }
+        ],
+        "result": {
+          "item": "minecraft:orange_dye",
+          "count": 1
+        }
+      }
+    }
+  ]
+}

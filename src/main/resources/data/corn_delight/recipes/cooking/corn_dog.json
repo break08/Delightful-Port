@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "corn_delight:cornbread_batter"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "corn_delight:corn_dog"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "ingredients": [
+          {
+            "item": "corn_delight:cornbread_batter"
+          },
+          {
+            "tag": "forge:foods/meat/cooked"
+          }
+        ],
+        "result": {
+          "item": "corn_delight:corn_dog"
+        },
+        "experience": 0.5,
+        "cookingtime": 100
+      }
+    }
+  ]
+}

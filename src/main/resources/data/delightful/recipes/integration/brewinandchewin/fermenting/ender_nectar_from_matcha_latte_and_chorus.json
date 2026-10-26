@@ -1,0 +1,52 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "matcha_latte"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "ender_nectar"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "brewinandchewin"
+        }
+      ],
+      "recipe": {
+        "type": "brewinandchewin:fermenting",
+        "basefluid": {
+          "count": 1000,
+          "fluid": "delightful:matcha_latte"
+        },
+        "experience": 1.0,
+        "fermentingtime": 12000,
+        "ingredients": [
+          {
+            "item": "minecraft:ender_eye"
+          },
+          {
+            "tag": "forge:fruits/chorus"
+          },
+          [
+            {
+              "item": "minecraft:warped_fungus"
+            },
+            {
+              "item": "minecraft:warped_roots"
+            }
+          ]
+        ],
+        "recipe_book_tab": "drinks",
+        "result": {
+          "count": 1000,
+          "fluid": "delightful:ender_nectar"
+        },
+        "temperature": 4
+      }
+    }
+  ]
+}

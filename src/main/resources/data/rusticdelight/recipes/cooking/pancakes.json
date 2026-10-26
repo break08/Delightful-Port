@@ -1,0 +1,45 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "rusticdelight:pancakes"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:bowl"
+        },
+        "cookingtime": 400,
+        "experience": 2.0,
+        "ingredients": [
+          {
+            "tag": "forge:batter"
+          },
+          {
+            "tag": "forge:syrup"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "item": "minecraft:sugar"
+          }
+        ],
+        "recipe_book_tab": "misc",
+        "result": {
+          "item": "rusticdelight:pancakes"
+        }
+      }
+    }
+  ]
+}

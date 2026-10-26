@@ -1,0 +1,43 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "fluix_knife"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "ae2"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:tag_empty",
+            "tag": "ae2:fluix_block"
+          }
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "ae2:fluix_upgrade_smithing_template"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smithing_transform",
+        "addition": {
+          "tag": "ae2:fluix_block"
+        },
+        "base": {
+          "tag": "delightful:quartz_knife"
+        },
+        "result": {
+          "item": "delightful:fluix_knife"
+        },
+        "template": {
+          "item": "ae2:fluix_upgrade_smithing_template"
+        }
+      }
+    }
+  ]
+}

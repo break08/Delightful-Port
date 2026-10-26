@@ -1,0 +1,49 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "matcha_latte"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "ender_nectar"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "farmersrespite"
+        },
+        {
+          "type": "forge:not",
+          "value": {
+            "type": "forge:mod_loaded",
+            "modid": "brewinandchewin"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "farmersrespite:brewing",
+        "base": {
+          "count": 1000,
+          "fluid": "delightful:matcha_latte"
+        },
+        "cookingtime": 12000,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "item": "minecraft:ender_eye"
+          },
+          {
+            "item": "minecraft:ender_eye"
+          }
+        ],
+        "result": {
+          "count": 1000,
+          "fluid": "delightful:ender_nectar"
+        }
+      }
+    }
+  ]
+}

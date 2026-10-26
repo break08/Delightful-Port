@@ -1,0 +1,40 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "botanypots"
+        }
+      ],
+      "recipe": {
+        "type": "botanypots:crop",
+        "seed": {
+          "item": "delightful:cantaloupe_seeds"
+        },
+        "categories": [
+          "sand"
+        ],
+        "growthTicks": 1800,
+        "display": {
+          "block": "delightful:cantaloupe"
+        },
+        "drops": [
+          {
+            "chance": 1,
+            "output": {
+              "item": "delightful:cantaloupe"
+            }
+          },
+          {
+            "chance": 0.05,
+            "output": {
+              "item": "delightful:cantaloupe_seeds"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

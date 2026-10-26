@@ -1,0 +1,45 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "phantasm:chorus_fruit_salad"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "phantasm:pream_berry"
+        },
+        {
+          "type": "forge:item_exists",
+          "item": "phantasm:oblifruit"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "food",
+        "ingredients": [
+          {
+            "item": "phantasm:pream_berry"
+          },
+          {
+            "item": "phantasm:oblifruit"
+          },
+          {
+            "tag": "forge:fruits/chorus"
+          },
+          {
+            "tag": "forge:fruits/chorus"
+          },
+          {
+            "item": "minecraft:bowl"
+          }
+        ],
+        "result": {
+          "item": "phantasm:chorus_fruit_salad"
+        }
+      }
+    }
+  ]
+}

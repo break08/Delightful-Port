@@ -1,0 +1,26 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "jeed"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "casualness_delight"
+        }
+      ],
+      "recipe": {
+        "type": "jeed:effect_provider",
+        "effect": "casualness_delight:rotten",
+        "providers": [
+          {
+            "tag": "delightful:rotten"
+          }
+        ]
+      }
+    }
+  ]
+}

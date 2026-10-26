@@ -1,15 +1,19 @@
 package net.brnbrd.delightful.common.item;
 
 import net.brnbrd.delightful.Delightful;
+import net.brnbrd.delightful.common.block.DelightfulBlocks;
 import net.brnbrd.delightful.common.item.food.BowlFoodItem;
 import net.brnbrd.delightful.common.item.food.DConsumableItem;
 import net.brnbrd.delightful.common.item.food.Nutrition;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.jetbrains.annotations.Nullable;
+import vectorwing.farmersdelight.common.registry.ModItems;
 
 import java.util.function.Supplier;
 
@@ -17,7 +21,18 @@ import java.util.function.Supplier;
 public class DelightfulItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Delightful.MODID);
 
+    public static final DeferredItem<Item> CANTALOUPE = registerItem("cantaloupe", () ->
+            new BlockItem(DelightfulBlocks.CANTALOUPE.get(), ModItems.basicItem()));
+
+    public static final DeferredItem<Item> CANTALOUPE_SEEDS = registerItem("cantaloupe_seeds",
+            () -> new ItemNameBlockItem(DelightfulBlocks.CANTALOUPE_PLANT.get(), ModItems.basicItem()));
+
     public static final DeferredItem<Item> CANTALOUPE_SLICE = registerFood("cantaloupe_slice", Nutrition.CANTALOUPE_SLICE);
+
+    public static final DeferredItem<Item> SALMONBERRY_PIPS = registerItem("salmonberry_pips",
+            () -> new ItemNameBlockItem(DelightfulBlocks.SALMONBERRY_BUSH.get(), ModItems.basicItem()));
+
+    public static final DeferredItem<Item> SALMONBERRIES = registerFood("salmonberries", Nutrition.SALMONBERRIES);
 
     public static DeferredItem<Item> registerFood(String name, FoodProperties food, Item... remainder) {
         if (remainder.length > 0) {

@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:item_exists",
+          "item": "hauntedharvest:cornbread"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "cookingtime": 200,
+        "experience": 1.0,
+        "ingredients": [
+          {
+            "tag": "forge:crops/corn"
+          },
+          {
+            "tag": "forge:crops/corn"
+          },
+          {
+            "tag": "forge:grain/wheat"
+          }
+        ],
+        "result": {
+          "item": "hauntedharvest:cornbread",
+          "count": 2
+        }
+      }
+    }
+  ]
+}
