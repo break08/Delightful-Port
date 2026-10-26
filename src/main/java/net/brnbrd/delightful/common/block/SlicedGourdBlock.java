@@ -1,13 +1,13 @@
 package net.brnbrd.delightful.common.block;
 
-import com.mojang.datafixers.util.Pair;
 import net.brnbrd.delightful.Util;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -82,7 +82,7 @@ public class SlicedGourdBlock extends Block implements ISliceable {
     }
 
     @Override
-    public @NotNull InteractionResult use(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hit) {
+    public @NotNull ItemInteractionResult useItemOn(@NotNull ItemStack stack, @NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, Player player, @NotNull InteractionHand hand, @NotNull BlockHitResult hit) {
         ItemStack heldStack = player.getItemInHand(hand);
         if (heldStack.is(ModTags.Items.KNIVES)) {
             return this.cutSlice(level, pos, state, player, hand, hit);
@@ -90,18 +90,21 @@ public class SlicedGourdBlock extends Block implements ISliceable {
         return this.consumeBite(level, pos, state, player);
     }
 
-    protected InteractionResult consumeBite(Level level, BlockPos pos, BlockState state, Player playerIn) {
+    protected ItemInteractionResult consumeBite(Level level, BlockPos pos, BlockState state, Player playerIn) {
         if (!playerIn.canEat(false)) {
-            return InteractionResult.PASS;
+            return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
         } else if (!level.isClientSide()) {
             ItemStack sliceStack = this.getSliceItem();
             Item slice = sliceStack.getItem();
             FoodProperties sliceFood = slice.getFoodProperties(sliceStack, playerIn);
-            playerIn.getFoodData().eat(slice, sliceStack, playerIn);
-            if (slice.getFoodProperties() != null && sliceFood != null) {
-                for (Pair<MobEffectInstance, Float> pair : sliceFood.effects()) {
-                    var effect = pair.getFirst();
-                    if (effect != null && level.random.nextFloat() < pair.getSecond()) {
+            if (sliceFood == null){
+                return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+            }
+            playerIn.getFoodData().eat(sliceFood);
+            if (sliceStack.has(DataComponents.FOOD)) {
+                for (FoodProperties.PossibleEffect pair : sliceFood.effects()) {
+                    var effect = pair.effect();
+                    if (level.random.nextFloat() < pair.probability()) {
                         playerIn.addEffect(new MobEffectInstance(effect));
                     }
                 }
@@ -114,10 +117,10 @@ public class SlicedGourdBlock extends Block implements ISliceable {
             }
             level.playSound(null, playerIn.blockPosition().above(), SoundEvents.GENERIC_EAT, SoundSource.PLAYERS, 1F, 1F);
         }
-        return InteractionResult.sidedSuccess(level.isClientSide());
+        return ItemInteractionResult.sidedSuccess(level.isClientSide());
     }
 
-    protected InteractionResult cutSlice(Level level, BlockPos pos, BlockState state, Player player, InteractionHand hand, BlockHitResult hit) {
+    protected ItemInteractionResult cutSlice(Level level, BlockPos pos, BlockState state, Player player, InteractionHand hand, BlockHitResult hit) {
         if (!level.isClientSide()) {
             int bites = state.getValue(BITES);
             if (bites == this.getMaxBites()) {
@@ -134,9 +137,9 @@ public class SlicedGourdBlock extends Block implements ISliceable {
                     player
             );
             level.playSound(null, pos, SoundEvents.PUMPKIN_CARVE, SoundSource.BLOCKS, 1F, 1F);
-            player.getItemInHand(hand).hurtAndBreak(1, player, LivingEntity.HAND_SLOTS(hand));
+            player.getItemInHand(hand).hurtAndBreak(1, player, LivingEntity.getSlotForHand(hand));
         }
-        return InteractionResult.sidedSuccess(level.isClientSide());
+        return ItemInteractionResult.sidedSuccess(level.isClientSide());
     }
 
     @Override
@@ -155,7 +158,7 @@ public class SlicedGourdBlock extends Block implements ISliceable {
     }
 
     @Override
-    public boolean isPathfindable(@NotNull BlockState state, @NotNull BlockGetter level, @NotNull BlockPos pos, @NotNull PathComputationType type) {
+    public boolean isPathfindable(@NotNull BlockState state, @NotNull PathComputationType type) {
         return false;
     }
 }
