@@ -3,10 +3,12 @@ package net.brnbrd.delightful.common.block;
 import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.compat.Modid;
+import net.brnbrd.delightful.compat.UnusualEndCompat;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.core.cauldron.CauldronInteraction;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
@@ -100,11 +102,11 @@ public class DelightfulBlocks {
 
     // Compat Pie Blocks
     
-    /*
+
     public static final DeferredBlock<DPieBlock> CHORUS_PIE = BLOCKS.register(UnusualEndCompat.chorus_pie,
             () -> new DPieBlock(DelightfulItems.CHORUS_PIE_SLICE, Modid.UE.rl(UnusualEndCompat.chorus_pie)));
             
-     */
+
 
     public static final DeferredBlock<DPieBlock> GLOOMGOURD_PIE = BLOCKS.register("gloomgourd_pie",
             () -> new DPieBlock(DelightfulItems.GLOOMGOURD_PIE_SLICE, Modid.UG.rl("gloomgourd_pie")));
@@ -131,22 +133,22 @@ public class DelightfulBlocks {
 
     public static final DeferredBlock<Block> SALMONBERRY_MILKSHAKE_CAULDRON = BLOCKS.register("salmonberry_milkshake_cauldron",
             () -> new DelightfulMilkshakeCauldronBlock(
-                    Modid.N.loaded() ?
-                            DelightfulCauldronInteractions.SALMONBERRY_MILKSHAKE.map() :
-                            CauldronInteraction.newInteractionMap())
-    );
+                    Biome.Precipitation.NONE,
+                    DelightfulCauldronInteractions.SALMONBERRY_MILKSHAKE,
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.CAULDRON)
+    ));
     public static final DeferredBlock<Block> MATCHA_MILKSHAKE_CAULDRON = BLOCKS.register("matcha_milkshake_cauldron",
             () -> new DelightfulMilkshakeCauldronBlock(
-                    Modid.N.loaded() ?
-                            DelightfulCauldronInteractions.MATCHA_MILKSHAKE.map() :
-                            CauldronInteraction.newInteractionMap())
-    );
+                    Biome.Precipitation.NONE,
+                    DelightfulCauldronInteractions.MATCHA_MILKSHAKE,
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.CAULDRON)
+    ));
     public static final DeferredBlock<Block> SOURCE_BERRY_MILKSHAKE_CAULDRON = BLOCKS.register("source_berry_milkshake_cauldron",
             () -> new DelightfulMilkshakeCauldronBlock(
-                    Modid.N.loaded() ?
-                            DelightfulCauldronInteractions.SOURCE_BERRY_MILKSHAKE.map() :
-                            CauldronInteraction.newInteractionMap())
-    );
+                    Biome.Precipitation.NONE,
+                    DelightfulCauldronInteractions.SOURCE_BERRY_MILKSHAKE,
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.CAULDRON)
+    ));
 
     public static final DeferredBlock<Block> BLUEBERRY_SACK = BLOCKS.register("blueberry_sack",
             () -> new Block(SACK(MapColor.TERRACOTTA_BLUE)));

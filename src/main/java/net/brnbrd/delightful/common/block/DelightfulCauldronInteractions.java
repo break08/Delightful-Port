@@ -6,9 +6,13 @@ import net.minecraft.core.cauldron.CauldronInteraction;
 
 
 public class DelightfulCauldronInteractions {
+    public static final CauldronInteraction.InteractionMap MATCHA_MILKSHAKE = CauldronInteraction.newInteractionMap("delightful:matcha_milkshake");
+    public static final CauldronInteraction.InteractionMap SALMONBERRY_MILKSHAKE = CauldronInteraction.newInteractionMap("delightful:salmonberry_milkshake");
+    public static final CauldronInteraction.InteractionMap SOURCE_BERRY_MILKSHAKE = CauldronInteraction.newInteractionMap("delightful:source_berry_milkshake");
+
     public static void registerCauldronInteractions() {
-        NeapolitanCauldronInteractions.addMilkshakeInteractions(DelightfulItems.MATCHA_MILKSHAKE.get(), DelightfulBlocks.MATCHA_MILKSHAKE_CAULDRON.get(), DelightfulItems.MATCHA_ICE_CREAM.get(), CauldronInteraction.newInteractionMap("matcha_milkshake").map());
-        NeapolitanCauldronInteractions.addMilkshakeInteractions(DelightfulItems.SALMONBERRY_MILKSHAKE.get(), DelightfulBlocks.SALMONBERRY_MILKSHAKE_CAULDRON.get(), DelightfulItems.SALMONBERRY_ICE_CREAM.get(), CauldronInteraction.newInteractionMap("salmonberry_milkshake").map());
-        NeapolitanCauldronInteractions.addMilkshakeInteractions(DelightfulItems.SOURCE_BERRY_MILKSHAKE.get(), DelightfulBlocks.SOURCE_BERRY_MILKSHAKE_CAULDRON.get(), DelightfulItems.SOURCE_BERRY_ICE_CREAM.get(), CauldronInteraction.newInteractionMap("source_berry_milkshake").map());
+        NeapolitanCauldronInteractions.addMilkshakeInteractions(DelightfulItems.MATCHA_MILKSHAKE.get(), DelightfulBlocks.MATCHA_MILKSHAKE_CAULDRON.get(), DelightfulItems.MATCHA_ICE_CREAM.get(), MATCHA_MILKSHAKE.map());
+        NeapolitanCauldronInteractions.addMilkshakeInteractions(DelightfulItems.SALMONBERRY_MILKSHAKE.get(), DelightfulBlocks.SALMONBERRY_MILKSHAKE_CAULDRON.get(), DelightfulItems.SALMONBERRY_ICE_CREAM.get(), SALMONBERRY_MILKSHAKE.map());
+        NeapolitanCauldronInteractions.addMilkshakeInteractions(DelightfulItems.SOURCE_BERRY_MILKSHAKE.get(), DelightfulBlocks.SOURCE_BERRY_MILKSHAKE_CAULDRON.get(), DelightfulItems.SOURCE_BERRY_ICE_CREAM.get(), SOURCE_BERRY_MILKSHAKE.map());
     }
 }

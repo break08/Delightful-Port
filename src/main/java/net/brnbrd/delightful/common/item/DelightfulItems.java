@@ -6,12 +6,10 @@ import net.brnbrd.delightful.common.block.CookieTilesItem;
 import net.brnbrd.delightful.common.block.DelightfulBlocks;
 import net.brnbrd.delightful.common.item.food.*;
 import net.brnbrd.delightful.common.item.knife.FurnaceFuelItem;
-import net.brnbrd.delightful.compat.BWGCompat;
-import net.brnbrd.delightful.compat.Modid;
-import net.brnbrd.delightful.compat.Mods;
-import net.brnbrd.delightful.compat.UnusualEndCompat;
+import net.brnbrd.delightful.compat.*;
 import net.brnbrd.delightful.compat.abnormals.AquaticCompat;
 import net.brnbrd.delightful.compat.abnormals.AtmosphericCompat;
+import net.brnbrd.delightful.compat.ars_nouveau.*;
 import net.brnbrd.delightful.compat.brewinandchewin.BrewinChewinCompat;
 import net.brnbrd.delightful.compat.undergarden.UndergardenCompat;
 import net.minecraft.network.chat.Component;
@@ -240,11 +238,14 @@ public class DelightfulItems {
      */
 
     // Roe
+    /*
     public static final DeferredItem<Item> STURGEON_ROE = registerItem("sturgeon_roe", () ->
             Modid.LFL.loaded() ?
                     LetFishLoveCompat.sturgeonRoeItem() :
                     new CompatItem(new Item.Properties(), Modid.LFL)
     );
+
+     */
 
     // Debug Items
     public static final DeferredItem<Item> DEBUG_GLOOMGOURD_PIE = registerItem("debug_gloomgourd_pie",

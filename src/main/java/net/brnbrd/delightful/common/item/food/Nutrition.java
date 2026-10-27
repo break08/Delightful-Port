@@ -247,4 +247,15 @@ public class Nutrition {
             .nutrition(2).saturationModifier(0.1F).fast()
             //.effect(() -> new MobEffectInstance(CosmopolitanCompat.getTracer(), 300, 0), 1F)
             .build();
+
+    public static final FoodProperties SINIGANG = (new FoodProperties.Builder())
+            .nutrition(12).saturationModifier(0.7F)
+            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 0), 1F)
+            //.effect(() -> CRCompat.getCorrosionOrFireResistance(600, 0), 1F)
+            .build();
+    public static final FoodProperties SINIGANG_CUP = (new FoodProperties.Builder())
+            .nutrition(6).saturationModifier(0.35F)
+            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 1800, 0), 1F)
+            //.effect(() -> CRCompat.getCorrosionOrFireResistance(300, 0), 1F)
+            .build();
 }
