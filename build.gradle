@@ -93,6 +93,29 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 dependencies {
     implementation "maven.modrinth:R2OftAxM:XTVZDOol"
 
+    // Nepolitan
+    implementation "maven.modrinth:InYMuiQt:RQ5qgaUC"
+
+    // Blueprint
+    implementation "maven.modrinth:VsM5EDoI:FHOjk8Ez"
+
+    // Brew'in and chewin
+    implementation "maven.modrinth:hIu9KJTT:MbcR48Ou"
+
+    // Youkai's Homecoming
+    implementation "maven.modrinth:uJT3ahxz:vu5Xy9Dk"
+
+    // Oh the biomes we've gone
+    compileOnly "maven.modrinth:NTi7d3Xc:gAxM0bHs"
+
+    // Unusual End
+    implementation "maven.modrinth:WKsNOKFh:oV8w25It"
+
+    // atmospheric
+    implementation "maven.modrinth:U9sJOFmJ:XIvPRE4O"
+
+    // undergarden
+    implementation "maven.modrinth:Ejfl5qDL:sY4KZ9q3"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

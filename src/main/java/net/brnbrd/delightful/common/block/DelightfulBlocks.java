@@ -3,8 +3,10 @@ package net.brnbrd.delightful.common.block;
 import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.compat.Modid;
+import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.core.cauldron.CauldronInteraction;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
@@ -12,12 +14,39 @@ import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import vectorwing.farmersdelight.common.block.FeastBlock;
+import vectorwing.farmersdelight.common.block.PieBlock;
+import vectorwing.farmersdelight.common.registry.ModBlocks;
 import vectorwing.farmersdelight.common.registry.ModItems;
 
 import java.util.function.Supplier;
 
 public class DelightfulBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Delightful.MODID);
+    public static final DeferredBlock<Block> QUARTZ_CABINET = registerBlock("quartz_cabinet",
+            () -> new DelightfulCabinetBlock(
+                    DelightfulItemTags.getGem("quartz"),
+                    Block.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK)
+                            .requiresCorrectToolForDrops()
+                            .strength(0.8F)
+            ));
+    public static final DeferredBlock<Block> BASALT_CABINET = registerBlock("basalt_cabinet",
+            () -> new DelightfulCabinetBlock(
+                    Ingredient.of(Items.BASALT),
+                    Block.Properties.ofFullCopy(Blocks.BASALT)
+                            .requiresCorrectToolForDrops()
+                            .strength(1.25F, 4.2F)
+                            .sound(SoundType.BASALT)
+            ));
+    public static final DeferredBlock<Block> WILD_SALMONBERRIES = BLOCKS.register("wild_salmonberries",
+            WildSalmonberriesBlock::new);
+    public static final DeferredBlock<Block> SALMONBERRY_BUSH = BLOCKS.register("salmonberry_bush",
+            () -> new SalmonberryBushBlock(
+                    Block.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)
+                            .randomTicks()
+                            .noCollission()
+                            .sound(SoundType.SWEET_BERRY_BUSH)
+            ));
     public static final DeferredBlock<Block> MINI_MELON = BLOCKS.register("mini_melon",
             () -> new MiniMelonBlock(Block.Properties.ofFullCopy(Blocks.MELON).noOcclusion()));
     public static final DeferredBlock<Block> SLICED_MINI_MELON = BLOCKS.register("sliced_mini_melon",
@@ -26,6 +55,11 @@ public class DelightfulBlocks {
             () -> new SlicedMiniMelonBlock(Block.Properties.ofFullCopy(SLICED_MINI_MELON.get()).noOcclusion(), DelightfulItems.CANTALOUPE_SLICE, null));
     public static final DeferredBlock<Block> CANTALOUPE = BLOCKS.register("cantaloupe",
             () -> new CantaloupeBlock(Block.Properties.ofFullCopy(MINI_MELON.get()).noOcclusion()));
+    public static final DeferredBlock<FeastBlock> STUFFED_CANTALOUPE_BLOCK = BLOCKS.register("stuffed_cantaloupe_block",
+            () -> new FeastBlock(
+                    BlockBehaviour.Properties.ofFullCopy(DelightfulBlocks.CANTALOUPE.get()),
+                    DelightfulItems.STUFFED_CANTALOUPE, false
+            ));
     public static final DeferredBlock<Block> CANTALOUPE_PLANT = BLOCKS.register("cantaloupe_plant",
             () -> new CantaloupePlantBlock(
                     BlockBehaviour.Properties.of()
@@ -36,13 +70,31 @@ public class DelightfulBlocks {
                             .sound(SoundType.CROP)
                             .pushReaction(PushReaction.DESTROY)
             ));
+    public static final DeferredBlock<Block> SLICED_MELON = BLOCKS.register("sliced_melon",
+            () -> new SlicedMelonBlock(Block.Properties.ofFullCopy(Blocks.MELON), () -> Items.MELON_SLICE, ModItems.MELON_JUICE));
+    public static final DeferredBlock<Block> SLICED_PUMPKIN = BLOCKS.register("sliced_pumpkin",
+            () -> new SlicedGourdBlock(Block.Properties.ofFullCopy(Blocks.PUMPKIN), ModItems.PUMPKIN_SLICE));
 
-    public static final DeferredBlock<Block> SALMONBERRY_BUSH = BLOCKS.register("salmonberry_bush",
-            () -> new SalmonberryBushBlock(
-                    Block.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)
-                            .randomTicks()
-                            .noCollission()
-                            .sound(SoundType.SWEET_BERRY_BUSH)
+    /*
+    public static final DeferredBlock<Block> SLICED_GLOOMGOURD = BLOCKS.register("sliced_gloomgourd",
+            Modid.UG.loaded() ?
+                    () -> new SlicedGloomgourdBlock(Block.Properties.ofFullCopy(Modid.UG.block("carved_gloomgourd", Blocks.PUMPKIN))) :
+                    () -> new SlicedGourdBlock(Block.Properties.ofFullCopy(Blocks.PUMPKIN), ModItems.PUMPKIN_SLICE)
+    );
+    */
+
+    public static final DeferredBlock<Block> SALMONBERRY_SACK = BLOCKS.register("salmonberry_sack",
+            () -> new Block(SACK(MapColor.COLOR_ORANGE)));
+    public static final DeferredBlock<Block> SALMONBERRY_PIE = BLOCKS.register("salmonberry_pie",
+            () -> new PieBlock(Block.Properties.ofFullCopy(ModBlocks.APPLE_PIE.get()), DelightfulItems.SALMONBERRY_PIE_SLICE));
+    public static final DeferredBlock<Block> BAKLAVA = BLOCKS.register("baklava",
+            () -> new BaklavaBlock(Block.Properties.ofFullCopy(ModBlocks.APPLE_PIE.get()), DelightfulItems.BAKLAVA_SLICE));
+    public static final DeferredBlock<DPieBlock> SOURCE_BERRY_PIE = BLOCKS.register("source_berry_pie",
+            () -> new DPieBlock(
+                    Modid.AND.loaded() ?
+                            () -> Modid.AND.item("source_berry_pie_slice") :
+                            DelightfulItems.SOURCE_BERRY_PIE_SLICE,
+                    Modid.AN.rl("source_berry_pie")
             ));
 
 
@@ -53,6 +105,7 @@ public class DelightfulBlocks {
             () -> new DPieBlock(DelightfulItems.CHORUS_PIE_SLICE, Modid.UE.rl(UnusualEndCompat.chorus_pie)));
             
      */
+
     public static final DeferredBlock<DPieBlock> GLOOMGOURD_PIE = BLOCKS.register("gloomgourd_pie",
             () -> new DPieBlock(DelightfulItems.GLOOMGOURD_PIE_SLICE, Modid.UG.rl("gloomgourd_pie")));
     public static final DeferredBlock<DPieBlock> BLUEBERRY_PIE = BLOCKS.register("blueberry_pie",
@@ -61,8 +114,10 @@ public class DelightfulBlocks {
             () -> new DPieBlock(DelightfulItems.GREEN_APPLE_PIE_SLICE, Modid.BWG.rl("green_apple_pie")));
     public static final DeferredBlock<DPieBlock> MULBERRY_PIE = BLOCKS.register("mulberry_pie",
             () -> new DPieBlock(DelightfulItems.MULBERRY_PIE_SLICE, Modid.UA.rl("mulberry_pie")));
+
     public static final DeferredBlock<DPieBlock> PASSION_FRUIT_TART = BLOCKS.register("passion_fruit_tart",
             () -> new DPieBlock(DelightfulItems.PASSION_FRUIT_TART_SLICE, Modid.AT.rl("passion_fruit_tart")));
+
     public static final DeferredBlock<DPieBlock> MUTTON_PIE = BLOCKS.register("mutton_pie",
             () -> new DPieBlock(DelightfulItems.MUTTON_PIE_SLICE, Modid.WS.rl("mutton_pie")));
     public static final DeferredBlock<Block> ACORN_SACK = BLOCKS.register("acorn_sack",
@@ -73,7 +128,7 @@ public class DelightfulBlocks {
             () -> new Block(Block.Properties.ofFullCopy(Blocks.SNOW_BLOCK).mapColor(MapColor.COLOR_LIGHT_GREEN).strength(0.2F).sound(SoundType.SNOW)));
     public static final DeferredBlock<Block> SOURCE_BERRY_ICE_CREAM_BLOCK = BLOCKS.register("source_berry_ice_cream_block",
             () -> new Block(Block.Properties.ofFullCopy(Blocks.SNOW_BLOCK).mapColor(MapColor.COLOR_PURPLE).strength(0.2F).sound(SoundType.SNOW)));
-    /*
+
     public static final DeferredBlock<Block> SALMONBERRY_MILKSHAKE_CAULDRON = BLOCKS.register("salmonberry_milkshake_cauldron",
             () -> new DelightfulMilkshakeCauldronBlock(
                     Modid.N.loaded() ?
@@ -93,7 +148,6 @@ public class DelightfulBlocks {
                             CauldronInteraction.newInteractionMap())
     );
 
-     */
     public static final DeferredBlock<Block> BLUEBERRY_SACK = BLOCKS.register("blueberry_sack",
             () -> new Block(SACK(MapColor.TERRACOTTA_BLUE)));
     public static final DeferredBlock<Block> MENDOSTEEN_CRATE = BLOCKS.register("mendosteen_crate",
