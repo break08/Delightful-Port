@@ -2,6 +2,7 @@ package net.brnbrd.delightful.common.item;
 
 import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;
@@ -133,8 +134,14 @@ public enum DelightfulTiers implements Tier {
     }
 
     @Override
-    public TagKey<Block> getIncorrectBlocksForDrops() {
-        return null;
+    public @NotNull TagKey<Block> getIncorrectBlocksForDrops() {
+        return switch (this.level) {
+            case 0 -> BlockTags.INCORRECT_FOR_WOODEN_TOOL;
+            case 1 -> BlockTags.INCORRECT_FOR_STONE_TOOL;
+            case 2 -> BlockTags.INCORRECT_FOR_IRON_TOOL;
+            case 3 -> BlockTags.INCORRECT_FOR_DIAMOND_TOOL;
+            default -> BlockTags.INCORRECT_FOR_NETHERITE_TOOL;
+        };
     }
 
     public int getEnchantmentValue() {

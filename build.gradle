@@ -102,7 +102,7 @@ dependencies {
     compileOnly "maven.modrinth:VsM5EDoI:FHOjk8Ez"
 
     // Brew'in and chewin
-    implementation "maven.modrinth:hIu9KJTT:MbcR48Ou"
+    compileOnly "maven.modrinth:hIu9KJTT:MbcR48Ou"
 
     // Oh the biomes we've gone
     compileOnly "maven.modrinth:NTi7d3Xc:gAxM0bHs"
