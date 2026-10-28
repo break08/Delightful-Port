@@ -1,0 +1,25 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "item": "atmospheric:blood_orange",
+          "type": "neoforge:item_exists"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "atmospheric:blood_orange"
+          }
+        ],
+        "result": {
+          "count": 1,
+          "id": "minecraft:red_dye"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "values": [
+    "#forge:cookies/source_berry",
+    "minecraft:cookie",
+    "farmersdelight:honey_cookie",
+    "farmersdelight:sweet_berry_cookie",
+    "delightful:glow_jam_cookie",
+    {
+      "id": "#supplementaries:cookies",
+      "required": false
+    },
+    {
+      "id": "farmersrespite:green_tea_cookie",
+      "required": false
+    },
+    {
+      "id": "abnormals_delight:mulberry_cookie",
+      "required": false
+    },
+    {
+      "id": "abnormals_delight:maple_cookie",
+      "required": false
+    },
+    {
+      "id": "abnormals_delight:cherry_cookie",
+      "required": false
+    },
+    {
+      "id": "miners_delight:bat_cookie",
+      "required": false
+    },
+    {
+      "id": "vintagedelight:oatmeal_cookie",
+      "required": false
+    },
+    {
+      "id": "hearthandharvest:peanut_butter_cookie",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:persimmon_cookie",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:lemon_cookie",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:cranberry_cookie",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:bayberry_cookie",
+      "required": false
+    },
+    {
+      "id": "frightsdelight:cookie_flesh",
+      "required": false
+    },
+    {
+      "id": "frightsdelight:cookie_spidereye",
+      "required": false
+    },
+    {
+      "id": "frightsdelight:cookie_slimeapple",
+      "required": false
+    },
+    {
+      "id": "frightsdelight:cookie_slime",
+      "required": false
+    },
+    {
+      "id": "frightsdelight:cookie_cobweb",
+      "required": false
+    },
+    {
+      "id": "frightsdelight:cookie_ghast_tear",
+      "required": false
+    },
+    {
+      "id": "frightsdelight:cookie_soul_berry",
+      "required": false
+    },
+    {
+      "id": "frightsdelight:cookie_wither_berry",
+      "required": false
+    },
+    {
+      "id": "exquisito:ether_bulb_cookie",
+      "required": false
+    },
+    {
+      "id": "exquisito:nightshade_berry_cookie",
+      "required": false
+    },
+    {
+      "id": "exquisito:chorus_cookie",
+      "required": false
+    },
+    {
+      "id": "ends_delight:chorus_cookie",
+      "required": false
+    },
+    {
+      "id": "endersdelight:uncanny_cookie",
+      "required": false
+    },
+    {
+      "id": "seeddelight:rose_cookie",
+      "required": false
+    },
+    {
+      "id": "snowyspirit:gingerbread_cookie",
+      "required": false
+    },
+    {
+      "id": "windswept:gingerbread_cookie",
+      "required": false
+    },
+    {
+      "id": "foragersinsight:acorn_cookie",
+      "required": false
+    },
+    {
+      "id": "foragersinsight:rose_cookie",
+      "required": false
+    },
+    {
+      "id": "sunflowerdelight:shortbread_cookie",
+      "required": false
+    },
+    {
+      "id": "vampiresdelight:orchid_cookie",
+      "required": false
+    },
+    {
+      "id": "ramadandelight:date_stuffed_cookie",
+      "required": false
+    }
+  ]
+}

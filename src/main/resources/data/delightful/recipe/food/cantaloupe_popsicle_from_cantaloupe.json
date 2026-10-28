@@ -1,0 +1,86 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "cantaloupe_popsicle"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "cantaloupe"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:ice_cubes"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "key": {
+          "-": {
+            "tag": "c:rods/wooden"
+          },
+          "i": {
+            "tag": "c:ice_cubes"
+          },
+          "m": {
+            "item": "delightful:cantaloupe"
+          }
+        },
+        "pattern": [
+          "im",
+          "-i"
+        ],
+        "result": {
+          "id": "delightful:cantaloupe_popsicle"
+        },
+        "show_notification": true
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "cantaloupe_popsicle"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "cantaloupe"
+        },
+        {
+          "type": "neoforge:tag_empty",
+          "tag": "c:ice_cubes"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "key": {
+          "-": {
+            "tag": "c:rods/wooden"
+          },
+          "i": {
+            "item": "minecraft:ice"
+          },
+          "m": {
+            "item": "delightful:cantaloupe"
+          }
+        },
+        "pattern": [
+          "im",
+          "-i"
+        ],
+        "result": {
+          "id": "delightful:cantaloupe_popsicle"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

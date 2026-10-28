@@ -1,0 +1,26 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "value": "silver_knife",
+          "type": "delightful:enabled"
+        },
+        {
+          "item": "eidolon:silver_nugget",
+          "type": "neoforge:item_exists"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smelting",
+        "ingredient": {
+          "item": "delightful:silver_knife"
+        },
+        "result": "eidolon:silver_nugget",
+        "experience": 0.1,
+        "cookingtime": 200
+      }
+    }
+  ]
+}

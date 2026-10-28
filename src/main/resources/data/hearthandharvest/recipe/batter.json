@@ -1,0 +1,43 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "hearthandharvest:batter"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "tag": "c:milk"
+          },
+          {
+            "tag": "c:eggs"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "tag": "c:grain/wheat"
+          },
+          {
+            "tag": "c:grain/wheat"
+          },
+          {
+            "item": "minecraft:bowl"
+          },
+          {
+            "item": "minecraft:bowl"
+          }
+        ],
+        "result": {
+          "count": 2,
+          "id": "hearthandharvest:batter"
+        }
+      }
+    }
+  ]
+}

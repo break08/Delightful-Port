@@ -1,0 +1,52 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "biomeswevegone:baobab_fruit"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "baobab_fruit_crate"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "biomeswevegone:baobab_fruit"
+          },
+          {
+            "item": "biomeswevegone:baobab_fruit"
+          },
+          {
+            "item": "biomeswevegone:baobab_fruit"
+          },
+          {
+            "item": "biomeswevegone:baobab_fruit"
+          },
+          {
+            "item": "biomeswevegone:baobab_fruit"
+          },
+          {
+            "item": "biomeswevegone:baobab_fruit"
+          },
+          {
+            "item": "biomeswevegone:baobab_fruit"
+          },
+          {
+            "item": "biomeswevegone:baobab_fruit"
+          },
+          {
+            "item": "biomeswevegone:baobab_fruit"
+          }
+        ],
+        "result": {
+          "id": "delightful:baobab_fruit_crate"
+        }
+      }
+    }
+  ]
+}

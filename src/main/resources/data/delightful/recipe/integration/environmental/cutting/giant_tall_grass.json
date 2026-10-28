@@ -1,0 +1,37 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "environmental:giant_tall_grass"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "environmental:giant_tall_grass"
+          }
+        ],
+        "result": [
+          {
+            "chance": 0.35,
+            "count": 1,
+            "item": "farmersdelight:straw"
+          }
+        ],
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "knife_dig"
+          },
+          {
+            "tag": "c:tools/knives"
+          }
+        ]
+      }
+    }
+  ]
+}

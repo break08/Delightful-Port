@@ -1,0 +1,39 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "thermal:machine_sawmill"
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "thermal_expansion"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "cantaloupe"
+        }
+      ],
+      "recipe": {
+        "type": "thermal:sawmill",
+        "ingredient": {
+          "item": "delightful:cantaloupe"
+        },
+        "result": [
+          {
+            "item": "delightful:cantaloupe_slice",
+            "count": 3
+          },
+          {
+            "item": "delightful:cantaloupe_seeds",
+            "chance": 0.25
+          }
+        ],
+        "energy": 800,
+        "experience": 0.2
+      }
+    }
+  ]
+}

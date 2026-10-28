@@ -1,0 +1,38 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:not",
+          "value": {
+            "tag": "c:chocolate",
+            "type": "neoforge:tag_empty"
+          }
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "frozenup:mug_of_milk"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "frozenup:mug_of_milk"
+          },
+          {
+            "tag": "c:chocolate"
+          },
+          {
+            "item": "frozenup:truffle"
+          }
+        ],
+        "result": {
+          "count": 1,
+          "id": "frozenup:mug_of_truffle_hot_chocolate"
+        }
+      }
+    }
+  ]
+}

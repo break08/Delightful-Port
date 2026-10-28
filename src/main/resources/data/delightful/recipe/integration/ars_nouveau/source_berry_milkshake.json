@@ -1,0 +1,60 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "source_berry_milkshake"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "source_berry_ice_cream"
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "ars_nouveau"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:fruits/sourceberry"
+          }
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:mod_loaded",
+            "modid": "cosmopolitan"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "minecraft:glass_bottle"
+          },
+          {
+            "item": "minecraft:glass_bottle"
+          },
+          {
+            "item": "minecraft:glass_bottle"
+          },
+          {
+            "item": "delightful:source_berry_ice_cream"
+          },
+          {
+            "tag": "c:milk"
+          }
+        ],
+        "result": {
+          "count": 3,
+          "id": "delightful:source_berry_milkshake"
+        }
+      }
+    }
+  ]
+}

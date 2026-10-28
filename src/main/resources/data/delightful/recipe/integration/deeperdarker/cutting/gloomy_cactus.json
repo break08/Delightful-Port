@@ -1,0 +1,43 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "cactus_flesh"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "deeperdarker:gloomy_cactus"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "deeperdarker:gloomy_cactus"
+          }
+        ],
+        "result": [
+          {
+            "item": "delightful:cactus_flesh"
+          },
+          {
+            "chance": 0.5,
+            "item": "minecraft:orange_dye"
+          }
+        ],
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "knife_dig"
+          },
+          {
+            "tag": "c:tools/knives"
+          }
+        ]
+      }
+    }
+  ]
+}

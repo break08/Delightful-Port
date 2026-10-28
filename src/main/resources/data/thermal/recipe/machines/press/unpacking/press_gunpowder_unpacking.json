@@ -1,0 +1,101 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "thermal:machine_press"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "thermal:gunpowder_block"
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "thermal_expansion"
+        },
+        {
+          "type": "neoforge:or",
+          "values": [
+            {
+              "type": "neoforge:not",
+              "value": {
+                "type": "neoforge:mod_loaded",
+                "modid": "quark"
+              }
+            },
+            {
+              "type": "neoforge:not",
+              "value": {
+                "type": "quark:flag",
+                "flag": "gunpowder_sack"
+              }
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "thermal:press",
+        "ingredients": [
+          {
+            "item": "thermal:gunpowder_block"
+          },
+          {
+            "item": "thermal:press_unpacking_die"
+          }
+        ],
+        "result": [
+          {
+            "item": "minecraft:gunpowder",
+            "count": 9
+          }
+        ],
+        "energy": 400
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "thermal:machine_press"
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "thermal_expansion"
+        },
+        {
+          "type": "neoforge:and",
+          "values": [
+            {
+              "type": "neoforge:item_exists",
+              "item": "quark:gunpowder_sack"
+            },
+            {
+              "type": "quark:flag",
+              "flag": "gunpowder_sack"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "thermal:press",
+        "ingredients": [
+          {
+            "item": "quark:gunpowder_sack"
+          },
+          {
+            "item": "thermal:press_unpacking_die"
+          }
+        ],
+        "result": [
+          {
+            "item": "minecraft:gunpowder",
+            "count": 9
+          }
+        ],
+        "energy": 400
+      }
+    }
+  ]
+}

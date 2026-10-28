@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "abnormals_delight:venison_shanks",
+      "required": false
+    },
+    {
+      "id": "twilightdelight:raw_venison_rib",
+      "required": false
+    }
+  ]
+}

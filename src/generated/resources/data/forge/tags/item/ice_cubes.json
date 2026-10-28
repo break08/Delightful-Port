@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "windswept:icicles",
+      "required": false
+    },
+    {
+      "id": "foragersinsight:crushed_ice",
+      "required": false
+    }
+  ]
+}

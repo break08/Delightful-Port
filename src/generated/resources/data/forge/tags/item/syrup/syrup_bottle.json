@@ -1,0 +1,24 @@
+{
+  "values": [
+    {
+      "id": "#rusticdelight:syrup",
+      "required": false
+    },
+    {
+      "id": "autumnity:syrup_bottle",
+      "required": false
+    },
+    {
+      "id": "hearthandharvest:syrup_bottle",
+      "required": false
+    },
+    {
+      "id": "thermal:syrup_bottle",
+      "required": false
+    },
+    {
+      "id": "foragersinsight:birch_syrup_bottle",
+      "required": false
+    }
+  ]
+}

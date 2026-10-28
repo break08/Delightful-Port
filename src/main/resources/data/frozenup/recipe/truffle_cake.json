@@ -1,0 +1,46 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "tag": "c:chocolate",
+          "type": "neoforge:tag_empty"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "frozenup:truffle_cake"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "###",
+          "CEC",
+          "WBW"
+        ],
+        "key": {
+          "#": {
+            "tag": "c:milk"
+          },
+          "C": {
+            "item": "minecraft:cocoa_beans"
+          },
+          "E": {
+            "tag": "c:eggs"
+          },
+          "W": {
+            "tag": "c:grain/wheat"
+          },
+          "B": {
+            "item": "frozenup:truffle"
+          }
+        },
+        "result": {
+          "count": 1,
+          "id": "frozenup:truffle_cake"
+        }
+      }
+    }
+  ]
+}

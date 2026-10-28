@@ -1,0 +1,38 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "forestry:squeezer"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:fruits/citrus"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "forestry:squeezer",
+        "chance": 0.1,
+        "output": {
+          "Amount": 400,
+          "FluidName": "forestry:juice"
+        },
+        "remnant": {
+          "Count": 1,
+          "id": "forestry:mulch"
+        },
+        "resources": [
+          {
+            "tag": "c:fruits/citrus"
+          }
+        ],
+        "time": 10
+      }
+    }
+  ]
+}

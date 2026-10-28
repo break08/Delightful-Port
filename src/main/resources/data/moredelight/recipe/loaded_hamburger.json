@@ -1,0 +1,92 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "moredelight:loaded_hamburger"
+        },
+        {
+          "type": "neoforge:tag_empty",
+          "tag": "c:burger_bun"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "tag": "c:bread"
+          },
+          {
+            "item": "farmersdelight:beef_patty"
+          },
+          {
+            "tag": "c:salad_ingredients"
+          },
+          {
+            "tag": "c:crops/tomato"
+          },
+          {
+            "tag": "c:cooked_bacon"
+          },
+          {
+            "tag": "c:cooked_eggs"
+          },
+          {
+            "tag": "c:crops/onion"
+          }
+        ],
+        "result": {
+          "id": "moredelight:loaded_hamburger"
+        }
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "moredelight:loaded_hamburger"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:burger_bun"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "tag": "c:burger_bun"
+          },
+          {
+            "item": "farmersdelight:beef_patty"
+          },
+          {
+            "tag": "c:salad_ingredients"
+          },
+          {
+            "tag": "c:crops/tomato"
+          },
+          {
+            "tag": "c:cooked_bacon"
+          },
+          {
+            "tag": "c:cooked_eggs"
+          },
+          {
+            "tag": "c:crops/onion"
+          }
+        ],
+        "result": {
+          "id": "moredelight:loaded_hamburger"
+        }
+      }
+    }
+  ]
+}

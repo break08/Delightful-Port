@@ -1,16 +1,16 @@
 {
-  "type": "forge:conditional",
+  "type": "neoforge:conditional",
   "recipes": [
     {
       "conditions": [
         {
-          "type": "forge:item_exists",
+          "type": "neoforge:item_exists",
           "item": "hearthandharvest:salt"
         },
         {
-          "type": "forge:not",
+          "type": "neoforge:not",
           "value": {
-            "type": "forge:mod_loaded",
+            "type": "neoforge:mod_loaded",
             "modid": "salt"
           }
         }
@@ -21,13 +21,13 @@
         "experience": 0.35,
         "ingredients": [
           {
-            "tag": "forge:water"
+            "tag": "c:water"
           }
         ],
         "recipe_book_tab": "misc",
         "result": {
           "count": 8,
-          "item": "hearthandharvest:salt"
+          "id": "hearthandharvest:salt"
         }
       }
     }

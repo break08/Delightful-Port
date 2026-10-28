@@ -1,0 +1,33 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "biomeswevegone:white_puffball_stew"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:bowl"
+        },
+        "cookingtime": 200,
+        "experience": 1.0,
+        "ingredients": [
+          {
+            "item": "biomeswevegone:white_puffball_cap"
+          },
+          {
+            "item": "biomeswevegone:white_puffball_cap"
+          }
+        ],
+        "recipe_book_tab": "meals",
+        "result": {
+          "id": "biomeswevegone:white_puffball_stew"
+        }
+      }
+    }
+  ]
+}

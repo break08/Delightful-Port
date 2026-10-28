@@ -1,0 +1,39 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "rusticdelight:fried_chicken"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:bowl"
+        },
+        "cookingtime": 200,
+        "experience": 1.0,
+        "ingredients": [
+          {
+            "tag": "rusticdelight:cooking_oil"
+          },
+          {
+            "tag": "c:batter"
+          },
+          {
+            "tag": "c:raw_chicken"
+          },
+          {
+            "tag": "c:vegetables/onion"
+          }
+        ],
+        "recipe_book_tab": "meals",
+        "result": {
+          "id": "rusticdelight:fried_chicken"
+        }
+      }
+    }
+  ]
+}

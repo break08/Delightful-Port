@@ -1,0 +1,80 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "corn_delight:corn_popsicle"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:ice_cubes"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "key": {
+          "-": {
+            "tag": "c:rods/wooden"
+          },
+          "i": {
+            "tag": "c:ice_cubes"
+          },
+          "c": {
+            "tag": "c:crops/corn"
+          }
+        },
+        "pattern": [
+          " cc",
+          "icc",
+          "-i "
+        ],
+        "result": {
+          "count": 1,
+          "id": "corn_delight:corn_popsicle"
+        }
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "corn_delight:corn_popsicle"
+        },
+        {
+          "type": "neoforge:tag_empty",
+          "tag": "c:ice_cubes"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "key": {
+          "-": {
+            "tag": "c:rods/wooden"
+          },
+          "i": {
+            "item": "minecraft:ice"
+          },
+          "m": {
+            "tag": "c:crops/corn"
+          }
+        },
+        "pattern": [
+          "  m",
+          "im ",
+          "-i "
+        ],
+        "result": {
+          "count": 1,
+          "id": "corn_delight:corn_popsicle"
+        }
+      }
+    }
+  ]
+}

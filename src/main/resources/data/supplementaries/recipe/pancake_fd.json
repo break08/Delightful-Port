@@ -1,0 +1,53 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "supplementaries:pancake"
+        },
+        {
+          "type": "neoforge:tag_empty",
+          "tag": "c:batter"
+        }
+      ],
+      "recipe": {
+        "global_conditions": [
+          {
+            "type": "supplementaries:flag",
+            "flag": "pancake"
+          }
+        ],
+        "type": "farmersdelight:cooking",
+        "cookingtime": 400,
+        "experience": 2.0,
+        "ingredients": [
+          {
+            "tag": "c:milk"
+          },
+          {
+            "tag": "c:eggs"
+          },
+          {
+            "tag": "c:grain/wheat"
+          },
+          {
+            "tag": "c:grain/wheat"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "item": "minecraft:sugar"
+          }
+        ],
+        "recipe_book_tab": "misc",
+        "result": {
+          "count": 6,
+          "id": "supplementaries:pancake"
+        }
+      }
+    }
+  ]
+}

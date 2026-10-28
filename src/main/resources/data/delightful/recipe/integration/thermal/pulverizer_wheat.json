@@ -1,0 +1,45 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "thermal:machine_pulverizer"
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "thermal_expansion"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:crops/wheat"
+          }
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "enderio:flour"
+        }
+      ],
+      "recipe": {
+        "type": "thermal:pulverizer",
+        "ingredient": {
+          "tag": "c:crops/wheat"
+        },
+        "result": [
+          {
+            "item": "enderio:flour",
+            "chance": 1.0
+          },
+          {
+            "item": "minecraft:wheat_seeds",
+            "chance": 0.2
+          }
+        ],
+        "experience": 0.1
+      }
+    }
+  ]
+}

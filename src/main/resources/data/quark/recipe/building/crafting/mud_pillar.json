@@ -1,0 +1,72 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "quark:mud_pillar"
+        },
+        {
+          "type": "quark:flag",
+          "flag": "more_mud_blocks"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "environmental:chiseled_mud_bricks"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "#",
+          "#"
+        ],
+        "key": {
+          "#": {
+            "item": "minecraft:packed_mud"
+          }
+        },
+        "result": {
+          "count": 2,
+          "id": "quark:mud_pillar"
+        }
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "quark:mud_pillar"
+        },
+        {
+          "type": "quark:flag",
+          "flag": "more_mud_blocks"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:item_exists",
+            "item": "environmental:chiseled_mud_bricks"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "#",
+          "#"
+        ],
+        "key": {
+          "#": {
+            "item": "minecraft:mud_brick_slab"
+          }
+        },
+        "result": {
+          "count": 1,
+          "id": "quark:mud_pillar"
+        }
+      }
+    }
+  ]
+}

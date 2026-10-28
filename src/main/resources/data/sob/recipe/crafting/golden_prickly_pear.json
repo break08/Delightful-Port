@@ -1,0 +1,32 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "sob:golden_prickly_pear"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "###",
+          "#P#",
+          "###"
+        ],
+        "key": {
+          "P": {
+            "tag": "c:fruits/prickly_pear"
+          },
+          "#": {
+            "item": "minecraft:gold_nugget"
+          }
+        },
+        "result": {
+          "id": "sob:golden_prickly_pear"
+        }
+      }
+    }
+  ]
+}

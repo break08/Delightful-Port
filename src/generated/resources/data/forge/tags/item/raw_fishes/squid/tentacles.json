@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "miners_delight:tentacles",
+      "required": false
+    },
+    {
+      "id": "culturaldelights:raw_calamari",
+      "required": false
+    },
+    {
+      "id": "oceansdelight:tentacles",
+      "required": false
+    }
+  ]
+}

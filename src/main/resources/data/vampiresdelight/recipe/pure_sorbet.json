@@ -1,0 +1,108 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "vampiresdelight:pure_sorbet"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:ice_cubes"
+          }
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "vampirism:pure_blood"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "key": {
+          "a": {
+            "tag": "c:fruits/apple"
+          },
+          "i": {
+            "tag": "c:ice_cubes"
+          },
+          "p": {
+            "tag": "vampirism:pure_blood"
+          },
+          "s": {
+            "tag": "c:fruits/sweet_berries"
+          },
+          "t": {
+            "tag": "c:rods/wooden"
+          }
+        },
+        "pattern": [
+          " sa",
+          "ips",
+          "ti "
+        ],
+        "result": {
+          "id": "vampiresdelight:pure_sorbet"
+        },
+        "show_notification": true
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "vampiresdelight:pure_sorbet"
+        },
+        {
+          "type": "neoforge:or",
+          "values": [
+            {
+              "type": "neoforge:tag_empty",
+              "tag": "c:ice_cubes"
+            },
+            {
+              "type": "neoforge:tag_empty",
+              "tag": "vampirism:pure_blood"
+            }
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "key": {
+          "a": {
+            "tag": "c:fruits/apple"
+          },
+          "i": {
+            "item": "minecraft:ice"
+          },
+          "p": {
+            "tag": "vampirism:pure_blood"
+          },
+          "s": {
+            "tag": "c:fruits/sweet_berries"
+          },
+          "t": {
+            "tag": "c:rods/wooden"
+          }
+        },
+        "pattern": [
+          " sa",
+          "ips",
+          "ti "
+        ],
+        "result": {
+          "id": "vampiresdelight:pure_sorbet"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

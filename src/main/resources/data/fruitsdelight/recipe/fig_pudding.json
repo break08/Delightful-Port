@@ -1,0 +1,46 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "fruitsdelight:fig_pudding"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "key": {
+          "D": {
+            "tag": "c:dough"
+          },
+          "E": {
+            "tag": "c:eggs"
+          },
+          "F": {
+            "tag": "c:fruits/fig"
+          },
+          "J": {
+            "item": "fruitsdelight:orange_jelly"
+          },
+          "M": {
+            "tag": "c:milk"
+          },
+          "S": {
+            "item": "minecraft:sweet_berries"
+          }
+        },
+        "pattern": [
+          "MSM",
+          "EJE",
+          "FDF"
+        ],
+        "result": {
+          "id": "fruitsdelight:fig_pudding"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "gilded_netherite_knife"
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "additionaladditions"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "additionaladditions:gold_ring"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "additionaladditions:gilded_netherite_upgrade"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smithing_transform",
+        "addition": {
+          "item": "additionaladditions:gold_ring"
+        },
+        "base": {
+          "item": "farmersdelight:netherite_knife"
+        },
+        "result": {
+          "id": "delightful:gilded_netherite_knife"
+        },
+        "template": {
+          "item": "additionaladditions:gilded_netherite_upgrade"
+        }
+      }
+    }
+  ]
+}

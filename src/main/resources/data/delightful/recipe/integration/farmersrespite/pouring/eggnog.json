@@ -1,0 +1,36 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "farmersrespite"
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "snowyspirit"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "snowyspirit:eggnog"
+        },
+        {
+          "type": "snowyspirit:flag",
+          "flag": "eggnog"
+        }
+      ],
+      "recipe": {
+        "type": "farmersrespite:kettle_pouring",
+        "amount": 250,
+        "container": {
+          "item": "minecraft:glass_bottle"
+        },
+        "fluid": "delightful:eggnog",
+        "output": {
+          "item": "snowyspirit:eggnog"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "lavender_tea"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "minecraft:flowers/lavender"
+          }
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "farmersrespite"
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "create"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:item_exists",
+            "item": "windswept:lavender_tea"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "create:filling",
+        "ingredients": [
+          {
+            "item": "minecraft:glass_bottle"
+          },
+          {
+            "amount": 250,
+            "fluid": "delightful:lavender_tea",
+            "nbt": {}
+          }
+        ],
+        "results": [
+          {
+            "item": "delightful:lavender_tea"
+          }
+        ]
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "minecraft:flowers/lavender"
+          }
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "farmersrespite"
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "create"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "windswept:lavender_tea"
+        }
+      ],
+      "recipe": {
+        "type": "create:filling",
+        "ingredients": [
+          {
+            "item": "minecraft:glass_bottle"
+          },
+          {
+            "amount": 250,
+            "fluid": "delightful:lavender_tea",
+            "nbt": {}
+          }
+        ],
+        "results": [
+          {
+            "item": "windswept:lavender_tea"
+          }
+        ]
+      }
+    }
+  ]
+}

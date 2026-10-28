@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "collectorsreap:chieftain_claw",
+      "required": false
+    },
+    {
+      "id": "finsandtails:cooked_bull_crab_claw",
+      "required": false
+    }
+  ]
+}

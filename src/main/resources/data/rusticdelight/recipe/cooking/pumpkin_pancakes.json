@@ -1,0 +1,45 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "rusticdelight:pumpkin_pancakes"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:bowl"
+        },
+        "cookingtime": 400,
+        "experience": 2.0,
+        "ingredients": [
+          {
+            "tag": "c:batter"
+          },
+          {
+            "tag": "c:syrup"
+          },
+          {
+            "item": "farmersdelight:pumpkin_slice"
+          },
+          {
+            "item": "farmersdelight:pumpkin_slice"
+          },
+          {
+            "item": "farmersdelight:pumpkin_slice"
+          },
+          {
+            "item": "farmersdelight:pumpkin_slice"
+          }
+        ],
+        "recipe_book_tab": "misc",
+        "result": {
+          "id": "rusticdelight:pumpkin_pancakes"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "enderio:sag_mill"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:ender_pearls"
+          }
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "thermal:ender_pearl_dust"
+        }
+      ],
+      "recipe": {
+        "type": "enderio:sag_milling",
+        "bonus": "none",
+        "energy": 2400,
+        "input": {
+          "tag": "c:ender_pearls"
+        },
+        "outputs": [
+          {
+            "chance": 1.0,
+            "item": {
+              "count": 1,
+              "item": "thermal:ender_pearl_dust"
+            },
+            "optional": false
+          }
+        ]
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "enderio:sag_mill"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:ender_pearls"
+          }
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "enderio:powdered_ender_pearl"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:item_exists",
+            "item": "thermal:ender_pearl_dust"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "enderio:sag_milling",
+        "bonus": "none",
+        "energy": 2400,
+        "input": {
+          "tag": "c:ender_pearls"
+        },
+        "outputs": [
+          {
+            "chance": 1.0,
+            "item": {
+              "count": 1,
+              "item": "enderio:powdered_ender_pearl"
+            },
+            "optional": false
+          }
+        ]
+      }
+    }
+  ]
+}

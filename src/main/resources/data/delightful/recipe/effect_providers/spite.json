@@ -1,0 +1,26 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "jeed"
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "sob"
+        }
+      ],
+      "recipe": {
+        "type": "jeed:effect_provider",
+        "effect": "sob:spite",
+        "providers": [
+          {
+            "tag": "delightful:spite"
+          }
+        ]
+      }
+    }
+  ]
+}

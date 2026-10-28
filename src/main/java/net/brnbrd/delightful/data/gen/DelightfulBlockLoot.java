@@ -1,0 +1,196 @@
+package net.brnbrd.delightful.data.gen;
+
+import net.brnbrd.delightful.common.block.*;
+import net.brnbrd.delightful.common.item.DelightfulItems;
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.loot.BlockLootSubProvider;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import vectorwing.farmersdelight.common.block.FeastBlock;
+import java.util.Collections;
+import java.util.List;
+import org.jetbrains.annotations.NotNull;
+
+
+public class DelightfulBlockLoot extends BlockLootSubProvider {
+    private final static List<ResourceLocation> NO_GEN = List.of(
+            DelightfulBlocks.WILD_SALMONBERRIES.getId()
+    );
+
+    protected DelightfulBlockLoot(HolderLookup.Provider registries) {
+        super(Collections.emptySet(), FeatureFlags.REGISTRY.allFlags(), registries);
+    }
+
+    @Override
+    protected void generate() {
+        // Cabinets
+        DelightfulBlocks.BLOCKS.getEntries().stream()
+                .map(DeferredHolder::value)
+                .filter(block -> block instanceof DelightfulCabinetBlock)
+                .forEach(this::dropSelf);
+
+        // Pies
+        this.empty(DelightfulBlocks.SALMONBERRY_PIE);
+        this.empty(DelightfulBlocks.SOURCE_BERRY_PIE);
+        this.empty(DelightfulBlocks.GLOOMGOURD_PIE);
+        this.empty(DelightfulBlocks.GREEN_APPLE_PIE);
+        this.empty(DelightfulBlocks.BLUEBERRY_PIE);
+        this.empty(DelightfulBlocks.CHORUS_PIE);
+        this.empty(DelightfulBlocks.MULBERRY_PIE);
+        this.empty(DelightfulBlocks.PASSION_FRUIT_TART);
+        this.empty(DelightfulBlocks.MUTTON_PIE);
+        this.empty(DelightfulBlocks.BAKLAVA);
+
+        // Whole melons
+        this.dropSelf(DelightfulBlocks.MINI_MELON.get());
+        this.dropSelf(DelightfulBlocks.CANTALOUPE.get());
+
+        // Plants
+        this.add(DelightfulBlocks.CANTALOUPE_PLANT.get(), (b) -> {
+                    LootTable.Builder loot = this.createSingleItemTable(DelightfulItems.CANTALOUPE_SEEDS.get())
+                            .withPool(LootPool.lootPool()
+                                    .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(b)
+                                            .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CantaloupePlantBlock.AGE, CantaloupePlantBlock.MAX_AGE)))
+                                    .add(LootItem.lootTableItem(DelightfulItems.CANTALOUPE.get())));
+                    return applyExplosionDecay(b, loot);
+                }
+        );
+
+        // Sliced
+        this.add(DelightfulBlocks.SLICED_MINI_MELON.get(), (b) -> {
+                    LootTable.Builder loot = LootTable.lootTable();
+                    int maxbites = ((SlicedMiniMelonBlock) DelightfulBlocks.SLICED_MINI_MELON.get()).getMaxBites();
+                    for (int i = 1; i <= maxbites; i++) {
+                        final float left = (float) i;
+                        loot = loot.withPool(LootPool.lootPool()
+                                .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(b)
+                                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SlicedMiniMelonBlock.BITES, i)))
+                                .add(LootItem.lootTableItem(((SlicedMiniMelonBlock) b).getSliceItem().getItem()))
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, ((float) maxbites) - left + 1F))));
+                    }
+                    return applyExplosionDecay(b, loot);
+                }
+        );
+        this.add(DelightfulBlocks.SLICED_CANTALOUPE.get(), (b) -> {
+                    LootTable.Builder loot = LootTable.lootTable();
+                    int maxbites = ((SlicedMiniMelonBlock) DelightfulBlocks.SLICED_CANTALOUPE.get()).getMaxBites();
+                    for (int i = 1; i <= maxbites; i++) {
+                        final float left = (float) i;
+                        loot = loot.withPool(LootPool.lootPool()
+                                .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(b)
+                                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SlicedMiniMelonBlock.BITES, i)))
+                                .add(LootItem.lootTableItem(((SlicedMiniMelonBlock) b).getSliceItem().getItem()))
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, ((float) maxbites) - left + 1F))));
+                    }
+                    return applyExplosionDecay(b, loot);
+                }
+        );
+        this.add(DelightfulBlocks.SLICED_MELON.get(), (b) -> {
+                    LootTable.Builder loot = LootTable.lootTable();
+                    int maxbites = ((SlicedMelonBlock) DelightfulBlocks.SLICED_MELON.get()).getMaxBites();
+                    for (int i = 1; i <= maxbites; i++) {
+                        final float left = (float) i;
+                        loot = loot.withPool(LootPool.lootPool()
+                                .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(b)
+                                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SlicedMelonBlock.BITES, i)))
+                                .add(LootItem.lootTableItem(((SlicedMelonBlock) b).getSliceItem().getItem()))
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, ((float) maxbites) - left + 1F))));
+                    }
+                    return applyExplosionDecay(b, loot);
+                }
+        );
+        this.add(DelightfulBlocks.SLICED_PUMPKIN.get(), (b) -> {
+                    LootTable.Builder loot = LootTable.lootTable();
+                    int maxbites = ((SlicedGourdBlock) DelightfulBlocks.SLICED_PUMPKIN.get()).getMaxBites();
+                    for (int i = 1; i <= maxbites; i++) {
+                        final float left = (float) i;
+                        loot = loot.withPool(LootPool.lootPool()
+                                .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(b)
+                                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SlicedGourdBlock.BITES, i)))
+                                .add(LootItem.lootTableItem(((SlicedGourdBlock) b).getSliceItem().getItem()))
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, ((float) maxbites) - left + 1F))));
+                    }
+                    return applyExplosionDecay(b, loot);
+                }
+        );
+        this.empty(DelightfulBlocks.SLICED_GLOOMGOURD);
+
+        // Salmonberry Bush drops Pips and optional Berry
+        this.add(DelightfulBlocks.SALMONBERRY_BUSH.get(), (b) -> {
+                    LootTable.Builder loot = this.createSingleItemTable(DelightfulItems.SALMONBERRY_PIPS.get());
+                    for (int i = 3; i <= SalmonberryBushBlock.MAX_AGE; i++) {
+                        loot = loot.withPool(LootPool.lootPool()
+                                .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(b)
+                                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SalmonberryBushBlock.AGE, i)))
+                                .add(LootItem.lootTableItem(DelightfulItems.SALMONBERRIES.get()))
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, (float) i - 1))));
+                    }
+                    return applyExplosionDecay(b, loot);
+                }
+        );
+
+        // Crates
+        this.dropSelf(DelightfulBlocks.SALMONBERRY_SACK.get());
+        this.dropSelf(DelightfulBlocks.ACORN_SACK.get());
+        this.dropSelf(DelightfulBlocks.BLUEBERRY_SACK.get());
+        this.dropSelf(DelightfulBlocks.MENDOSTEEN_CRATE.get());
+        this.dropSelf(DelightfulBlocks.BASTION_FRUIT_CRATE.get());
+        this.dropSelf(DelightfulBlocks.FROSTAYA_CRATE.get());
+        this.dropSelf(DelightfulBlocks.BOMBEGRANATE_CRATE.get());
+        this.dropSelf(DelightfulBlocks.GREEN_APPLE_CRATE.get());
+        this.dropSelf(DelightfulBlocks.YUCCA_FRUIT_CRATE.get());
+        this.dropSelf(DelightfulBlocks.BAOBAB_FRUIT_CRATE.get());
+        this.dropSelf(DelightfulBlocks.GLOW_JAM_COOKIE_TILES.get());
+        this.dropSelf(DelightfulBlocks.GLOW_JAM_COOKIE_TILE_STAIRS.get());
+        this.dropSelf(DelightfulBlocks.GLOW_JAM_COOKIE_TILE_SLAB.get());
+        this.dropSelf(DelightfulBlocks.GLOW_JAM_COOKIE_TILE_WALL.get());
+        this.dropSelf(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILES.get());
+        this.dropSelf(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILE_STAIRS.get());
+        this.dropSelf(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILE_SLAB.get());
+        this.dropSelf(DelightfulBlocks.SOURCE_BERRY_COOKIE_TILE_WALL.get());
+
+        // Ice Cream Blocks
+        this.dropSelf(DelightfulBlocks.SALMONBERRY_ICE_CREAM_BLOCK.get());
+        this.dropSelf(DelightfulBlocks.MATCHA_ICE_CREAM_BLOCK.get());
+        this.dropSelf(DelightfulBlocks.SOURCE_BERRY_ICE_CREAM_BLOCK.get());
+
+        // Milkshake Cauldrons
+        this.dropOther(DelightfulBlocks.SALMONBERRY_MILKSHAKE_CAULDRON.get(), Blocks.CAULDRON);
+        this.dropOther(DelightfulBlocks.MATCHA_MILKSHAKE_CAULDRON.get(), Blocks.CAULDRON);
+        this.dropOther(DelightfulBlocks.SOURCE_BERRY_MILKSHAKE_CAULDRON.get(), Blocks.CAULDRON);
+
+        this.add(DelightfulBlocks.STUFFED_CANTALOUPE_BLOCK.get(), (b) -> {
+            LootTable.Builder loot = LootTable.lootTable().withPool(LootPool.lootPool()
+                    .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(b)
+                            .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(FeastBlock.SERVINGS, 4)))
+                    .add(LootItem.lootTableItem(DelightfulItems.STUFFED_CANTALOUPE_BLOCK.get())));
+            return applyExplosionDecay(b, loot);
+        });
+
+        //this.dropOther(DelightfulBlocks.STURGEON_ROE.get(), DelightfulItems.STURGEON_ROE.get());
+    }
+
+    @Override
+    protected @NotNull Iterable<Block> getKnownBlocks() {
+        return DelightfulBlocks.BLOCKS.getEntries()
+                .stream()
+                .filter(o -> !NO_GEN.contains(o.getId()))
+                .<Block>map(DeferredHolder::value)
+                ::iterator;
+    }
+
+    public void empty(DeferredBlock<? extends Block> block) {
+        this.add(block.get(), LootTable.lootTable());
+    }
+}

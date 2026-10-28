@@ -15,7 +15,7 @@ public class BCLFLCompat {
 				.craftRemainder(Items.GLASS_BOTTLE)
 		);
 	public static final Supplier<Item> CAVIAR = () ->
-		new CaviarItem(DelightfulFluids.CAVIAR.get(),
+		new CaviarItem(DelightfulFluids.CAVIAR::get,
 			(new Item.Properties())
 				.stacksTo(16)
 				.food(Nutrition.CAVIAR)

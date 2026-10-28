@@ -1,0 +1,30 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "resonarium_knife"
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "deeperdarker"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smithing_transform",
+        "addition": {
+          "item": "deeperdarker:resonarium_plate"
+        },
+        "base": {
+          "item": "farmersdelight:iron_knife"
+        },
+        "result": {
+          "id": "delightful:resonarium_knife"
+        },
+        "template": []
+      }
+    }
+  ]
+}

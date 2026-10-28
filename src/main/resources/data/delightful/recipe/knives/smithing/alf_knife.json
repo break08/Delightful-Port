@@ -1,0 +1,43 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "alf_knife"
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mythicbotany"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:ingots/alfsteel"
+          }
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "mythicbotany:alf_upgrade"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smithing_transform",
+        "addition": {
+          "tag": "c:ingots/alfsteel"
+        },
+        "base": {
+          "item": "delightful:terra_knife"
+        },
+        "result": {
+          "id": "delightful:alf_knife"
+        },
+        "template": {
+          "item": "mythicbotany:alf_upgrade"
+        }
+      }
+    }
+  ]
+}

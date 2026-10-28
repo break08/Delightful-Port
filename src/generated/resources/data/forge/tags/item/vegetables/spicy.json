@@ -1,0 +1,28 @@
+{
+  "values": [
+    {
+      "id": "#forge:vegetables/ghost_pepper",
+      "required": false
+    },
+    {
+      "id": "#forge:chilipepper",
+      "required": false
+    },
+    {
+      "id": "#forge:chile_peppers",
+      "required": false
+    },
+    {
+      "id": "#forge:crops/chile_pepper",
+      "required": false
+    },
+    {
+      "id": "#collectorsreap:hot_nether_fruits",
+      "required": false
+    },
+    {
+      "id": "mynethersdelight:bullet_pepper",
+      "required": false
+    }
+  ]
+}

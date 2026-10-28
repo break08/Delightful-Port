@@ -1,0 +1,37 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "gloomgourd_pie_slice"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "undergarden:gloomgourd_pie"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "delightful:gloomgourd_pie_slice"
+          },
+          {
+            "item": "delightful:gloomgourd_pie_slice"
+          },
+          {
+            "item": "delightful:gloomgourd_pie_slice"
+          },
+          {
+            "item": "delightful:gloomgourd_pie_slice"
+          }
+        ],
+        "result": {
+          "id": "undergarden:gloomgourd_pie"
+        }
+      }
+    }
+  ]
+}

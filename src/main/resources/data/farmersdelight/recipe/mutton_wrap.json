@@ -1,0 +1,66 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:tag_empty",
+          "tag": "c:tortilla"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "tag": "c:bread"
+          },
+          {
+            "tag": "c:cooked_mutton"
+          },
+          {
+            "tag": "c:salad_ingredients"
+          },
+          {
+            "tag": "c:crops/onion"
+          }
+        ],
+        "result": {
+          "id": "farmersdelight:mutton_wrap"
+        }
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:tortilla"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "tag": "c:tortilla"
+          },
+          {
+            "tag": "c:cooked_mutton"
+          },
+          {
+            "tag": "c:salad_ingredients"
+          },
+          {
+            "tag": "c:crops/onion"
+          }
+        ],
+        "result": {
+          "id": "farmersdelight:mutton_wrap"
+        }
+      }
+    }
+  ]
+}

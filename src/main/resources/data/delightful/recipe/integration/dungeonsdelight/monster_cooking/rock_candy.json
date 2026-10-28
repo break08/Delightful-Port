@@ -1,0 +1,44 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "dungeonsdelight"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "rock_candy"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:gems/rose_quartz"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "dungeonsdelight:monster_cooking",
+        "cookingtime": 200,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "tag": "c:gems/rose_quartz"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "tag": "c:berries"
+          }
+        ],
+        "recipe_book_tab": "misc",
+        "result": {
+          "id": "delightful:rock_candy"
+        }
+      }
+    }
+  ]
+}

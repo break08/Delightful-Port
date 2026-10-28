@@ -1,0 +1,82 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "blueberry_pie_slice"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "biomeswevegone:blueberry_pie"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "biomeswevegone:blueberries"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "#": {
+            "tag": "c:grain/wheat"
+          },
+          "O": {
+            "item": "farmersdelight:pie_crust"
+          },
+          "a": {
+            "item": "biomeswevegone:blueberries"
+          },
+          "x": {
+            "item": "minecraft:sugar"
+          }
+        },
+        "pattern": [
+          "###",
+          "aaa",
+          "xOx"
+        ],
+        "result": {
+          "id": "biomeswevegone:blueberry_pie"
+        }
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "delightful:enabled",
+            "value": "blueberry_pie_slice"
+          }
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "biomeswevegone:blueberry_pie"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "biomeswevegone:blueberries"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "biomeswevegone:blueberries"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "tag": "c:eggs"
+          }
+        ],
+        "result": {
+          "id": "biomeswevegone:blueberry_pie"
+        }
+      }
+    }
+  ]
+}

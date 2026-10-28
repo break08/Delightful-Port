@@ -1,0 +1,41 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "ars_nouveau:purple_archwood_wood"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:mod_loaded",
+            "modid": "arsdelight"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "ars_nouveau:purple_archwood_wood"
+          }
+        ],
+        "result": [
+          {
+            "item": "ars_nouveau:stripped_purple_archwood_wood"
+          },
+          {
+            "item": "farmersdelight:tree_bark"
+          }
+        ],
+        "sound": "minecraft:item.axe.strip",
+        "tool": {
+          "type": "farmersdelight:tool_action",
+          "action": "axe_strip"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:tag_empty",
+          "tag": "c:burger_bun"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "tag": "c:bread"
+          },
+          {
+            "item": "farmersdelight:beef_patty"
+          },
+          {
+            "tag": "c:salad_ingredients"
+          },
+          {
+            "tag": "c:crops/tomato"
+          },
+          {
+            "tag": "c:crops/onion"
+          }
+        ],
+        "result": {
+          "id": "farmersdelight:hamburger"
+        }
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:burger_bun"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "tag": "c:burger_bun"
+          },
+          {
+            "item": "farmersdelight:beef_patty"
+          },
+          {
+            "tag": "c:salad_ingredients"
+          },
+          {
+            "tag": "c:crops/tomato"
+          },
+          {
+            "tag": "c:crops/onion"
+          }
+        ],
+        "result": {
+          "id": "farmersdelight:hamburger"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "corn_delight:taco"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "tag": "c:tortilla"
+          },
+          {
+            "tag": "c:salad_ingredients"
+          },
+          {
+            "tag": "c:crops/onion"
+          },
+          {
+            "tag": "c:foods/meat/cooked"
+          }
+        ],
+        "result": {
+          "id": "corn_delight:taco"
+        }
+      }
+    }
+  ]
+}

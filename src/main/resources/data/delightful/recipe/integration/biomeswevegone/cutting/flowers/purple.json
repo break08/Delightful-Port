@@ -1,0 +1,39 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "biomeswevegone:dye/makes_purple"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "tag": "biomeswevegone:dye/makes_purple"
+          }
+        ],
+        "result": [
+          {
+            "count": 2,
+            "item": "minecraft:purple_dye"
+          }
+        ],
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "knife_dig"
+          },
+          {
+            "tag": "c:tools/knives"
+          }
+        ]
+      }
+    }
+  ]
+}

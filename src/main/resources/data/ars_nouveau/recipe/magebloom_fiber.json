@@ -1,0 +1,30 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "ars_nouveau:magebloom"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "ars_nouveau:magebloom_fiber"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "ars_nouveau:magebloom"
+          }
+        ],
+        "result": {
+          "count": 2,
+          "id": "ars_nouveau:magebloom_fiber"
+        }
+      }
+    }
+  ]
+}

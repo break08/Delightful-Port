@@ -1,0 +1,40 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "rose_gold_knife"
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "additionaladditions"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "additionaladditions:rose_gold_alloy"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "additionaladditions:rose_gold_upgrade"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smithing_transform",
+        "addition": {
+          "item": "additionaladditions:rose_gold_alloy"
+        },
+        "base": {
+          "item": "farmersdelight:iron_knife"
+        },
+        "result": {
+          "id": "delightful:rose_gold_knife"
+        },
+        "template": {
+          "item": "additionaladditions:rose_gold_upgrade"
+        }
+      }
+    }
+  ]
+}

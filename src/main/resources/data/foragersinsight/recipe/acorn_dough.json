@@ -1,0 +1,53 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "foragersinsight:acorn_dough"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "foragersinsight:acorn_meal"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "foragersinsight:acorn_meal"
+          },
+          {
+            "item": "foragersinsight:acorn_meal"
+          },
+          {
+            "item": "foragersinsight:acorn_meal"
+          },
+          {
+            "item": "foragersinsight:acorn_meal"
+          },
+          [
+            {
+              "tag": "c:eggs"
+            },
+            {
+              "tag": "c:water"
+            },
+            {
+              "count": 1,
+              "type": "neoforge:nbt",
+              "item": "minecraft:potion",
+              "nbt": "{Potion:\"minecraft:water\"}"
+            }
+          ]
+        ],
+        "result": {
+          "count": 3,
+          "id": "foragersinsight:acorn_dough"
+        }
+      }
+    }
+  ]
+}

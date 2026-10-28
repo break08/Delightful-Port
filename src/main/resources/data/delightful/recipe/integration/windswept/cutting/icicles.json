@@ -1,0 +1,40 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "windswept:icicles"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "neapolitan:ice_cubes"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "windswept:icicles"
+          }
+        ],
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "pickaxe_dig"
+          },
+          {
+            "tag": "minecraft:pickaxes"
+          }
+        ],
+        "result": [
+          {
+            "item": "neapolitan:ice_cubes",
+            "count": 1
+          }
+        ]
+      }
+    }
+  ]
+}

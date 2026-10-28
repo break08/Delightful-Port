@@ -1,0 +1,47 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "biomeswevegone:flower_patch"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "biomeswevegone:flower_patch"
+          }
+        ],
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "knife_dig"
+          },
+          {
+            "tag": "c:tools/knives"
+          }
+        ],
+        "result": [
+          {
+            "count": 1,
+            "chance": 0.5,
+            "item": "minecraft:red_dye"
+          },
+          {
+            "count": 1,
+            "chance": 0.5,
+            "item": "minecraft:purple_dye"
+          },
+          {
+            "count": 1,
+            "chance": 0.25,
+            "item": "minecraft:orange_dye"
+          }
+        ]
+      }
+    }
+  ]
+}

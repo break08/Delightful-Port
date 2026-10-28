@@ -16,7 +16,7 @@
       "predicate": {
         "equipment": {
           "mainhand": {
-            "tag": "forge:tools/knives"
+            "tag": "c:tools/knives"
           }
         }
       }

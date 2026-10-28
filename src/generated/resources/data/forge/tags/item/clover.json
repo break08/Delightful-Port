@@ -1,0 +1,20 @@
+{
+  "values": [
+    {
+      "id": "biomesoplenty:clover",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:clover_patch",
+      "required": false
+    },
+    {
+      "id": "twilightforest:clover_patch",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:clover",
+      "required": false
+    }
+  ]
+}

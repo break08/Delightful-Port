@@ -1,0 +1,64 @@
+{
+  "values": [
+    {
+      "id": "#forge:raw_meat",
+      "required": false
+    },
+    "#forge:raw_rabbit",
+    "#forge:raw_venison",
+    "#forge:raw_crab",
+    "#forge:raw_goat",
+    {
+      "id": "#forge:raw_duck",
+      "required": false
+    },
+    {
+      "id": "#forge:raw_turkey",
+      "required": false
+    },
+    {
+      "id": "naturalist:bushmeat",
+      "required": false
+    },
+    {
+      "id": "arsdelight:wilden_meat",
+      "required": false
+    },
+    {
+      "id": "arsdelight:wilden_meat_slice",
+      "required": false
+    },
+    {
+      "id": "arsdelight:chimera_meat",
+      "required": false
+    },
+    {
+      "id": "arsdelight:chimera_meat_slice",
+      "required": false
+    },
+    {
+      "id": "casualness_delight:raw_donkey_meat",
+      "required": false
+    },
+    {
+      "id": "undergarden:raw_dweller_meat",
+      "required": false
+    },
+    {
+      "id": "undergarden:raw_gloomper_leg",
+      "required": false
+    },
+    {
+      "id": "phantasm:behemoth_meat",
+      "required": false
+    },
+    {
+      "id": "functionality:frog_leg",
+      "required": false
+    },
+    {
+      "id": "frog_legs:frog_legs",
+      "required": false
+    }
+  ]
+}

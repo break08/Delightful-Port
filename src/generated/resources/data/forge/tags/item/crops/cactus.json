@@ -1,0 +1,9 @@
+{
+  "values": [
+    "delightful:cactus_flesh",
+    {
+      "id": "#forge:crops/cactus_paddle",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:tag_empty",
+          "tag": "c:tortilla"
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "vintagedelight"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "tag": "c:bread"
+          },
+          {
+            "tag": "delightful:patties"
+          },
+          {
+            "tag": "c:salad_ingredients"
+          },
+          {
+            "tag": "c:crops/tomato"
+          },
+          {
+            "tag": "c:cheese"
+          },
+          {
+            "tag": "c:vegetables/ghost_pepper"
+          }
+        ],
+        "result": {
+          "id": "vintagedelight:stuffed_burrito"
+        }
+      }
+    }
+  ]
+}

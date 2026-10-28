@@ -1,0 +1,74 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "ae2:inscriber"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:ender_pearls"
+          }
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "thermal:ender_pearl_dust"
+        }
+      ],
+      "recipe": {
+        "type": "ae2:inscriber",
+        "ingredients": {
+          "middle": {
+            "tag": "c:ender_pearls"
+          }
+        },
+        "mode": "inscribe",
+        "result": {
+          "id": "thermal:ender_pearl_dust"
+        }
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "ae2:inscriber"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:ender_pearls"
+          }
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:item_exists",
+            "item": "thermal:ender_pearl_dust"
+          }
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "ae2:ender_dust"
+        }
+      ],
+      "recipe": {
+        "type": "ae2:inscriber",
+        "ingredients": {
+          "middle": {
+            "tag": "c:ender_pearls"
+          }
+        },
+        "mode": "inscribe",
+        "result": {
+          "id": "ae2:ender_dust"
+        }
+      }
+    }
+  ]
+}

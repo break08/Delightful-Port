@@ -1,0 +1,39 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "brewinandchewin:quiche"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "brewinandchewin:quiche_slice"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "brewinandchewin:quiche_slice"
+          },
+          {
+            "item": "brewinandchewin:quiche_slice"
+          },
+          {
+            "item": "brewinandchewin:quiche_slice"
+          },
+          {
+            "item": "brewinandchewin:quiche_slice"
+          }
+        ],
+        "result": {
+          "id": "brewinandchewin:quiche"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

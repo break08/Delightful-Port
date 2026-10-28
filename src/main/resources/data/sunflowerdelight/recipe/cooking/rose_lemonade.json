@@ -1,0 +1,193 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "sunflowerdelight:rose_lemonade"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "sunflowerdelight:rosebud"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:fruits/lemon"
+          }
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "farmersrespite:rose_hips"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:glass_bottle"
+        },
+        "cookingtime": 400,
+        "experience": 2.0,
+        "ingredients": [
+          {
+            "item": "farmersrespite:rose_hips"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "tag": "c:fruits/lemon"
+          },
+          {
+            "item": "minecraft:nether_wart"
+          }
+        ],
+        "recipe_book_tab": "drinks",
+        "result": {
+          "id": "sunflowerdelight:rose_lemonade"
+        }
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "sunflowerdelight:rose_lemonade"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "sunflowerdelight:rosebud"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:fruits/lemon"
+          }
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:item_exists",
+            "item": "farmersrespite:rose_hips"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:glass_bottle"
+        },
+        "cookingtime": 400,
+        "experience": 2.0,
+        "ingredients": [
+          {
+            "item": "sunflowerdelight:rosebud"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "tag": "c:fruits/lemon"
+          },
+          {
+            "item": "minecraft:nether_wart"
+          }
+        ],
+        "recipe_book_tab": "drinks",
+        "result": {
+          "id": "sunflowerdelight:rose_lemonade"
+        }
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "sunflowerdelight:rose_lemonade"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "sunflowerdelight:rosebud"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:fruits/citrus"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:glass_bottle"
+        },
+        "cookingtime": 400,
+        "experience": 2.0,
+        "ingredients": [
+          {
+            "item": "sunflowerdelight:rosebud"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "tag": "c:fruits/citrus"
+          },
+          {
+            "item": "minecraft:nether_wart"
+          }
+        ],
+        "recipe_book_tab": "drinks",
+        "result": {
+          "id": "sunflowerdelight:rose_lemonade"
+        }
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "sunflowerdelight:rose_lemonade"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "sunflowerdelight:rosebud"
+        },
+        {
+          "type": "neoforge:tag_empty",
+          "tag": "c:fruits/lemon"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:glass_bottle"
+        },
+        "cookingtime": 400,
+        "experience": 2.0,
+        "ingredients": [
+          {
+            "item": "sunflowerdelight:rosebud"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "tag": "c:fruits/melon"
+          },
+          {
+            "item": "minecraft:nether_wart"
+          }
+        ],
+        "recipe_book_tab": "drinks",
+        "result": {
+          "id": "sunflowerdelight:rose_lemonade"
+        }
+      }
+    }
+  ]
+}

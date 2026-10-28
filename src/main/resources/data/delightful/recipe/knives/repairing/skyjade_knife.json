@@ -1,0 +1,25 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "skyjade_knife"
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "deep_aether"
+        }
+      ],
+      "recipe": {
+        "type": "aether:repairing",
+        "group": "altar_sword_repair",
+        "ingredient": {
+          "item": "delightful:skyjade_knife"
+        },
+        "repairTime": 750
+      }
+    }
+  ]
+}

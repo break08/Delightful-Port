@@ -1,0 +1,39 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "brewinandchewin:pizza"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "brewinandchewin:pizza_slice"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "brewinandchewin:pizza_slice"
+          },
+          {
+            "item": "brewinandchewin:pizza_slice"
+          },
+          {
+            "item": "brewinandchewin:pizza_slice"
+          },
+          {
+            "item": "brewinandchewin:pizza_slice"
+          }
+        ],
+        "result": {
+          "id": "brewinandchewin:pizza"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

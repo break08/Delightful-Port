@@ -1,0 +1,30 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:fruits/mangosteen"
+          }
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "ars_nouveau:mendosteen_pod"
+        }
+      ],
+      "recipe": {
+        "type": "ars_nouveau:imbuement",
+        "count": 1,
+        "input": {
+          "tag": "c:fruits/mangosteen"
+        },
+        "output": "ars_nouveau:mendosteen_pod",
+        "pedestalItems": [],
+        "source": 500
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "item": "neapolitan:mint_leaves",
+          "type": "neoforge:item_exists"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "neapolitan:mint_leaves"
+          }
+        ],
+        "result": [
+          {
+            "count": 1,
+            "item": "minecraft:lime_dye"
+          }
+        ],
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "knife_dig"
+          },
+          {
+            "tag": "c:tools/knives"
+          }
+        ]
+      }
+    }
+  ]
+}

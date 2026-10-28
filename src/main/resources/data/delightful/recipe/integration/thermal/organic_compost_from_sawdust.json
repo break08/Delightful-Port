@@ -1,0 +1,52 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:dusts/wood"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "minecraft:dirt"
+          },
+          {
+            "item": "farmersdelight:straw"
+          },
+          {
+            "item": "farmersdelight:straw"
+          },
+          {
+            "item": "minecraft:bone_meal"
+          },
+          {
+            "item": "minecraft:bone_meal"
+          },
+          {
+            "tag": "c:dusts/wood"
+          },
+          {
+            "tag": "c:dusts/wood"
+          },
+          {
+            "tag": "c:dusts/wood"
+          },
+          {
+            "tag": "c:dusts/wood"
+          }
+        ],
+        "result": {
+          "count": 1,
+          "id": "farmersdelight:organic_compost"
+        }
+      }
+    }
+  ]
+}

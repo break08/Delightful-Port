@@ -1,0 +1,35 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "thermal:machine_press"
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "thermal_expansion"
+        }
+      ],
+      "recipe": {
+        "type": "thermal:press",
+        "ingredients": [
+          {
+            "item": "minecraft:melon_slice",
+            "count": 4
+          },
+          {
+            "item": "thermal:press_packing_2x2_die"
+          }
+        ],
+        "result": [
+          {
+            "item": "delightful:mini_melon"
+          }
+        ],
+        "energy": 400
+      }
+    }
+  ]
+}

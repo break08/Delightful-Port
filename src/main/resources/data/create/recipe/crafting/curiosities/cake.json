@@ -1,0 +1,31 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "modid": "create",
+          "type": "neoforge:mod_loaded"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "this_item:does_not_exist"
+        },
+        {
+          "type": "neoforge:false"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "this_item:does_not_exist"
+          }
+        ],
+        "result": {
+          "id": "this_item:does_not_exist"
+        }
+      }
+    }
+  ]
+}

@@ -60,7 +60,9 @@ neoForge {
             // gameDirectory = project.file('run-data')
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+            programArguments.addAll '--mod', 'delightful', '--all',
+                    '--output', file('src/generated/resources/').getAbsolutePath(),
+                    '--existing', file('src/main/resources/').getAbsolutePath()
         }
 
         // applies to all the run configs above
@@ -94,25 +96,19 @@ dependencies {
     implementation "maven.modrinth:R2OftAxM:XTVZDOol"
 
     // Nepolitan
-    implementation "maven.modrinth:InYMuiQt:RQ5qgaUC"
+    compileOnly "maven.modrinth:InYMuiQt:RQ5qgaUC"
 
     // Blueprint
-    implementation "maven.modrinth:VsM5EDoI:FHOjk8Ez"
+    compileOnly "maven.modrinth:VsM5EDoI:FHOjk8Ez"
 
     // Brew'in and chewin
     implementation "maven.modrinth:hIu9KJTT:MbcR48Ou"
-
-    // Youkai's Homecoming
-    implementation "maven.modrinth:uJT3ahxz:vu5Xy9Dk"
 
     // Oh the biomes we've gone
     compileOnly "maven.modrinth:NTi7d3Xc:gAxM0bHs"
 
     // Unusual End
-    implementation "maven.modrinth:WKsNOKFh:oV8w25It"
-
-    // atmospheric
-    implementation "maven.modrinth:U9sJOFmJ:XIvPRE4O"
+    compileOnly "maven.modrinth:WKsNOKFh:oV8w25It"
 
     // undergarden
     implementation "maven.modrinth:Ejfl5qDL:sY4KZ9q3"
@@ -164,4 +160,8 @@ idea {
         downloadSources = true
         downloadJavadoc = true
     }
+}
+
+tasks.named('createMinecraftArtifacts') {
+    dependsOn 'generateModMetadata'
 }

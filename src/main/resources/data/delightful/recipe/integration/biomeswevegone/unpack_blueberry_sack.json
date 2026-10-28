@@ -1,0 +1,29 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "biomeswevegone:blueberries"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "blueberry_sack"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "delightful:blueberry_sack"
+          }
+        ],
+        "result": {
+          "count": 9,
+          "id": "biomeswevegone:blueberries"
+        }
+      }
+    }
+  ]
+}

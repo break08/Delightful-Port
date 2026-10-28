@@ -1,0 +1,21 @@
+{
+  "values": [
+    "#forge:crab_claw/cooked",
+    {
+      "id": "crabbersdelight:crab_claw",
+      "required": false
+    },
+    {
+      "id": "ecologics:crab_claw",
+      "required": false
+    },
+    {
+      "id": "finsandtails:red_bull_crab_claw",
+      "required": false
+    },
+    {
+      "id": "finsandtails:white_bull_crab_claw",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "ars_nouveau:bombegranate_pod"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "bombegranate_crate"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:mod_loaded",
+            "modid": "arsdelight"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "ars_nouveau:bombegranate_pod"
+          },
+          {
+            "item": "ars_nouveau:bombegranate_pod"
+          },
+          {
+            "item": "ars_nouveau:bombegranate_pod"
+          },
+          {
+            "item": "ars_nouveau:bombegranate_pod"
+          },
+          {
+            "item": "ars_nouveau:bombegranate_pod"
+          },
+          {
+            "item": "ars_nouveau:bombegranate_pod"
+          },
+          {
+            "item": "ars_nouveau:bombegranate_pod"
+          },
+          {
+            "item": "ars_nouveau:bombegranate_pod"
+          },
+          {
+            "item": "ars_nouveau:bombegranate_pod"
+          }
+        ],
+        "result": {
+          "id": "delightful:bombegranate_crate"
+        }
+      }
+    }
+  ]
+}

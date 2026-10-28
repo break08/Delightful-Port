@@ -1,0 +1,44 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "cactus_flesh"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "biomemakeover:saguaro_cactus"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "biomemakeover:saguaro_cactus"
+          }
+        ],
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "knife_dig"
+          },
+          {
+            "tag": "c:tools/knives"
+          }
+        ],
+        "result": [
+          {
+            "count": 2,
+            "item": "delightful:cactus_flesh"
+          },
+          {
+            "chance": 0.5,
+            "item": "minecraft:green_dye"
+          }
+        ]
+      }
+    }
+  ]
+}

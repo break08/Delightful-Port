@@ -1,0 +1,49 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "hearthandharvest:chicken_pot_pie"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "key": {
+          "C": {
+            "item": "farmersdelight:cooked_chicken_cuts"
+          },
+          "M": {
+            "tag": "c:milk"
+          },
+          "O": {
+            "tag": "c:crops/onion"
+          },
+          "P": {
+            "item": "farmersdelight:pie_crust"
+          },
+          "S": {
+            "tag": "c:salt"
+          },
+          "T": {
+            "tag": "c:crops/potato"
+          },
+          "V": {
+            "tag": "c:crops/carrot"
+          }
+        },
+        "pattern": [
+          " C ",
+          "TVO",
+          "MPS"
+        ],
+        "result": {
+          "id": "hearthandharvest:chicken_pot_pie"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "windswept_delights:wild_berry_popsicle"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:ice_cubes"
+          }
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:fruits/wild_berries"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "key": {
+          "c": {
+            "tag": "c:fruits/wild_berries"
+          },
+          "i": {
+            "tag": "c:ice_cubes"
+          },
+          "s": {
+            "tag": "c:rods/wooden"
+          }
+        },
+        "pattern": [
+          " cc",
+          "icc",
+          "si "
+        ],
+        "result": {
+          "id": "windswept_delights:wild_berry_popsicle"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

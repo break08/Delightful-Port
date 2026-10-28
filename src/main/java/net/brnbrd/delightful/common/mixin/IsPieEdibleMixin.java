@@ -4,16 +4,21 @@ import net.brnbrd.delightful.common.DelightfulConfig;
 import net.brnbrd.delightful.common.event.PieEvents;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import vectorwing.farmersdelight.common.Configuration;
 import vectorwing.farmersdelight.common.tag.ModTags;
 
 @Mixin(Item.class)
@@ -32,4 +37,20 @@ public abstract class IsPieEdibleMixin {
             cir.setReturnValue(InteractionResultHolder.pass(p_41433_.getItemInHand(p_41434_)));
         }
     }
+
+    @Inject(method = "useOn", at = @At("TAIL"), cancellable = true)
+    private void usePie(UseOnContext context, CallbackInfoReturnable<InteractionResult> cir) {
+        final ItemStack stack = context.getItemInHand();
+        if (PieEvents.isCompatPie(stack)) {
+            final @Nullable BlockItem pieBlock = PieEvents.getPieBlockItem(stack);
+            final Player player = context.getPlayer();
+            if (pieBlock != null && player != null && (
+                    !Configuration.ENABLE_PUMPKIN_PIE_SNEAK_TO_PLACE.get() || player.isSecondaryUseActive()
+            )) {
+                cir.setReturnValue(pieBlock.useOn(context));
+            }
+        }
+    }
+
+
 }

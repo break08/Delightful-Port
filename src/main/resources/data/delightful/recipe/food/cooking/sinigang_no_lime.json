@@ -1,0 +1,92 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "sinigang"
+        },
+        {
+          "type": "neoforge:tag_empty",
+          "tag": "c:fruits/lime"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:crops/ginger"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:bowl"
+        },
+        "cookingtime": 200,
+        "experience": 1.0,
+        "ingredients": [
+          {
+            "tag": "c:raw_pork"
+          },
+          {
+            "item": "farmersdelight:tomato_sauce"
+          },
+          {
+            "tag": "c:fruits"
+          },
+          {
+            "tag": "c:crops/ginger"
+          }
+        ],
+        "recipe_book_tab": "meals",
+        "result": {
+          "id": "delightful:sinigang"
+        }
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "sinigang"
+        },
+        {
+          "type": "neoforge:tag_empty",
+          "tag": "c:fruits/lime"
+        },
+        {
+          "type": "neoforge:tag_empty",
+          "tag": "c:crops/ginger"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:bowl"
+        },
+        "cookingtime": 200,
+        "experience": 1.0,
+        "ingredients": [
+          {
+            "tag": "c:raw_pork"
+          },
+          {
+            "item": "farmersdelight:tomato_sauce"
+          },
+          {
+            "tag": "c:fruits"
+          },
+          {
+            "tag": "c:crops/onion"
+          }
+        ],
+        "recipe_book_tab": "meals",
+        "result": {
+          "id": "delightful:sinigang"
+        }
+      }
+    }
+  ]
+}

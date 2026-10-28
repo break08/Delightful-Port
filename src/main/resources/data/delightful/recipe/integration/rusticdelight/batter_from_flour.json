@@ -1,0 +1,47 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "rusticdelight:batter"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:flour"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "tag": "c:milk"
+          },
+          {
+            "tag": "c:eggs"
+          },
+          {
+            "tag": "c:flour"
+          },
+          {
+            "tag": "c:flour"
+          },
+          {
+            "item": "minecraft:bowl"
+          },
+          {
+            "item": "minecraft:bowl"
+          }
+        ],
+        "result": {
+          "count": 2,
+          "id": "rusticdelight:batter"
+        }
+      }
+    }
+  ]
+}

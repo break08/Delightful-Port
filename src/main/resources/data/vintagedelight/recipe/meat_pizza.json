@@ -1,0 +1,39 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "vintagedelight:meat_pizza"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "key": {
+          "C": {
+            "tag": "c:dough"
+          },
+          "E": {
+            "item": "farmersdelight:tomato_sauce"
+          },
+          "A": {
+            "tag": "c:cheese"
+          },
+          "Q": {
+            "tag": "c:foods/meat/cooked"
+          }
+        },
+        "pattern": [
+          " Q ",
+          "AAA",
+          "CEC"
+        ],
+        "result": {
+          "id": "vintagedelight:meat_pizza"
+        }
+      }
+    }
+  ]
+}

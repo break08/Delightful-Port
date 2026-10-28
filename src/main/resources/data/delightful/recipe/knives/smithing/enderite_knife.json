@@ -1,0 +1,43 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "enderite_knife"
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "lolenderite"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:ingots/enderite"
+          }
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "lolenderite:enderite_upgrade_smithing_template"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smithing_transform",
+        "addition": {
+          "tag": "c:ingots/enderite"
+        },
+        "base": {
+          "item": "farmersdelight:netherite_knife"
+        },
+        "result": {
+          "id": "delightful:enderite_knife"
+        },
+        "template": {
+          "item": "lolenderite:enderite_upgrade_smithing_template"
+        }
+      }
+    }
+  ]
+}

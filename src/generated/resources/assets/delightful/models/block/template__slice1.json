@@ -1,0 +1,10 @@
+{
+  "parent": "farmersdelight:block/template_pie_slice1",
+  "textures": {
+    "bottom": "delightful:block/_bottom",
+    "inner": "delightful:block/_inner",
+    "particle": "delightful:block/_top",
+    "side": "delightful:block/_side",
+    "top": "delightful:block/_top"
+  }
+}

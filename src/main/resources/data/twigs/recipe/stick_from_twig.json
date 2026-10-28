@@ -1,0 +1,25 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "twigs:twig"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "twigs:twig"
+          }
+        ],
+        "result": {
+          "id": "minecraft:stick"
+        }
+      }
+    }
+  ]
+}

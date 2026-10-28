@@ -1,0 +1,413 @@
+{
+  "values": [
+    "minecraft:cod",
+    "minecraft:salmon",
+    "minecraft:tropical_fish",
+    "minecraft:pufferfish",
+    "minecraft:turtle",
+    "minecraft:guardian",
+    "minecraft:elder_guardian",
+    "minecraft:squid",
+    "minecraft:glow_squid",
+    "minecraft:dolphin",
+    "minecraft:ocelot",
+    "minecraft:cat",
+    "minecraft:horse",
+    "minecraft:donkey",
+    "minecraft:mule",
+    "minecraft:llama",
+    "minecraft:trader_llama",
+    "minecraft:pig",
+    "minecraft:piglin",
+    "minecraft:piglin_brute",
+    "minecraft:hoglin",
+    "minecraft:cow",
+    "minecraft:mooshroom",
+    "minecraft:sheep",
+    "minecraft:goat",
+    "minecraft:panda",
+    "minecraft:polar_bear",
+    "minecraft:wolf",
+    "minecraft:fox",
+    "minecraft:camel",
+    "minecraft:rabbit",
+    "minecraft:frog",
+    "minecraft:sniffer",
+    {
+      "id": "quark:crab",
+      "required": false
+    },
+    {
+      "id": "quark:foxhound",
+      "required": false
+    },
+    {
+      "id": "quark:shiba",
+      "required": false
+    },
+    {
+      "id": "neapolitan:chimpanzee",
+      "required": false
+    },
+    {
+      "id": "buzzier_bees:moobloom",
+      "required": false
+    },
+    {
+      "id": "buzzier_bees:grizzly_bear",
+      "required": false
+    },
+    {
+      "id": "environmental:deer",
+      "required": false
+    },
+    {
+      "id": "environmental:duck",
+      "required": false
+    },
+    {
+      "id": "environmental:koi",
+      "required": false
+    },
+    {
+      "id": "environmental:reindeer",
+      "required": false
+    },
+    {
+      "id": "environmental:slabfish",
+      "required": false
+    },
+    {
+      "id": "environmental:tapir",
+      "required": false
+    },
+    {
+      "id": "environmental:yak",
+      "required": false
+    },
+    {
+      "id": "environmental:zebra",
+      "required": false
+    },
+    {
+      "id": "autumnity:turkey",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:thrasher",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:great_thrasher",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:goose",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:lionfish",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:perch",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:pike",
+      "required": false
+    },
+    {
+      "id": "collectorsreap:chieftain_crab",
+      "required": false
+    },
+    {
+      "id": "collectorsreap:platinum_bass",
+      "required": false
+    },
+    {
+      "id": "naturalist:alligator",
+      "required": false
+    },
+    {
+      "id": "naturalist:bass",
+      "required": false
+    },
+    {
+      "id": "naturalist:bear",
+      "required": false
+    },
+    {
+      "id": "naturalist:boar",
+      "required": false
+    },
+    {
+      "id": "naturalist:catfish",
+      "required": false
+    },
+    {
+      "id": "naturalist:deer",
+      "required": false
+    },
+    {
+      "id": "naturalist:duck",
+      "required": false
+    },
+    {
+      "id": "naturalist:elephant",
+      "required": false
+    },
+    {
+      "id": "naturalist:giraffe",
+      "required": false
+    },
+    {
+      "id": "naturalist:hippo",
+      "required": false
+    },
+    {
+      "id": "naturalist:lion",
+      "required": false
+    },
+    {
+      "id": "naturalist:rhino",
+      "required": false
+    },
+    {
+      "id": "naturalist:snake",
+      "required": false
+    },
+    {
+      "id": "naturalist:rattlesnake",
+      "required": false
+    },
+    {
+      "id": "naturalist:coral_snake",
+      "required": false
+    },
+    {
+      "id": "naturalist:tortoise",
+      "required": false
+    },
+    {
+      "id": "naturalist:zebra",
+      "required": false
+    },
+    {
+      "id": "ecologics:penguin",
+      "required": false
+    },
+    {
+      "id": "ecologics:squirrel",
+      "required": false
+    },
+    {
+      "id": "ecologics:coconut_crab",
+      "required": false
+    },
+    {
+      "id": "ars_nouveau:starbuncle",
+      "required": false
+    },
+    {
+      "id": "frozenup:chilloo",
+      "required": false
+    },
+    {
+      "id": "frozenup:penguin",
+      "required": false
+    },
+    {
+      "id": "frozenup:reindeer",
+      "required": false
+    },
+    {
+      "id": "sullysmod:lanternfish",
+      "required": false
+    },
+    {
+      "id": "sullysmod:piranha",
+      "required": false
+    },
+    {
+      "id": "sullysmod:tortoise",
+      "required": false
+    },
+    {
+      "id": "habitat:pooka",
+      "required": false
+    },
+    {
+      "id": "goated:geep",
+      "required": false
+    },
+    {
+      "id": "biomemakeover:glowfish",
+      "required": false
+    },
+    {
+      "id": "biomemakeover:helmit_crab",
+      "required": false
+    },
+    {
+      "id": "biomemakeover:toad",
+      "required": false
+    },
+    {
+      "id": "goodall:deer",
+      "required": false
+    },
+    {
+      "id": "goodall:dumbo_octopus",
+      "required": false
+    },
+    {
+      "id": "goodall:fennec_fox",
+      "required": false
+    },
+    {
+      "id": "goodall:grizzly_bear",
+      "required": false
+    },
+    {
+      "id": "goodall:manatee",
+      "required": false
+    },
+    {
+      "id": "goodall:red_deer",
+      "required": false
+    },
+    {
+      "id": "goodall:seal",
+      "required": false
+    },
+    {
+      "id": "goodall:white_tailed_deer",
+      "required": false
+    },
+    {
+      "id": "goodall:rhino",
+      "required": false
+    },
+    {
+      "id": "goodall:river_turtle",
+      "required": false
+    },
+    {
+      "id": "goodall:tortoise",
+      "required": false
+    },
+    {
+      "id": "crittersandcompanions:dumbo_octopus",
+      "required": false
+    },
+    {
+      "id": "crittersandcompanions:ferret",
+      "required": false
+    },
+    {
+      "id": "crittersandcompanions:koi_fish",
+      "required": false
+    },
+    {
+      "id": "crittersandcompanions:otter",
+      "required": false
+    },
+    {
+      "id": "crittersandcompanions:red_panda",
+      "required": false
+    },
+    {
+      "id": "hedgehog:hedgehog",
+      "required": false
+    },
+    {
+      "id": "fishofthieves:ancientscale",
+      "required": false
+    },
+    {
+      "id": "fishofthieves:battlegill",
+      "required": false
+    },
+    {
+      "id": "fishofthieves:devilfish",
+      "required": false
+    },
+    {
+      "id": "fishofthieves:islehopper",
+      "required": false
+    },
+    {
+      "id": "fishofthieves:plentifin",
+      "required": false
+    },
+    {
+      "id": "fishofthieves:pondie",
+      "required": false
+    },
+    {
+      "id": "fishofthieves:splashtail",
+      "required": false
+    },
+    {
+      "id": "fishofthieves:stormfish",
+      "required": false
+    },
+    {
+      "id": "fishofthieves:wildsplash",
+      "required": false
+    },
+    {
+      "id": "fishofthieves:wrecker",
+      "required": false
+    },
+    {
+      "id": "friendsandfoes:moobloom",
+      "required": false
+    },
+    {
+      "id": "duckling:duck",
+      "required": false
+    },
+    {
+      "id": "duckling:quackling",
+      "required": false
+    },
+    {
+      "id": "aqcaracal:caracal",
+      "required": false
+    },
+    {
+      "id": "cold_sweat:chameleon",
+      "required": false
+    },
+    {
+      "id": "babyfat:ranchu",
+      "required": false
+    },
+    {
+      "id": "bettas:betta_fish",
+      "required": false
+    },
+    {
+      "id": "farmlife:domestic_tribull",
+      "required": false
+    },
+    {
+      "id": "rats:rat",
+      "required": false
+    },
+    {
+      "id": "snowpig:snow_pig",
+      "required": false
+    },
+    {
+      "id": "sprout:elephant",
+      "required": false
+    },
+    {
+      "id": "wandering_trapper:trapper_dog",
+      "required": false
+    }
+  ]
+}

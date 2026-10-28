@@ -1,0 +1,94 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "ars_nouveau:source_berry_pie"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "ars_nouveau:magebloom"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "source_berry_pie_slice"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "#": {
+            "tag": "c:grain/wheat"
+          },
+          "O": {
+            "item": "farmersdelight:pie_crust"
+          },
+          "a": {
+            "tag": "c:fruits/sourceberry"
+          },
+          "m": {
+            "item": "ars_nouveau:magebloom"
+          },
+          "x": {
+            "item": "minecraft:sugar"
+          }
+        },
+        "pattern": [
+          "#m#",
+          "aaa",
+          "xOx"
+        ],
+        "result": {
+          "id": "ars_nouveau:source_berry_pie"
+        }
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "ars_nouveau:source_berry_pie"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "ars_nouveau:magebloom"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "delightful:enabled",
+            "value": "source_berry_pie_slice"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "tag": "c:eggs"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "item": "ars_nouveau:magebloom"
+          },
+          {
+            "item": "ars_nouveau:source_berry"
+          },
+          {
+            "item": "ars_nouveau:source_berry"
+          },
+          {
+            "item": "ars_nouveau:source_berry"
+          }
+        ],
+        "result": {
+          "id": "ars_nouveau:source_berry_pie"
+        }
+      }
+    }
+  ]
+}

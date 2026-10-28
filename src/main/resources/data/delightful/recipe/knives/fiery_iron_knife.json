@@ -1,0 +1,58 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "fiery_knife"
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "twilightforest"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "twilightforest:fiery_vial"
+          }
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:mod_loaded",
+            "modid": "twilightdelight"
+          }
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:mod_loaded",
+            "modid": "dungeonsdelight"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "farmersdelight:iron_knife"
+          },
+          {
+            "tag": "twilightforest:fiery_vial"
+          },
+          {
+            "tag": "twilightforest:fiery_vial"
+          },
+          {
+            "tag": "c:rods/blaze"
+          }
+        ],
+        "result": {
+          "id": "delightful:fiery_knife"
+        }
+      }
+    }
+  ]
+}

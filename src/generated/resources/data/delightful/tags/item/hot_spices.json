@@ -1,0 +1,10 @@
+{
+  "values": [
+    "minecraft:blaze_powder",
+    "#forge:vegetables/spicy",
+    {
+      "id": "#mynethersdelight:hot_spice",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "autumnity:pancake"
+        },
+        {
+          "type": "neoforge:tag_empty",
+          "tag": "c:batter"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "cookingtime": 400,
+        "experience": 2.0,
+        "ingredients": [
+          {
+            "tag": "c:milk"
+          },
+          {
+            "tag": "c:eggs"
+          },
+          {
+            "tag": "c:grain/wheat"
+          },
+          {
+            "tag": "c:syrup"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "item": "minecraft:sugar"
+          }
+        ],
+        "recipe_book_tab": "misc",
+        "result": {
+          "count": 6,
+          "id": "autumnity:pancake"
+        }
+      }
+    }
+  ]
+}

@@ -1,10 +1,10 @@
 {
-  "type": "forge:conditional",
+  "type": "neoforge:conditional",
   "recipes": [
     {
       "conditions": [
         {
-          "type": "forge:not",
+          "type": "neoforge:not",
           "value": {
             "type": "delightful:enabled",
             "value": "pumpkin_pie_slice"
@@ -26,7 +26,7 @@
           }
         ],
         "result": {
-          "item": "minecraft:pumpkin_pie"
+          "id": "minecraft:pumpkin_pie"
         }
       }
     }

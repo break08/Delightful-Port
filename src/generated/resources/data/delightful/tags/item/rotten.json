@@ -1,0 +1,13 @@
+{
+  "values": [
+    "minecraft:rotten_flesh",
+    {
+      "id": "rottenleather:rotten_chunk",
+      "required": false
+    },
+    {
+      "id": "undergarden:rotten_blisterberry",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "boneequipment:bone_leggings"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smelting",
+        "ingredient": {
+          "item": "boneequipment:bone_leggings"
+        },
+        "result": "minecraft:bone_meal",
+        "experience": 0.1,
+        "cookingtime": 100
+      }
+    }
+  ]
+}

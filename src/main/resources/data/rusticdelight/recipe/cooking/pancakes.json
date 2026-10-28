@@ -1,0 +1,45 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "rusticdelight:pancakes"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:bowl"
+        },
+        "cookingtime": 400,
+        "experience": 2.0,
+        "ingredients": [
+          {
+            "tag": "c:batter"
+          },
+          {
+            "tag": "c:syrup"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "item": "minecraft:sugar"
+          }
+        ],
+        "recipe_book_tab": "misc",
+        "result": {
+          "id": "rusticdelight:pancakes"
+        }
+      }
+    }
+  ]
+}

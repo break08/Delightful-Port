@@ -1,0 +1,49 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "brewinandchewin"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "brewincompatdelight:margarita"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:drinks/tequila"
+          }
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:fruits/lime"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "tag": "c:fruits/lime"
+          },
+          {
+            "tag": "c:drinks/tequila"
+          },
+          {
+            "tag": "c:fruits/lime"
+          }
+        ],
+        "result": {
+          "count": 1,
+          "id": "brewincompatdelight:margarita"
+        }
+      }
+    }
+  ]
+}

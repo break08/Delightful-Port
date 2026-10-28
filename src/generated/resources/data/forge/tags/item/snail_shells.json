@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "naturalist:snail_shell",
+      "required": false
+    },
+    {
+      "id": "autumnity:snail_shell_piece",
+      "required": false
+    }
+  ]
+}

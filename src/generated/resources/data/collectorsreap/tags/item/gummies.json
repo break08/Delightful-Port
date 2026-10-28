@@ -1,0 +1,20 @@
+{
+  "values": [
+    {
+      "id": "exquisito:chorus_gummy",
+      "required": false
+    },
+    {
+      "id": "exquisito:ether_bulb_gummy",
+      "required": false
+    },
+    {
+      "id": "exquisito:nightshade_berry_gummy",
+      "required": false
+    },
+    {
+      "id": "exquisito:warzipan_gummy",
+      "required": false
+    }
+  ]
+}

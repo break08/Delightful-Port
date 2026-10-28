@@ -1,0 +1,24 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "sunflowerdelight:rosebud"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "sunflowerdelight:rosebud"
+          }
+        ],
+        "result": {
+          "id": "minecraft:red_dye"
+        }
+      }
+    }
+  ]
+}

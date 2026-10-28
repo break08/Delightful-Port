@@ -1,0 +1,37 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "biomeswevegone:blooming_oddion"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "biomeswevegone:oddion_bulb"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "cookingtime": 200,
+        "experience": 1.0,
+        "ingredients": [
+          {
+            "tag": "c:dough"
+          },
+          {
+            "tag": "c:eggs"
+          },
+          {
+            "item": "biomeswevegone:oddion_bulb"
+          }
+        ],
+        "recipe_book_tab": "meals",
+        "result": {
+          "id": "biomeswevegone:blooming_oddion"
+        }
+      }
+    }
+  ]
+}

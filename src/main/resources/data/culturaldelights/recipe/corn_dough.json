@@ -1,0 +1,42 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "culturaldelights:corn_dough"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          [
+            {
+              "tag": "c:water"
+            },
+            {
+              "count": 1,
+              "type": "neoforge:nbt",
+              "item": "minecraft:potion",
+              "nbt": "{Potion:\"minecraft:water\"}"
+            }
+          ],
+          {
+            "tag": "c:crops/corn"
+          },
+          {
+            "tag": "c:crops/corn"
+          },
+          {
+            "tag": "c:crops/corn"
+          }
+        ],
+        "result": {
+          "count": 3,
+          "id": "culturaldelights:corn_dough"
+        }
+      }
+    }
+  ]
+}

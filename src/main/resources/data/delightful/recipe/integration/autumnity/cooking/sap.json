@@ -1,0 +1,75 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "autumnity:sap_bottle"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "autumnity:syrup_bottle"
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "thermal_expansion"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:glass_bottle"
+        },
+        "cookingtime": 200,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "item": "autumnity:sap_bottle"
+          },
+          {
+            "item": "autumnity:sap_bottle"
+          }
+        ],
+        "result": {
+          "id": "autumnity:syrup_bottle"
+        }
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "autumnity:sap_bottle"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "autumnity:syrup_bottle"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:mod_loaded",
+            "modid": "thermal_expansion"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cooking",
+        "container": {
+          "item": "minecraft:glass_bottle"
+        },
+        "cookingtime": 200,
+        "experience": 0.35,
+        "ingredients": [
+          {
+            "item": "autumnity:sap_bottle"
+          }
+        ],
+        "result": {
+          "id": "autumnity:syrup_bottle"
+        }
+      }
+    }
+  ]
+}

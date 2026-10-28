@@ -1,0 +1,29 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:false"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "minecraft:pumpkin"
+          },
+          {
+            "item": "minecraft:sugar"
+          },
+          {
+            "item": "duckling:duck_egg"
+          }
+        ],
+        "result": {
+          "id": "minecraft:pumpkin_pie"
+        }
+      }
+    }
+  ]
+}

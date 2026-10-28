@@ -166,17 +166,14 @@ public class Util {
         return Mods.stringLoaded(location.getNamespace()) && BuiltInRegistries.BLOCK.containsKey(location);
     }
 
-    @Nullable
     public static Item item(ResourceLocation rl) {
         return BuiltInRegistries.ITEM.get(rl);
     }
 
-    @Nullable
     public static Item item(String modid, String path) {
         return item(rl(modid, path));
     }
 
-    @Nullable
     public static Item item(Modid modid, String path) {
         return item(rl(modid, path));
     }
@@ -184,10 +181,7 @@ public class Util {
     @NotNull
     public static Item item(ResourceLocation location, @NotNull Item backup) {
         if (itemExists(location)) {
-            Item item = item(location);
-            if (item != null) {
-                return item;
-            }
+            return item(location);
         }
         return backup;
     }
@@ -201,9 +195,7 @@ public class Util {
     public static ItemStack itemStack(ResourceLocation location, @NotNull ItemStack backup) {
         if (itemExists(location)) {
             Item returnItem = item(location);
-            if (returnItem != null) {
-                return new ItemStack(returnItem);
-            }
+            return new ItemStack(returnItem);
         }
         return backup;
     }
@@ -365,7 +357,7 @@ public class Util {
 
         if (data != null) {
             CompoundTag tag = data.copyTag();
-            return tag != null && tag.contains(key) && tag.getString(key).equals(value);
+            return tag.contains(key) && tag.getString(key).equals(value);
         }
         return false;
     }

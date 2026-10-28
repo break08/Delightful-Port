@@ -1,0 +1,38 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "hearthandharvest:sweet_berry_crate"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:mod_loaded",
+            "modid": "berry_good"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:sweet_berries"
+          }
+        },
+        "pattern": [
+          "###",
+          "###",
+          "###"
+        ],
+        "result": {
+          "id": "hearthandharvest:sweet_berry_crate"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "biomesoplenty:wilted_lily"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "biomesoplenty:wilted_lily"
+          }
+        ],
+        "result": [
+          {
+            "item": "minecraft:gray_dye",
+            "count": 2
+          }
+        ],
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "knife_dig"
+          },
+          {
+            "tag": "c:tools/knives"
+          }
+        ]
+      }
+    }
+  ]
+}

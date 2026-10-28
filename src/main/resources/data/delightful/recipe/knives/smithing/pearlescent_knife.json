@@ -1,0 +1,43 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "pearlescent_knife"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:ingots/pearlescent"
+          }
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "unusualend"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "unusualend:pearlescent_upgrade_smithing_template"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smithing_transform",
+        "addition": {
+          "tag": "c:ingots/pearlescent"
+        },
+        "base": {
+          "item": "farmersdelight:diamond_knife"
+        },
+        "result": {
+          "id": "delightful:pearlescent_knife"
+        },
+        "template": {
+          "item": "unusualend:pearlescent_upgrade_smithing_template"
+        }
+      }
+    }
+  ]
+}

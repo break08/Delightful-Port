@@ -1,0 +1,40 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "green_apple_pie_slice"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "biomeswevegone:green_apple_pie"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "biomeswevegone:green_apple_pie"
+          }
+        ],
+        "result": [
+          {
+            "count": 4,
+            "item": "delightful:green_apple_pie_slice"
+          }
+        ],
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "knife_dig"
+          },
+          {
+            "tag": "c:tools/knives"
+          }
+        ]
+      }
+    }
+  ]
+}

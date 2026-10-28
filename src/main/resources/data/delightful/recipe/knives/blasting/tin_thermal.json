@@ -1,0 +1,26 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "value": "tin_knife",
+          "type": "delightful:enabled"
+        },
+        {
+          "item": "thermal:tin_nugget",
+          "type": "neoforge:item_exists"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:blasting",
+        "ingredient": {
+          "item": "delightful:tin_knife"
+        },
+        "result": "thermal:tin_nugget",
+        "experience": 0.1,
+        "cookingtime": 100
+      }
+    }
+  ]
+}

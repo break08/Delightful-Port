@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "moredelight:diced_potatoes",
+      "required": false
+    },
+    {
+      "id": "casualness_delight:potato_slice",
+      "required": false
+    }
+  ]
+}

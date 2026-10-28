@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "brewincompatdelight:tequila",
+      "required": false
+    },
+    {
+      "id": "sob:tequila",
+      "required": false
+    },
+    {
+      "id": "dolt_mod_how:tequila",
+      "required": false
+    }
+  ]
+}

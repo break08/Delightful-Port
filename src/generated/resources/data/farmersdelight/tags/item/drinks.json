@@ -1,0 +1,55 @@
+{
+  "values": [
+    "#forge:drinks/tequila",
+    "#forge:juices",
+    "delightful:ender_nectar",
+    "delightful:matcha_latte",
+    "delightful:berry_matcha_latte",
+    "delightful:azalea_tea",
+    "delightful:lavender_tea",
+    {
+      "id": "#brewinandchewin:fermented_drinks",
+      "required": false
+    },
+    {
+      "id": "farmersrespite:green_tea",
+      "required": false
+    },
+    {
+      "id": "farmersrespite:yellow_tea",
+      "required": false
+    },
+    {
+      "id": "farmersrespite:black_tea",
+      "required": false
+    },
+    {
+      "id": "farmersrespite:rose_hip_tea",
+      "required": false
+    },
+    {
+      "id": "farmersrespite:dandelion_tea",
+      "required": false
+    },
+    {
+      "id": "farmersrespite:purulent_tea",
+      "required": false
+    },
+    {
+      "id": "farmersrespite:gamblers_tea",
+      "required": false
+    },
+    {
+      "id": "windswept:lavender_tea",
+      "required": false
+    },
+    {
+      "id": "windswept:ginger_tea",
+      "required": false
+    },
+    {
+      "id": "snowyspirit:eggnog",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "value": "emerald_knife",
+          "type": "delightful:enabled"
+        },
+        {
+          "item": "emeraldequipment:emerald_shard",
+          "type": "neoforge:item_exists"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:blasting",
+        "ingredient": {
+          "item": "delightful:emerald_knife"
+        },
+        "result": "emeraldequipment:emerald_shard",
+        "experience": 0.1,
+        "cookingtime": 100
+      }
+    }
+  ]
+}

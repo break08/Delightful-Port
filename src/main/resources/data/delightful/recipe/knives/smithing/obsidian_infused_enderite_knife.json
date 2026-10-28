@@ -1,0 +1,43 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "obsidian_infused_enderite_knife"
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "lolenderite"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:ingots/obsidian_infused_enderite"
+          }
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "lolenderite:enderite_upgrade_smithing_template"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smithing_transform",
+        "addition": {
+          "tag": "c:ingots/obsidian_infused_enderite"
+        },
+        "base": {
+          "item": "delightful:enderite_knife"
+        },
+        "result": {
+          "id": "delightful:obsidian_infused_enderite_knife"
+        },
+        "template": {
+          "item": "lolenderite:enderite_upgrade_smithing_template"
+        }
+      }
+    }
+  ]
+}

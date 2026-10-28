@@ -1,0 +1,24 @@
+{
+  "values": [
+    {
+      "id": "vintagedelight:oat_seeds",
+      "required": false
+    },
+    {
+      "id": "vintagedelight:ghost_pepper_seeds",
+      "required": false
+    },
+    {
+      "id": "vintagedelight:cucumber_seeds",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:lemon_seeds",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:hamimelon_seeds",
+      "required": false
+    }
+  ]
+}

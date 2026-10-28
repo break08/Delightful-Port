@@ -1,0 +1,64 @@
+{
+  "values": [
+    {
+      "id": "#forge:cooked_meat",
+      "required": false
+    },
+    "#forge:cooked_rabbit",
+    "#forge:cooked_venison",
+    "#forge:cooked_crab",
+    "#forge:cooked_goat",
+    {
+      "id": "#forge:cooked_duck",
+      "required": false
+    },
+    {
+      "id": "#forge:cooked_turkey",
+      "required": false
+    },
+    {
+      "id": "naturalist:cooked_bushmeat",
+      "required": false
+    },
+    {
+      "id": "arsdelight:grilled_wilden_meat",
+      "required": false
+    },
+    {
+      "id": "arsdelight:grilled_wilden_meat_slice",
+      "required": false
+    },
+    {
+      "id": "arsdelight:grilled_chimera_meat",
+      "required": false
+    },
+    {
+      "id": "arsdelight:grilled_chimera_meat_slice",
+      "required": false
+    },
+    {
+      "id": "casualness_delight:cooked_donkey_meat",
+      "required": false
+    },
+    {
+      "id": "undergarden:dweller_steak",
+      "required": false
+    },
+    {
+      "id": "undergarden:gloomper_leg",
+      "required": false
+    },
+    {
+      "id": "phantasm:behemoth_steak",
+      "required": false
+    },
+    {
+      "id": "functionality:cooked_frog_leg",
+      "required": false
+    },
+    {
+      "id": "frog_legs:cooked_frog_legs",
+      "required": false
+    }
+  ]
+}

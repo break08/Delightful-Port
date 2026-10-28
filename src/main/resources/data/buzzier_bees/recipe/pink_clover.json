@@ -1,0 +1,43 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "delightful:enabled",
+            "value": "chopped_clover"
+          }
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "buzzier_bees:pink_clover"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "buzzier_bees:pink_clover"
+          }
+        ],
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "knife_dig"
+          },
+          {
+            "tag": "c:tools/knives"
+          }
+        ],
+        "result": [
+          {
+            "item": "minecraft:pink_dye",
+            "count": 2
+          }
+        ]
+      }
+    }
+  ]
+}

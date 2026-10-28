@@ -1,0 +1,37 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "wildberries:raspberry_pie"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "wildberries:raspberry_pie_slice"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "wildberries:raspberry_pie_slice"
+          },
+          {
+            "item": "wildberries:raspberry_pie_slice"
+          },
+          {
+            "item": "wildberries:raspberry_pie_slice"
+          },
+          {
+            "item": "wildberries:raspberry_pie_slice"
+          }
+        ],
+        "result": {
+          "id": "wildberries:raspberry_pie"
+        }
+      }
+    }
+  ]
+}

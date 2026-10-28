@@ -1,0 +1,46 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "prickly_pear_juice"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:fruits/prickly_pear"
+          }
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "farmersrespite"
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "create"
+        }
+      ],
+      "recipe": {
+        "type": "create:filling",
+        "ingredients": [
+          {
+            "item": "minecraft:glass_bottle"
+          },
+          {
+            "amount": 250,
+            "fluid": "delightful:prickly_pear_juice",
+            "nbt": {}
+          }
+        ],
+        "results": [
+          {
+            "item": "delightful:prickly_pear_juice"
+          }
+        ]
+      }
+    }
+  ]
+}

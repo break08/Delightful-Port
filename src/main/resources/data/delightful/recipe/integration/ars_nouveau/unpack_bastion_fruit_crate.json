@@ -1,0 +1,36 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "ars_nouveau:bastion_pod"
+        },
+        {
+          "type": "delightful:enabled",
+          "value": "bastion_fruit_crate"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:mod_loaded",
+            "modid": "arsdelight"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "delightful:bastion_fruit_crate"
+          }
+        ],
+        "result": {
+          "count": 9,
+          "id": "ars_nouveau:bastion_pod"
+        }
+      }
+    }
+  ]
+}

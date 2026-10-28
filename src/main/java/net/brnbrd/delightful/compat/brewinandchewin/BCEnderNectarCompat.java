@@ -8,7 +8,7 @@ import java.util.function.Supplier;
 
 public class BCEnderNectarCompat {
 	public static final Supplier<Item> ENDER_NECTAR = () ->
-		new FermentedEnderNectarItem(DelightfulFluids.ENDER_NECTAR.get(),
+		new FermentedEnderNectarItem(DelightfulFluids.ENDER_NECTAR::get,
 			(new Item.Properties())
 				.food(Nutrition.ENDER_NECTAR)
 				.stacksTo(16)

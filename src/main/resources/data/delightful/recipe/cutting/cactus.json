@@ -1,0 +1,86 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "cactus_flesh"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "sob:nopal"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "minecraft:cactus"
+          }
+        ],
+        "result": [
+          {
+            "count": 2,
+            "item": "delightful:cactus_flesh"
+          },
+          {
+            "chance": 0.4,
+            "item": "sob:nopal"
+          }
+        ],
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "knife_dig"
+          },
+          {
+            "tag": "c:tools/knives"
+          }
+        ]
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "cactus_flesh"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:item_exists",
+            "item": "sob:nopal"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "minecraft:cactus"
+          }
+        ],
+        "result": [
+          {
+            "count": 2,
+            "item": "delightful:cactus_flesh"
+          },
+          {
+            "chance": 0.5,
+            "item": "minecraft:green_dye"
+          }
+        ],
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "knife_dig"
+          },
+          {
+            "tag": "c:tools/knives"
+          }
+        ]
+      }
+    }
+  ]
+}

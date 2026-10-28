@@ -1,0 +1,31 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "ends_delight:chorus_cookie"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "tag": "c:fruits/chorus"
+          },
+          {
+            "item": "minecraft:wheat"
+          },
+          {
+            "item": "minecraft:wheat"
+          }
+        ],
+        "result": {
+          "count": 8,
+          "id": "ends_delight:chorus_cookie"
+        }
+      }
+    }
+  ]
+}

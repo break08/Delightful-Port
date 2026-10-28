@@ -1,0 +1,44 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "cactus_flesh"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "habitat:flowering_red_ball_cactus_block"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "habitat:flowering_red_ball_cactus_block"
+          }
+        ],
+        "result": [
+          {
+            "item": "delightful:cactus_flesh",
+            "count": 2
+          },
+          {
+            "item": "habitat:red_ball_cactus_flower",
+            "count": 2
+          }
+        ],
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "knife_dig"
+          },
+          {
+            "tag": "c:tools/knives"
+          }
+        ]
+      }
+    }
+  ]
+}

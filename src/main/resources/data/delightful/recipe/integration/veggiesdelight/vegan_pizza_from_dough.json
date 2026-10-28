@@ -1,0 +1,38 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "veggiesdelight:vegan_pizza"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "tag": "c:crops/bellpepper"
+          },
+          {
+            "tag": "c:vegetables"
+          },
+          {
+            "tag": "c:crops/onion"
+          },
+          {
+            "item": "farmersdelight:tomato_sauce"
+          },
+          {
+            "tag": "c:dough/wheat"
+          }
+        ],
+        "result": {
+          "id": "veggiesdelight:vegan_pizza"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

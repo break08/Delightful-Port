@@ -1,0 +1,36 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "biomeswevegone:silver_vase_flower"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "biomeswevegone:silver_vase_flower"
+          }
+        ],
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "knife_dig"
+          },
+          {
+            "tag": "c:tools/knives"
+          }
+        ],
+        "result": [
+          {
+            "count": 2,
+            "item": "minecraft:pink_dye"
+          }
+        ]
+      }
+    }
+  ]
+}

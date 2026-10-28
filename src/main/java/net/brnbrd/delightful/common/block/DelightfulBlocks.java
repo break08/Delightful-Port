@@ -4,6 +4,7 @@ import net.brnbrd.delightful.Delightful;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.compat.Modid;
 import net.brnbrd.delightful.compat.UnusualEndCompat;
+import net.brnbrd.delightful.compat.undergarden.SlicedGloomgourdBlock;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.core.cauldron.CauldronInteraction;
 import net.minecraft.world.item.Items;
@@ -77,13 +78,12 @@ public class DelightfulBlocks {
     public static final DeferredBlock<Block> SLICED_PUMPKIN = BLOCKS.register("sliced_pumpkin",
             () -> new SlicedGourdBlock(Block.Properties.ofFullCopy(Blocks.PUMPKIN), ModItems.PUMPKIN_SLICE));
 
-    /*
     public static final DeferredBlock<Block> SLICED_GLOOMGOURD = BLOCKS.register("sliced_gloomgourd",
             Modid.UG.loaded() ?
                     () -> new SlicedGloomgourdBlock(Block.Properties.ofFullCopy(Modid.UG.block("carved_gloomgourd", Blocks.PUMPKIN))) :
                     () -> new SlicedGourdBlock(Block.Properties.ofFullCopy(Blocks.PUMPKIN), ModItems.PUMPKIN_SLICE)
     );
-    */
+
 
     public static final DeferredBlock<Block> SALMONBERRY_SACK = BLOCKS.register("salmonberry_sack",
             () -> new Block(SACK(MapColor.COLOR_ORANGE)));

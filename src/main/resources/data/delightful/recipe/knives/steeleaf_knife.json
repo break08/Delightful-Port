@@ -1,0 +1,58 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "delightful:enabled",
+          "value": "steeleaf_knife"
+        },
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "twilightforest"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:ingots/steeleaf"
+          }
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:mod_loaded",
+            "modid": "twilightdelight"
+          }
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:mod_loaded",
+            "modid": "dungeonsdelight"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "m": {
+            "tag": "c:ingots/steeleaf"
+          },
+          "s": {
+            "tag": "c:rods/wooden"
+          }
+        },
+        "pattern": [
+          "m",
+          "s"
+        ],
+        "result": {
+          "nbt": "{Enchantments:[{lvl:2s,id:\"minecraft:smite\"}]}",
+          "type": "minecraft:item_nbt",
+          "id": "delightful:steeleaf_knife"
+        }
+      }
+    }
+  ]
+}

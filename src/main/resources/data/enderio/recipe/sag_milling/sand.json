@@ -1,0 +1,73 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "enderio:sag_mill"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "ae2:silicon"
+        }
+      ],
+      "recipe": {
+        "type": "enderio:sag_milling",
+        "energy": 2400,
+        "input": {
+          "tag": "c:sand"
+        },
+        "outputs": [
+          {
+            "chance": 0.5,
+            "item": {
+              "count": 1,
+              "item": "ae2:silicon"
+            },
+            "optional": false
+          }
+        ]
+      }
+    },
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "enderio:sag_mill"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:item_exists",
+            "item": "ae2:silicon"
+          }
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:silicon"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "enderio:sag_milling",
+        "energy": 2400,
+        "input": {
+          "tag": "c:sand"
+        },
+        "outputs": [
+          {
+            "chance": 0.5,
+            "item": {
+              "count": 1,
+              "tag": "c:silicon"
+            },
+            "optional": false
+          }
+        ]
+      }
+    }
+  ]
+}

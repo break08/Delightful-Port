@@ -3,11 +3,11 @@
   "category": "misc",
   "ingredients": [
     {
-      "tag": "forge:pumpkins/pumpkin_blocks"
+      "tag": "c:pumpkins/pumpkin_blocks"
     }
   ],
   "result": {
     "count": 4,
-    "item": "minecraft:pumpkin_seeds"
+    "id": "minecraft:pumpkin_seeds"
   }
 }

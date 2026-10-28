@@ -1,0 +1,25 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "item": "atmospheric:orange",
+          "type": "neoforge:item_exists"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "atmospheric:orange"
+          }
+        ],
+        "result": {
+          "count": 1,
+          "id": "minecraft:orange_dye"
+        }
+      }
+    }
+  ]
+}

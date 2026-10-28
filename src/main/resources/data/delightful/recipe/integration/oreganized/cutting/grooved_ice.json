@@ -1,0 +1,40 @@
+{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "oreganized:grooved_ice"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "neapolitan:ice_cubes"
+        }
+      ],
+      "recipe": {
+        "type": "farmersdelight:cutting",
+        "ingredients": [
+          {
+            "item": "oreganized:grooved_ice"
+          }
+        ],
+        "tool": [
+          {
+            "type": "farmersdelight:tool_action",
+            "action": "pickaxe_dig"
+          },
+          {
+            "tag": "minecraft:pickaxes"
+          }
+        ],
+        "result": [
+          {
+            "item": "neapolitan:ice_cubes",
+            "count": 4
+          }
+        ]
+      }
+    }
+  ]
+}
