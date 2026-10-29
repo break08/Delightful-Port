@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "cantaloupe"
+    },
+    {
+      "type": "delightful:enabled",
+      "value": "cantaloupe_slice"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "delightful:cantaloupe"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "id": "delightful:cantaloupe_slice"
+  }
+}

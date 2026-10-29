@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "cactus_steak"
+    }
+  ],
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "delightful:cactus_flesh"
+  },
+  "result": {
+    "count": 1,
+    "id": "delightful:cactus_steak"
+  }
+}

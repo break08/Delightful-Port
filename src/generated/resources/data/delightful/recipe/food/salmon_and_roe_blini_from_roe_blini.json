@@ -1,0 +1,44 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "salmon_and_roe_blini"
+    },
+    {
+      "type": "delightful:enabled",
+      "value": "roe_blini"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "forge:roe"
+      }
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "brewinandchewin"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "letfishlove"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "delightful:roe_blini"
+    },
+    {
+      "item": "farmersdelight:salmon_slice"
+    },
+    {
+      "tag": "forge:fruits/salmonberries"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "delightful:salmon_and_roe_blini"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "cactus_steak"
+    },
+    {
+      "type": "delightful:enabled",
+      "value": "field_salad"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cactus_steak": {
+      "conditions": {
+        "items": [
+          {
+            "items": "delightful:cactus_steak"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "delightful:food/field_salad"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cactus_steak"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "delightful:food/field_salad"
+    ]
+  }
+}

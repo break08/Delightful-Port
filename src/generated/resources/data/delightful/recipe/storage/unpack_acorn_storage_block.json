@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "acorn_sack"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "delightful:acorn_sack"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "delightful:acorn"
+  }
+}

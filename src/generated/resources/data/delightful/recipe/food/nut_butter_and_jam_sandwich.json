@@ -1,0 +1,39 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "nut_butter_and_jam_sandwich"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "forge:nuts"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "croptopia"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:foods/bread"
+    },
+    {
+      "tag": "forge:nut_butter"
+    },
+    {
+      "tag": "forge:jams"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "delightful:nut_butter_and_jam_sandwich"
+  }
+}

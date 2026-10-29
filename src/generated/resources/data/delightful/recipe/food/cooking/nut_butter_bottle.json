@@ -1,0 +1,53 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "nut_butter_bottle"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "forge:nuts"
+      }
+    },
+    {
+      "type": "neoforge:tag_empty",
+      "tag": "forge:salt"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "vintagedelight"
+      }
+    }
+  ],
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "minecraft:glass_bottle"
+  },
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "tag": "forge:nuts"
+    },
+    {
+      "tag": "forge:nuts"
+    },
+    {
+      "tag": "forge:nuts"
+    },
+    {
+      "item": "minecraft:kelp"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "delightful:nut_butter_bottle"
+  }
+}

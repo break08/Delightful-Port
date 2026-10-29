@@ -15,6 +15,10 @@ public class DFluidType extends FluidType {
         this.tint = tint;
     }
 
+    public int getTint() {
+        return this.tint;
+    }
+
     // Chill deprecated =)
 
     /*

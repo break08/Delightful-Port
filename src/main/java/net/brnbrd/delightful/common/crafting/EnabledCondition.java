@@ -1,7 +1,9 @@
 package net.brnbrd.delightful.common.crafting;
 
 import com.google.gson.JsonObject;
+import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.brnbrd.delightful.Util;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
@@ -29,9 +31,13 @@ public class EnabledCondition implements ICondition {
         return Util.configEnabled(this.value);
     }
 
+    public static final MapCodec<EnabledCondition> CODEC = RecordCodecBuilder.mapCodec(i -> i.group(
+            Codec.STRING.fieldOf("value").forGetter(c -> c.value)
+    ).apply(i, EnabledCondition::new));
+
     @Override
     public @NotNull MapCodec<? extends ICondition> codec() {
-        return this.codec();
+        return CODEC;
     }
 
     @Override

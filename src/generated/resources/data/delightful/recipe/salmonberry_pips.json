@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "salmonberry_pips"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "delightful:salmonberries"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "delightful:salmonberry_pips"
+  }
+}

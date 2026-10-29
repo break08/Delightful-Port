@@ -37,7 +37,7 @@ public class Generators {
                 List.of(new LootTableProvider.SubProviderEntry(DelightfulBlockLoot::new, LootContextParamSets.BLOCK)),
                 e.getLookupProvider()));
 
-        //e.getGenerator().addProvider(e.includeServer(), new DelightfulRecipeProvider(output));
+        e.getGenerator().addProvider(e.includeServer(), new DelightfulRecipeProvider(output, e.getLookupProvider()));
         DelightfulBlockTagProvider blockTag = new DelightfulBlockTagProvider(output, lookup, helper);
         e.getGenerator().addProvider(e.includeServer(), blockTag);
         e.getGenerator().addProvider(e.includeServer(), new DelightfulItemTagProvider(output, lookup, blockTag.contentsGetter(), helper));

@@ -1,0 +1,45 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "salmonberry_ice_cream"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "forge:ice_cubes"
+      }
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ice_cubes": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#forge:ice_cubes"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "delightful:food/salmonberry_ice_cream"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_ice_cubes"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "delightful:food/salmonberry_ice_cream"
+    ]
+  }
+}

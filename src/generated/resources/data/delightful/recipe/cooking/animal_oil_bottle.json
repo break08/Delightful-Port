@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "animal_oil_bottle"
+    }
+  ],
+  "type": "farmersdelight:cooking",
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "item": "delightful:animal_fat"
+    },
+    {
+      "item": "delightful:animal_fat"
+    },
+    {
+      "item": "delightful:animal_fat"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "delightful:animal_oil_bottle"
+  }
+}

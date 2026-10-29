@@ -1,0 +1,45 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "lapis_lazuli_knife"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:gems/lapis"
+      }
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gems/lapis": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:gems/lapis"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "delightful:knives/lapis_lazuli_knife"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_gems/lapis"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "delightful:knives/lapis_lazuli_knife"
+    ]
+  }
+}

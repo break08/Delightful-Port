@@ -1,0 +1,26 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "wrapped_cantaloupe"
+    },
+    {
+      "type": "delightful:enabled",
+      "value": "cantaloupe"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "forge:fruits/cantaloupe"
+    },
+    {
+      "tag": "c:foods/cooked_bacon"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "delightful:wrapped_cantaloupe"
+  }
+}

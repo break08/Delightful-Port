@@ -1,0 +1,57 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "salmon_and_roe_blini"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "forge:pancakes"
+      }
+    },
+    {
+      "type": "neoforge:tag_empty",
+      "tag": "forge:cheese/mild/cream"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "forge:roe"
+      }
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "brewinandchewin"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "letfishlove"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "forge:pancakes"
+    },
+    {
+      "tag": "c:drinks/milk"
+    },
+    {
+      "tag": "delightful:aged_roes"
+    },
+    {
+      "item": "farmersdelight:salmon_slice"
+    },
+    {
+      "tag": "forge:fruits/salmonberries"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "delightful:salmon_and_roe_blini"
+  }
+}

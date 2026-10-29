@@ -1,0 +1,28 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "baklava"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "delightful:baklava_slice"
+    },
+    {
+      "item": "delightful:baklava_slice"
+    },
+    {
+      "item": "delightful:baklava_slice"
+    },
+    {
+      "item": "delightful:baklava_slice"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "delightful:baklava"
+  }
+}

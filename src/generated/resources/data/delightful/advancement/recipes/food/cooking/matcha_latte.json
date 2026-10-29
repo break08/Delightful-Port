@@ -1,0 +1,45 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "matcha_latte"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "farmersrespite"
+      }
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_matcha": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#forge:matcha"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "delightful:food/cooking/matcha_latte"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_matcha"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "delightful:food/cooking/matcha_latte"
+    ]
+  }
+}

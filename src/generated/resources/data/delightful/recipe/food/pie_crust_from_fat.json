@@ -1,0 +1,26 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "animal_fat"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "delightful:animal_fat"
+    },
+    "f": {
+      "tag": "c:crops/wheat"
+    }
+  },
+  "pattern": [
+    "fAf",
+    " f "
+  ],
+  "result": {
+    "count": 1,
+    "id": "farmersdelight:pie_crust"
+  }
+}

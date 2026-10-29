@@ -1,0 +1,37 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "matcha_latte"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "farmersrespite"
+      }
+    }
+  ],
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "minecraft:glass_bottle"
+  },
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "tag": "c:drinks/milk"
+    },
+    {
+      "item": "minecraft:honey_bottle"
+    },
+    {
+      "tag": "forge:matcha"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "delightful:matcha_latte"
+  }
+}

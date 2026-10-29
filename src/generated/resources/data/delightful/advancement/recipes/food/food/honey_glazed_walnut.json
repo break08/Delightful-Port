@@ -1,0 +1,45 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "honey_glazed_walnut"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "forge:nuts/walnut"
+      }
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "delightful:food/honey_glazed_walnut"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_walnut": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#forge:nuts/walnut"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_walnut"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "delightful:food/honey_glazed_walnut"
+    ]
+  }
+}

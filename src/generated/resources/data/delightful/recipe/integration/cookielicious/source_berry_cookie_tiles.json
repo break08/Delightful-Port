@@ -1,0 +1,31 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "source_berry_cookie_tiles"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "cookielicious"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ars_nouveau"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "c": {
+      "tag": "forge:cookies/source_berry"
+    }
+  },
+  "pattern": [
+    "cc",
+    "cc"
+  ],
+  "result": {
+    "count": 4,
+    "id": "delightful:source_berry_cookie_tiles"
+  }
+}

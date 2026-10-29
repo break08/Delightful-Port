@@ -1,0 +1,45 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "animal_fat"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "forge:flour"
+      }
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_flour": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#forge:flour"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "delightful:food/pie_crust_from_flour_and_fat"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_flour"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "delightful:food/pie_crust_from_flour_and_fat"
+    ]
+  }
+}

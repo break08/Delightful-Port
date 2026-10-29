@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "salmonberry_sack"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "delightful:salmonberry_sack"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "delightful:salmonberries"
+  }
+}

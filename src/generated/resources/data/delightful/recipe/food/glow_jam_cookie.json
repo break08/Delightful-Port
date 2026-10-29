@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "glow_jam_cookie"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "forge:jams/glow"
+    },
+    {
+      "tag": "c:crops/grain"
+    },
+    {
+      "tag": "c:crops/grain"
+    }
+  ],
+  "result": {
+    "count": 8,
+    "id": "delightful:glow_jam_cookie"
+  }
+}

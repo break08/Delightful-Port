@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "cheeseburger"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "forge:cheese"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "farmersdelight:hamburger"
+    },
+    {
+      "tag": "forge:cheese"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "delightful:cheeseburger"
+  }
+}

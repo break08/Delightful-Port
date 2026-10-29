@@ -1,0 +1,35 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "cantaloupe"
+    },
+    {
+      "type": "delightful:enabled",
+      "value": "cantaloupe_slice"
+    }
+  ],
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "delightful:cantaloupe"
+    }
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 4,
+        "id": "delightful:cantaloupe_slice"
+      }
+    }
+  ],
+  "tool": [
+    {
+      "type": "farmersdelight:item_ability",
+      "action": "knife_dig"
+    },
+    {
+      "tag": "c:tools/knife"
+    }
+  ]
+}

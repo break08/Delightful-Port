@@ -1,0 +1,43 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "rock_candy"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "forge:gems/rose_quartz"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "dungeonsdelight"
+      }
+    }
+  ],
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "minecraft:stick"
+  },
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "tag": "forge:gems/rose_quartz"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "tag": "c:foods/berry"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "delightful:rock_candy"
+  }
+}

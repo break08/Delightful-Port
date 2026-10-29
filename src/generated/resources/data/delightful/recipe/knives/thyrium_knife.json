@@ -1,0 +1,37 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "thyrium_knife"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "forge:ingots/thyrium"
+      }
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "fusion"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "m": {
+      "tag": "forge:ingots/thyrium"
+    },
+    "s": {
+      "tag": "c:rods/wooden"
+    }
+  },
+  "pattern": [
+    "m",
+    "s"
+  ],
+  "result": {
+    "count": 1,
+    "id": "delightful:thyrium_knife"
+  }
+}

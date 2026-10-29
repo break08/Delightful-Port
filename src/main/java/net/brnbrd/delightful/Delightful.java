@@ -1,12 +1,17 @@
 package net.brnbrd.delightful;
 
 import com.mojang.logging.LogUtils;
+import com.mojang.serialization.MapCodec;
 import net.brnbrd.delightful.common.DelightfulConfig;
 import net.brnbrd.delightful.common.block.DelightfulBlocks;
+import net.brnbrd.delightful.common.crafting.EnabledCondition;
 import net.brnbrd.delightful.common.fluid.DelightfulFluids;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.world.DelightfulPlacementModifiers;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.levelgen.placement.PlacementModifierType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -18,10 +23,14 @@ import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.common.conditions.ICondition;
+import net.neoforged.neoforge.event.BlockEntityTypeAddBlocksEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import org.slf4j.Logger;
+import vectorwing.farmersdelight.common.registry.ModBlockEntityTypes;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(Delightful.MODID)
@@ -31,6 +40,26 @@ public class Delightful {
 
     private static final Logger LOGGER = LogUtils.getLogger();
 
+    private void addBlocksToBlockEntities(BlockEntityTypeAddBlocksEvent event) {
+        event.modify(ModBlockEntityTypes.CABINET.get(),
+                DelightfulBlocks.BASALT_CABINET.get(),
+                DelightfulBlocks.QUARTZ_CABINET.get());
+    }
+
+    public static final DeferredRegister<CreativeModeTab> TABS =
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Delightful.MODID);
+
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MAIN = TABS.register("main",
+            () -> CreativeModeTab.builder()
+                    .title(Component.translatable("itemGroup." + Delightful.MODID))
+                    .icon(() -> new ItemStack(DelightfulItems.MINI_MELON.get()))
+                    .displayItems((parameters, output) ->
+                            DelightfulItems.ITEMS.getEntries().forEach(item -> output.accept(item.get())))
+                    .build());
+
+    DeferredRegister<MapCodec<? extends ICondition>> conditions =
+            DeferredRegister.create(NeoForgeRegistries.Keys.CONDITION_CODECS, MODID);
+
     public Delightful(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
 
@@ -38,11 +67,18 @@ public class Delightful {
 
         DelightfulBlocks.BLOCKS.register(modEventBus);
 
+        modEventBus.addListener(this::addBlocksToBlockEntities);
+
         DelightfulItems.ITEMS.register(modEventBus);
 
         DelightfulFluids.create(modEventBus);
 
         DelightfulPlacementModifiers.PLACEMENT_MODIFIERS.register(modEventBus);
+
+        TABS.register(modEventBus);
+
+        conditions.register("enabled", () -> EnabledCondition.CODEC);
+        conditions.register(modEventBus);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, DelightfulConfig.SPEC);
