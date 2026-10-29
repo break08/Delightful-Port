@@ -260,7 +260,7 @@ public class DelightfulBlockStateProvider extends BlockStateProvider {
     public void pieBlock(DeferredBlock<? extends Block> block) {
         getVariantBuilder(block.get()).forAllStates(state -> {
                     int bites = state.getValue(PieBlock.BITES);
-                    String name = Util.name(block);
+                    String name = block.getId().getPath();
                     String suffix = bites > 0 ? "_slice" + bites : Util.EMPTY_STR;
                     var mod = models()
                             .withExistingParent("block/template_" + name + suffix, Util.rl(FarmersDelight.MODID, "template_pie" + suffix))

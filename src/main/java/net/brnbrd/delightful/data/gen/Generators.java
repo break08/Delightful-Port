@@ -19,7 +19,6 @@ import java.util.concurrent.CompletableFuture;
 
 @EventBusSubscriber(modid = Delightful.MODID)
 public class Generators {
-
     // Gathering data
     @SubscribeEvent
     public static void gatherData(GatherDataEvent e) {
@@ -42,10 +41,10 @@ public class Generators {
         e.getGenerator().addProvider(e.includeServer(), blockTag);
         e.getGenerator().addProvider(e.includeServer(), new DelightfulItemTagProvider(output, lookup, blockTag.contentsGetter(), helper));
         e.getGenerator().addProvider(e.includeServer(), new DelightfulEntityTagProvider(output, lookup, helper));
-        //e.getGenerator().addProvider(e.includeServer(), new DelightfulLootModifierProvider(output));
+        e.getGenerator().addProvider(e.includeServer(), new DelightfulLootModifierProvider(output, e.getLookupProvider(), Delightful.MODID));
 
         e.getGenerator().addProvider(e.includeClient(), new DelightfulBlockStateProvider(output, helper));
         e.getGenerator().addProvider(e.includeClient(), new DelightfulItemModelProvider(output, helper));
-        //e.getGenerator().addProvider(e.includeClient(), new DelightfulLanguageProvider(output));
+        e.getGenerator().addProvider(e.includeClient(), new DelightfulLanguageProvider(output));
     }
 }

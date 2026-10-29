@@ -13,7 +13,7 @@ public class DelightfulLootModifiers {
 
     public static final DeferredHolder<MapCodec<? extends IGlobalLootModifier>, MapCodec<AddItemLootModifier>> ADD_ITEM = GLM.register("add_item", () -> AddItemLootModifier.CODEC);
     public static final DeferredHolder<MapCodec<? extends IGlobalLootModifier>, MapCodec<SmeltLootModifier>> SMELT = GLM.register("smelt", () -> SmeltLootModifier.CODEC);
-    //public static final DeferredHolder<MapCodec<? extends IGlobalLootModifier>, MapCodec<AddItemLootModifier>> REPLACE = GLM.register("replace", ReplaceLootModifier.CODEC);
+    public static final DeferredHolder<MapCodec<? extends IGlobalLootModifier>, MapCodec<ReplaceLootModifier>> REPLACE = GLM.register("replace", ReplaceLootModifier.CODEC);
 
     public static void create(IEventBus bus) {
         GLM.register(bus);

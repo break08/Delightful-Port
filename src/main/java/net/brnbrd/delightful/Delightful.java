@@ -8,8 +8,12 @@ import net.brnbrd.delightful.common.crafting.EnabledCondition;
 import net.brnbrd.delightful.common.fluid.DelightfulFluids;
 import net.brnbrd.delightful.common.item.DelightfulItems;
 import net.brnbrd.delightful.common.world.DelightfulPlacementModifiers;
+import net.brnbrd.delightful.compat.Modid;
+import net.brnbrd.delightful.proxy.ClientProxy;
+import net.brnbrd.delightful.proxy.CommonProxy;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.levelgen.placement.PlacementModifierType;
@@ -17,6 +21,7 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
@@ -30,6 +35,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import org.slf4j.Logger;
+import vectorwing.farmersdelight.FarmersDelight;
 import vectorwing.farmersdelight.common.registry.ModBlockEntityTypes;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
@@ -39,6 +45,10 @@ public class Delightful {
     public static final String MODID = "delightful";
 
     private static final Logger LOGGER = LogUtils.getLogger();
+
+    public static Delightful instance;
+
+    public static CommonProxy proxy;
 
     private void addBlocksToBlockEntities(BlockEntityTypeAddBlocksEvent event) {
         event.modify(ModBlockEntityTypes.CABINET.get(),
@@ -60,8 +70,30 @@ public class Delightful {
     DeferredRegister<MapCodec<? extends ICondition>> conditions =
             DeferredRegister.create(NeoForgeRegistries.Keys.CONDITION_CODECS, MODID);
 
+    private static void registerAliases() {
+        final ResourceLocation crystalline = Util.rl(Modid.EP, "crystalline_knife");
+
+        for (String oldRoe : new String[]{"aged_fish_roe", "aged_prawn_roe"}) {
+            DelightfulItems.ITEMS.addAlias(Util.delight(oldRoe), DelightfulItems.AGED_ROE.getId());
+            DelightfulFluids.FLUIDS.addAlias(Util.delight(oldRoe), DelightfulFluids.AGED_ROE.getId());
+        }
+
+        // Item
+        DelightfulItems.ITEMS.addAlias(Util.delight("pumpkin_pie_slice"),
+                ResourceLocation.fromNamespaceAndPath(FarmersDelight.MODID, "pumpkin_pie_slice"));
+        if (ModList.get().isLoaded(crystalline.getNamespace())) {
+            DelightfulItems.ITEMS.addAlias(Util.delight("crystalline_knife"), crystalline);
+        }
+
+        // Block
+        DelightfulBlocks.BLOCKS.addAlias(Util.delight("pumpkin_pie"),
+                ResourceLocation.fromNamespaceAndPath(FarmersDelight.MODID, "pumpkin_pie"));
+    }
+
     public Delightful(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
+
+        registerAliases();
 
         NeoForge.EVENT_BUS.register(this);
 
@@ -79,6 +111,9 @@ public class Delightful {
 
         conditions.register("enabled", () -> EnabledCondition.CODEC);
         conditions.register(modEventBus);
+
+        proxy = new CommonProxy();
+        proxy.start(modEventBus);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, DelightfulConfig.SPEC);
@@ -98,7 +133,6 @@ public class Delightful {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
         }
     }
 }

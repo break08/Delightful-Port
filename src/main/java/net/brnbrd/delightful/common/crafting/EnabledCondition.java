@@ -45,25 +45,4 @@ public class EnabledCondition implements ICondition {
         return "enabled(\"" + this.value + "\")";
     }
 
-    /*
-    public static class Serializer implements IConditionSerializer<EnabledCondition> {
-        public static final EnabledCondition.Serializer INSTANCE = new EnabledCondition.Serializer();
-
-        @Override
-        public void write(JsonObject json, EnabledCondition condition) {
-            json.addProperty("value", condition.value);
-        }
-
-        @Override
-        public EnabledCondition read(JsonObject json) {
-            return new EnabledCondition(GsonHelper.getAsString(json, "value"));
-        }
-
-        @Override
-        public ResourceLocation getID() {
-            return EnabledCondition.NAME;
-        }
-    }
-
-     */
 }
