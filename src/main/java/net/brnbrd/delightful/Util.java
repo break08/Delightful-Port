@@ -1,6 +1,5 @@
 package net.brnbrd.delightful;
 
-import com.mojang.datafixers.util.Pair;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.brnbrd.delightful.common.DelightfulConfig;
 import net.brnbrd.delightful.common.item.DelightfulItems;
@@ -10,6 +9,7 @@ import net.brnbrd.delightful.compat.Mods;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.Registry;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -36,14 +36,7 @@ import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-/*
-import net.minecraftforge.items.ItemHandlerHelper;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.IForgeRegistry;
-import net.minecraftforge.registries.RegistryObject;
-import net.minecraftforge.registries.tags.ITagManager;
 
- */
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
@@ -53,6 +46,8 @@ import net.neoforged.neoforge.items.ItemHandlerHelper;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import vectorwing.farmersdelight.FarmersDelight;
+
+import static vectorwing.farmersdelight.data.ModEnchantments.BACKSTABBING;
 
 public class Util {
     public static final String EMPTY_STR = "";
@@ -66,6 +61,12 @@ public class Util {
     public static ResourceLocation rl(@NotNull String modid, @NotNull String path) {
         return ResourceLocation.fromNamespaceAndPath(modid, path);
     }
+
+    public static Enchantment enchantFrom(HolderLookup.Provider registries){
+        return registries.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(BACKSTABBING).value();
+    }
+
+
 
     public static ResourceLocation rl(@NotNull Modid modid, @NotNull String path) {
         return rl(modid.get(), path);

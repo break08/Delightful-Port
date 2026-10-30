@@ -7,11 +7,12 @@ import net.brnbrd.delightful.common.loot.DelightfulLootItemConditions;
 import net.brnbrd.delightful.common.loot.DelightfulLootModifiers;
 import net.brnbrd.delightful.data.gen.Generators;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.common.NeoForge;
 
 public class CommonProxy {
     public void start(IEventBus modBus) {
-        modBus.register(new NeoForgeEvents());
-        modBus.register(new PieEvents());
+        NeoForge.EVENT_BUS.register(new NeoForgeEvents());
+        NeoForge.EVENT_BUS.register(new PieEvents());
         modBus.register(new ModEvents());
         modBus.register(Generators.class);
         DelightfulLootItemConditions.create(modBus);

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.StringUtils;
 
 public class ModEvents {
     @SubscribeEvent
-    void setup(FMLCommonSetupEvent e) {
+    public void setup(FMLCommonSetupEvent e) {
         //DPacketHandler.init(); // Botania
         e.enqueueWork(() -> {
             if (Modid.N.loaded()) {
@@ -69,6 +69,7 @@ public class ModEvents {
 
     @SubscribeEvent
     public void addPackFinders(AddPackFindersEvent e) {
+        /*
         e.addPackFinders(
                 ResourceLocation.fromNamespaceAndPath(Delightful.MODID, "overhauls"),
                 PackType.CLIENT_RESOURCES,
@@ -78,5 +79,7 @@ public class ModEvents {
                 false,
                 Pack.Position.TOP
         );
+
+         */
     }
 }

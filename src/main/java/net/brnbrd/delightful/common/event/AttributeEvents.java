@@ -19,5 +19,6 @@ public class AttributeEvents {
                         event.addModifier(e.attribute(), e.modifier(), e.slot()));
             }
         }
+
     }
 }

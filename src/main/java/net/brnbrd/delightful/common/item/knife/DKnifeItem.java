@@ -3,9 +3,11 @@ package net.brnbrd.delightful.common.item.knife;
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
+
 import net.brnbrd.delightful.Util;
 import net.brnbrd.delightful.common.item.IConfigured;
 import net.brnbrd.delightful.compat.Modid;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.util.Lazy;
@@ -78,7 +80,7 @@ public class DKnifeItem extends KnifeItem implements IConfigured {
         return Ingredient.of(Tags.Items.RODS_WOODEN);
     }
 
-    public @NotNull ItemStack getCreativeItem() {
+    public @NotNull ItemStack getCreativeItem(HolderLookup.Provider registries) {
         return new ItemStack(this);
     }
 
@@ -91,9 +93,10 @@ public class DKnifeItem extends KnifeItem implements IConfigured {
         return null;
     }
 
+
     /*
     @Override
-    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlot slot, ItemStack stack) {
+    public Lazy<ItemAttributeModifiers> getModifiers(EquipmentSlot slot, ItemStack stack) {
         Multimap<Attribute, AttributeModifier> mods = super.getAttributeModifiers(slot, stack);
         Lazy<Multimap<Attribute, AttributeModifier>> additional = this.getModifiers(slot, stack);
         if (this.enabled() && slot == EquipmentSlot.MAINHAND && additional != null) {
@@ -108,6 +111,7 @@ public class DKnifeItem extends KnifeItem implements IConfigured {
     }
 
      */
+
 
     public String getTranslation() {
         return StringUtils.capitaliseAllWords(

@@ -5,18 +5,21 @@ import com.mojang.serialization.MapCodec;
 import net.brnbrd.delightful.common.DelightfulConfig;
 import net.brnbrd.delightful.common.block.DelightfulBlocks;
 import net.brnbrd.delightful.common.crafting.EnabledCondition;
+import net.brnbrd.delightful.common.event.ModEvents;
+import net.brnbrd.delightful.common.event.NeoForgeEvents;
+import net.brnbrd.delightful.common.event.PieEvents;
 import net.brnbrd.delightful.common.fluid.DelightfulFluids;
 import net.brnbrd.delightful.common.item.DelightfulItems;
+import net.brnbrd.delightful.common.loot.DelightfulLootItemConditions;
+import net.brnbrd.delightful.common.loot.DelightfulLootModifiers;
 import net.brnbrd.delightful.common.world.DelightfulPlacementModifiers;
 import net.brnbrd.delightful.compat.Modid;
-import net.brnbrd.delightful.proxy.ClientProxy;
-import net.brnbrd.delightful.proxy.CommonProxy;
+import net.brnbrd.delightful.data.gen.Generators;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.levelgen.placement.PlacementModifierType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -38,17 +41,12 @@ import org.slf4j.Logger;
 import vectorwing.farmersdelight.FarmersDelight;
 import vectorwing.farmersdelight.common.registry.ModBlockEntityTypes;
 
-// The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(Delightful.MODID)
 public class Delightful {
 
     public static final String MODID = "delightful";
-
     private static final Logger LOGGER = LogUtils.getLogger();
-
     public static Delightful instance;
-
-    public static CommonProxy proxy;
 
     private void addBlocksToBlockEntities(BlockEntityTypeAddBlocksEvent event) {
         event.modify(ModBlockEntityTypes.CABINET.get(),
@@ -67,8 +65,12 @@ public class Delightful {
                             DelightfulItems.ITEMS.getEntries().forEach(item -> output.accept(item.get())))
                     .build());
 
-    DeferredRegister<MapCodec<? extends ICondition>> conditions =
+    public static final DeferredRegister<MapCodec<? extends ICondition>> CONDITIONS =
             DeferredRegister.create(NeoForgeRegistries.Keys.CONDITION_CODECS, MODID);
+
+    static {
+        CONDITIONS.register("enabled", () -> EnabledCondition.CODEC);
+    }
 
     private static void registerAliases() {
         final ResourceLocation crystalline = Util.rl(Modid.EP, "crystalline_knife");
@@ -91,43 +93,41 @@ public class Delightful {
     }
 
     public Delightful(IEventBus modEventBus, ModContainer modContainer) {
+        instance = this;
         modEventBus.addListener(this::commonSetup);
 
         registerAliases();
 
+        // Register Global Events
         NeoForge.EVENT_BUS.register(this);
+        NeoForge.EVENT_BUS.register(new NeoForgeEvents());
+        NeoForge.EVENT_BUS.register(new PieEvents());
 
-        DelightfulBlocks.BLOCKS.register(modEventBus);
-
+        // Register Mod Bus Listeners
+        modEventBus.register(new ModEvents());
+        modEventBus.register(Generators.class);
         modEventBus.addListener(this::addBlocksToBlockEntities);
 
+        // Register Registries (Chỉ gọi đúng 1 lần duy nhất trên modEventBus)
+        DelightfulBlocks.BLOCKS.register(modEventBus);
         DelightfulItems.ITEMS.register(modEventBus);
-
         DelightfulFluids.create(modEventBus);
-
         DelightfulPlacementModifiers.PLACEMENT_MODIFIERS.register(modEventBus);
-
         TABS.register(modEventBus);
+        CONDITIONS.register(modEventBus);
+        DelightfulLootItemConditions.create(modEventBus);
+        DelightfulLootModifiers.create(modEventBus);
 
-        conditions.register("enabled", () -> EnabledCondition.CODEC);
-        conditions.register(modEventBus);
-
-        proxy = new CommonProxy();
-        proxy.start(modEventBus);
-
-        // Register our mod's ModConfigSpec so that FML can create and load the config file for us
+        // Register Config
         modContainer.registerConfig(ModConfig.Type.COMMON, DelightfulConfig.SPEC);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
     }
 
-
-
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
     }
-
 
     @EventBusSubscriber(modid = MODID, value = Dist.CLIENT)
     public static class ClientModEvents {

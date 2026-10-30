@@ -112,6 +112,15 @@ dependencies {
 
     // undergarden
     implementation "maven.modrinth:Ejfl5qDL:sY4KZ9q3"
+
+    // jade
+    implementation "maven.modrinth:nvQzSEkH:eYz2YBGT"
+
+    // jei
+    implementation "maven.modrinth:u6dRKJwZ:4SbkkJ5m"
+
+    // mezz config
+    implementation "maven.modrinth:7tEfOcA7:RdGonQpr"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
