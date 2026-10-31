@@ -1,28 +1,21 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:mod_loaded",
-          "modid": "create"
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:crafting_shapeless",
-        "category": "misc",
-        "ingredients": [
-          {
-            "tag": "c:dough"
-          },
-          {
-            "tag": "c:dyes/lime"
-          }
-        ],
-        "result": {
-          "id": "minecraft:slime_ball"
-        }
-      }
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
     }
-  ]
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:dough"
+    },
+    {
+      "tag": "c:dyes/lime"
+    }
+  ],
+  "result": {
+    "id": "minecraft:slime_ball"
+  }
 }

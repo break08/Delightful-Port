@@ -1,43 +1,36 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:item_exists",
-          "item": "atmospheric:passion_fruit_tart"
-        },
-        {
-          "type": "delightful:enabled",
-          "value": "passion_fruit_tart_slice"
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:crafting_shaped",
-        "key": {
-          "#": {
-            "tag": "c:grain/wheat"
-          },
-          "a": {
-            "tag": "c:fruits/passion_fruit"
-          },
-          "O": {
-            "item": "farmersdelight:pie_crust"
-          },
-          "x": {
-            "item": "minecraft:sugar"
-          }
-        },
-        "pattern": [
-          "###",
-          "aaa",
-          "xOx"
-        ],
-        "result": {
-          "count": 1,
-          "id": "atmospheric:passion_fruit_tart"
-        }
-      }
+      "type": "neoforge:item_exists",
+      "item": "atmospheric:passion_fruit_tart"
+    },
+    {
+      "type": "delightful:enabled",
+      "value": "passion_fruit_tart_slice"
     }
-  ]
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "tag": "c:grain/wheat"
+    },
+    "a": {
+      "tag": "c:fruits/passion_fruit"
+    },
+    "O": {
+      "item": "farmersdelight:pie_crust"
+    },
+    "x": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "pattern": [
+    "###",
+    "aaa",
+    "xOx"
+  ],
+  "result": {
+    "count": 1,
+    "id": "atmospheric:passion_fruit_tart"
+  }
 }

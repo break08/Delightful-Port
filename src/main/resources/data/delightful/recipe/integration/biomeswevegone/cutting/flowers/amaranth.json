@@ -1,36 +1,29 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:item_exists",
-          "item": "biomeswevegone:amaranth"
-        }
-      ],
-      "recipe": {
-        "type": "farmersdelight:cutting",
-        "ingredients": [
-          {
-            "item": "biomeswevegone:amaranth"
-          }
-        ],
-        "tool": [
-          {
-            "type": "farmersdelight:tool_action",
-            "action": "knife_dig"
-          },
-          {
-            "tag": "c:tools/knives"
-          }
-        ],
-        "result": [
-          {
-            "count": 2,
-            "item": "minecraft:red_dye"
-          }
-        ]
-      }
+      "type": "neoforge:item_exists",
+      "item": "biomeswevegone:amaranth"
+    }
+  ],
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "biomeswevegone:amaranth"
+    }
+  ],
+  "tool": [
+    {
+      "type": "farmersdelight:tool_action",
+      "action": "knife_dig"
+    },
+    {
+      "tag": "c:tools/knives"
+    }
+  ],
+  "result": [
+    {
+      "count": 2,
+      "item": "minecraft:red_dye"
     }
   ]
 }

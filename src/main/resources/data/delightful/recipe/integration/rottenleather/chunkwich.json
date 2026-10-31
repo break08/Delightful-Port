@@ -1,74 +1,34 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "chunkwich"
-        },
-        {
-          "type": "neoforge:item_exists",
-          "item": "rottenleather:sweetened_chunk"
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:tag_empty",
-            "tag": "c:burger_bun"
-          }
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:crafting_shapeless",
-        "ingredients": [
-          {
-            "tag": "c:burger_bun"
-          },
-          {
-            "item": "rottenleather:sweetened_chunk"
-          },
-          {
-            "tag": "c:crops/onion"
-          }
-        ],
-        "result": {
-          "id": "delightful:chunkwich"
-        }
-      }
+      "type": "delightful:enabled",
+      "value": "chunkwich"
     },
     {
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "chunkwich"
-        },
-        {
-          "type": "neoforge:item_exists",
-          "item": "rottenleather:sweetened_chunk"
-        },
-        {
-          "type": "neoforge:tag_empty",
-          "tag": "c:burger_bun"
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:crafting_shapeless",
-        "ingredients": [
-          {
-            "tag": "c:bread"
-          },
-          {
-            "item": "rottenleather:sweetened_chunk"
-          },
-          {
-            "tag": "c:crops/onion"
-          }
-        ],
-        "result": {
-          "id": "delightful:chunkwich"
-        }
+      "type": "neoforge:item_exists",
+      "item": "rottenleather:sweetened_chunk"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:burger_bun"
       }
     }
-  ]
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "c:burger_bun"
+    },
+    {
+      "item": "rottenleather:sweetened_chunk"
+    },
+    {
+      "tag": "c:crops/onion"
+    }
+  ],
+  "result": {
+    "id": "delightful:chunkwich"
+  }
 }

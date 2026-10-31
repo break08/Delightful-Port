@@ -1,118 +1,53 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "marshmallow_stick"
-        },
-        {
-          "type": "neoforge:tag_empty",
-          "tag": "c:marshmallow"
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:mod_loaded",
-            "modid": "hearthandharvest"
-          }
-        },
-        {
-          "type": "neoforge:item_exists",
-          "item": "neapolitan:dried_vanilla_pods"
-        }
-      ],
-      "recipe": {
-        "type": "farmersdelight:cooking",
-        "container": {
-          "item": "minecraft:stick"
-        },
-        "cookingtime": 200,
-        "experience": 1.0,
-        "ingredients": [
-          [
-            {
-              "item": "delightful:animal_fat"
-            },
-            {
-              "tag": "c:slimeballs"
-            },
-            {
-              "tag": "c:eggs"
-            }
-          ],
-          {
-            "item": "minecraft:sugar"
-          },
-          {
-            "item": "neapolitan:dried_vanilla_pods"
-          }
-        ],
-        "recipe_book_tab": "misc",
-        "result": {
-          "count": 2,
-          "id": "delightful:marshmallow_stick"
-        }
+      "type": "delightful:enabled",
+      "value": "marshmallow_stick"
+    },
+    {
+      "type": "neoforge:tag_empty",
+      "tag": "c:marshmallow"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "hearthandharvest"
       }
     },
     {
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "marshmallow_stick"
-        },
-        {
-          "type": "neoforge:tag_empty",
-          "tag": "c:marshmallow"
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:mod_loaded",
-            "modid": "hearthandharvest"
-          }
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:item_exists",
-            "item": "neapolitan:dried_vanilla_pods"
-          }
-        }
-      ],
-      "recipe": {
-        "type": "farmersdelight:cooking",
-        "container": {
-          "item": "minecraft:stick"
-        },
-        "cookingtime": 200,
-        "experience": 1.0,
-        "ingredients": [
-          [
-            {
-              "item": "delightful:animal_fat"
-            },
-            {
-              "tag": "c:slimeballs"
-            },
-            {
-              "tag": "c:eggs"
-            }
-          ],
-          {
-            "item": "minecraft:sugar"
-          },
-          {
-            "item": "minecraft:sugar"
-          }
-        ],
-        "recipe_book_tab": "misc",
-        "result": {
-          "count": 2,
-          "id": "delightful:marshmallow_stick"
-        }
-      }
+      "type": "neoforge:item_exists",
+      "item": "neapolitan:dried_vanilla_pods"
     }
-  ]
+  ],
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "minecraft:stick"
+  },
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    [
+      {
+        "item": "delightful:animal_fat"
+      },
+      {
+        "tag": "c:slimeballs"
+      },
+      {
+        "tag": "c:eggs"
+      }
+    ],
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "neapolitan:dried_vanilla_pods"
+    }
+  ],
+  "recipe_book_tab": "misc",
+  "result": {
+    "count": 2,
+    "id": "delightful:marshmallow_stick"
+  }
 }

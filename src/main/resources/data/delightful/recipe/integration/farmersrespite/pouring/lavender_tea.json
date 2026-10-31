@@ -1,72 +1,35 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "lavender_tea"
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:tag_empty",
-            "tag": "minecraft:flowers/lavender"
-          }
-        },
-        {
-          "type": "neoforge:mod_loaded",
-          "modid": "farmersrespite"
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:item_exists",
-            "item": "windswept:lavender_tea"
-          }
-        }
-      ],
-      "recipe": {
-        "type": "farmersrespite:kettle_pouring",
-        "amount": 250,
-        "container": {
-          "item": "minecraft:glass_bottle"
-        },
-        "fluid": "delightful:lavender_tea",
-        "output": {
-          "item": "delightful:lavender_tea"
-        }
+      "type": "delightful:enabled",
+      "value": "lavender_tea"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "minecraft:flowers/lavender"
       }
     },
     {
-      "conditions": [
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:tag_empty",
-            "tag": "minecraft:flowers/lavender"
-          }
-        },
-        {
-          "type": "neoforge:mod_loaded",
-          "modid": "farmersrespite"
-        },
-        {
-          "type": "neoforge:item_exists",
-          "item": "windswept:lavender_tea"
-        }
-      ],
-      "recipe": {
-        "type": "farmersrespite:kettle_pouring",
-        "amount": 250,
-        "container": {
-          "item": "minecraft:glass_bottle"
-        },
-        "fluid": "delightful:lavender_tea",
-        "output": {
-          "item": "windswept:lavender_tea"
-        }
+      "type": "neoforge:mod_loaded",
+      "modid": "farmersrespite"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:item_exists",
+        "item": "windswept:lavender_tea"
       }
     }
-  ]
+  ],
+  "type": "farmersrespite:kettle_pouring",
+  "amount": 250,
+  "container": {
+    "item": "minecraft:glass_bottle"
+  },
+  "fluid": "delightful:lavender_tea",
+  "output": {
+    "item": "delightful:lavender_tea"
+  }
 }

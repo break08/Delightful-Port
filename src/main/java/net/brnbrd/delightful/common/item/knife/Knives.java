@@ -5,6 +5,7 @@ import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.common.item.knife.compat.*;
 import net.brnbrd.delightful.common.item.knife.compat.additionaladditions.GildedNetheriteKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.additionaladditions.RoseGoldKnifeItem;
+import net.brnbrd.delightful.common.item.knife.compat.ae2.FluixKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.aether.GravititeKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.aether.HolystoneKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.aether.SkyrootKnifeItem;
@@ -26,7 +27,6 @@ import net.brnbrd.delightful.common.item.knife.compat.oresabovediamonds.LargeAme
 import net.brnbrd.delightful.common.item.knife.compat.oresabovediamonds.NetheriteOpalKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.rootsclassic.LivingKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.seeds.LeafKnifeItem;
-import net.brnbrd.delightful.common.item.knife.compat.spirit.SoulSteelKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.twilightforest.FieryKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.twilightforest.IronwoodKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.twilightforest.KnightmetalKnifeItem;
@@ -37,9 +37,11 @@ import net.brnbrd.delightful.common.item.knife.compat.undergarden.FroststeelKnif
 import net.brnbrd.delightful.common.item.knife.compat.undergarden.UtheriumKnifeItem;
 import net.brnbrd.delightful.common.item.knife.compat.unusualend.PearlescentKnifeItem;
 import net.brnbrd.delightful.compat.Modid;
+import net.brnbrd.delightful.compat.aether.DeepAetherCompat;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.registries.DeferredItem;
 
@@ -96,7 +98,6 @@ public class Knives extends DelightfulItems {
     public static final DeferredItem<Item> BLAZING = registerItem("blazing_knife", () -> new BlazingKnifeItem(props()));
     public static final DeferredItem<Item> LEAF = registerItem("leaf_knife", () -> new LeafKnifeItem(props()));
     public static final DeferredItem<Item> KIWANO = registerItem("kiwano_knife", () -> new KiwanoKnifeItem(props()));
-    public static final DeferredItem<Item> SOUL_STEEL = registerItem("soul_steel_knife", () -> new SoulSteelKnifeItem(props()));
     public static final DeferredItem<Item> ROSE_GOLD = registerItem("rose_gold_knife", () -> new RoseGoldKnifeItem(props()));
     public static final DeferredItem<Item> GILDED_NETHERITE = registerItem("gilded_netherite_knife", () -> new GildedNetheriteKnifeItem(props()));
     public static final DeferredItem<Item> NECRONIUM = registerItem("necronium_knife", () -> new NecroniumKnifeItem(props()));
@@ -131,25 +132,7 @@ public class Knives extends DelightfulItems {
             DelightfulItemTags.ingot("terrasteel"),
             Modid.BTA.loaded() ? BotaniaCompat.terrasteel().get() : DelightfulTiers.STEEL
     ));
-    public static final DeferredItem<Item> ALF = registerItem("alf_knife", () -> new AlfKnifeItem(props()));
-    public static final DeferredItem<Item> VERIDIUM = registerItem("veridium_knife",
-            () -> Modid.AER.loaded() ?
-                    AetherReduxCompat.VERIDIUM.get() :
-                    new DummyKnifeItem(
-                            DelightfulItemTags.INGOTS_VERIDIUM,
-                            Ingredient.of(DelightfulItemTags.SKYROOT_STICK),
-                            Modid.AE, Modid.AER
-                    )
-    );
-    public static final DeferredItem<Item> INFUSED_VERIDIUM = registerItem("infused_veridium_knife",
-            () -> Modid.AER.loaded() ?
-                    AetherReduxCompat.INFUSED_VERIDIUM.get() :
-                    new DummyKnifeItem(
-                            DelightfulItemTags.INGOTS_VERIDIUM,
-                            Ingredient.of(DelightfulItemTags.SKYROOT_STICK),
-                            Modid.AE, Modid.AER
-                    )
-    );
+    */
     public static final DeferredItem<Item> SKYJADE = registerItem("skyjade_knife",
             () -> Modid.DA.loaded() ?
                     DeepAetherCompat.SKYJADE.get() :
@@ -168,11 +151,10 @@ public class Knives extends DelightfulItems {
                             Modid.AE, Modid.DA
                     )
     );
-    public static final DeferredItem<Item> VALKYRUM = registerItem("valkyrum_knife", () -> new ValkyrumKnifeItem(props()));
+
     public static final DeferredItem<Item> CERTUS_QUARTZ = registerKnife("certus_quartz", DelightfulItemTags.CERTUS_QUARTZ, Modid.AE2);
     public static final DeferredItem<Item> FLUIX = registerItem("fluix_knife", () -> new FluixKnifeItem(props()));
 
-     */
 
     // Registers a knife, requiring modid
     public static DeferredItem<Item> registerKnife(String name, TagKey<Item> tag, Modid... modid) {

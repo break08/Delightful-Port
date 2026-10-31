@@ -1,4 +1,4 @@
-// 1.21.1	2026-10-30T20:51:08.2373817	Recipes
+// 1.21.1	2026-10-31T11:42:09.577991	Recipes
 3011b814f58bace5bff2560655b29382b7c5fd35 data/delightful/advancement/recipes/building_blocks/integration/cookielicious/glow_jam_cookie_tiles.json
 0eefe84a012f1f3d1646a52213d1b6a013a72ed2 data/delightful/advancement/recipes/building_blocks/integration/cookielicious/glow_jam_cookie_tile_slab.json
 3e1e399e8fb2602041fd3b499094192f159550be data/delightful/advancement/recipes/building_blocks/integration/cookielicious/glow_jam_cookie_tile_stairs.json
@@ -20,6 +20,7 @@ ec5ac2dd4cf802e8f54b9f9cd05f605a056703d1 data/delightful/advancement/recipes/com
 5bbfb92777c5e0e58a92c2935060fd7e3d7d2e92 data/delightful/advancement/recipes/combat/knives/bone_knife.json
 c77ceb9eee2da09c90e017667d8b7d25c5f61276 data/delightful/advancement/recipes/combat/knives/brass_knife.json
 1cf968337a551a14f2655a467339f4fad3fe5be8 data/delightful/advancement/recipes/combat/knives/bronze_knife.json
+64288824f4a60b2651ae60215c929900fa322ac0 data/delightful/advancement/recipes/combat/knives/certus_quartz_knife.json
 64a71e7689262c4731de0fc8881f34f7ff4ca0ab data/delightful/advancement/recipes/combat/knives/cloggrum_knife.json
 d749c716694ed8590d9b846ea5099ca7976b90d0 data/delightful/advancement/recipes/combat/knives/constantan_knife.json
 270dba587a1ffe9264ae8d3826121812e223cfa8 data/delightful/advancement/recipes/combat/knives/copper_knife.json
@@ -47,10 +48,11 @@ e29acca7df5c19e655fa869fe79376ebce661017 data/delightful/advancement/recipes/com
 97c30b6650013878fc3547ba947a8df84d5c70e8 data/delightful/advancement/recipes/combat/knives/refined_obsidian_knife.json
 ed89aee08a5488c770b0efcd913b10f3641ed8af data/delightful/advancement/recipes/combat/knives/silver_knife.json
 336108f20155b08ff0f9a2f2a55fdba2c2cce9ae data/delightful/advancement/recipes/combat/knives/sinisite_knife.json
+58fc22fead8c55203d08b039beb318231da43870 data/delightful/advancement/recipes/combat/knives/skyjade_knife.json
 6398a6f59efc15b4f912cd5090b2996226fcfa32 data/delightful/advancement/recipes/combat/knives/skyroot_knife.json
 f7305e873659c15bec0ac3deba48c7068fc77092 data/delightful/advancement/recipes/combat/knives/smelting/bone/knife_minecraft.json
-cf9ca7ac49f8e6700bbd0a0cc9e67b03c5c0648c data/delightful/advancement/recipes/combat/knives/soul_steel_knife.json
 dadb3d3564519461dc293977dd04487a2b2acdca data/delightful/advancement/recipes/combat/knives/steel_knife.json
+ad15f7383d330e5414a4843c3c9178652b69438c data/delightful/advancement/recipes/combat/knives/stratus_knife.json
 66590ba3d2ff0eb4cb4c7821e73e0b0072bb1cb6 data/delightful/advancement/recipes/combat/knives/thyrium_knife.json
 ad30876302ed765102a1b19f172e68cf858bafdc data/delightful/advancement/recipes/combat/knives/tin_knife.json
 9a635124f6a39a1ffd4f36d1283db3f65aa0c87d data/delightful/advancement/recipes/combat/knives/utherium_knife.json
@@ -251,6 +253,7 @@ d06e1410d13b870e1feddd21f3469e20f0e109ce data/delightful/recipe/knives/blasting/
 fb815036d34e3a575587274ba7d4a08dd49d62b7 data/delightful/recipe/knives/bone_knife.json
 90d6b859a00f6e85d9794a5c55fa1123bf43d628 data/delightful/recipe/knives/brass_knife.json
 4ecfc522717e9fa605005eb9a50c01c99039efe5 data/delightful/recipe/knives/bronze_knife.json
+bae5b4f851d49644fe4d48b7f1c94fbe9124b6a6 data/delightful/recipe/knives/certus_quartz_knife.json
 00e2278845f583fd33cf8f3a1e56b725f2ea16a5 data/delightful/recipe/knives/cloggrum_knife.json
 836cc6df652f6cd777006d0b2163572210ef58e2 data/delightful/recipe/knives/constantan_knife.json
 5b7427acd7a6438f33ac3b38c276b95cb2b9b35c data/delightful/recipe/knives/copper_knife.json
@@ -278,10 +281,11 @@ bacfcc78caac472a408a9099014c1868b53d85c3 data/delightful/recipe/knives/lapis_laz
 6b0de77634a939e7639d48f63649071102e82e01 data/delightful/recipe/knives/refined_obsidian_knife.json
 70bf287e71ea2a263693776843dd58e70b1066c0 data/delightful/recipe/knives/silver_knife.json
 a494164065f81521be068f5740aab3c162f076ee data/delightful/recipe/knives/sinisite_knife.json
+cfa980db6b228947c28c44175b8e4e953169b3f5 data/delightful/recipe/knives/skyjade_knife.json
 a6caa8e073f1812894765ee0941190d4fbea4153 data/delightful/recipe/knives/skyroot_knife.json
 76bd62ac85d1875f37a33b7623f371314b8a53dc data/delightful/recipe/knives/smelting/bone/knife_minecraft.json
-d9e779a4aa631391947a922fa0912c325f42fcf0 data/delightful/recipe/knives/soul_steel_knife.json
 8fcb8bcc20f702180a984f72a8e46e22babf5a47 data/delightful/recipe/knives/steel_knife.json
+28d486684f7cd1fa0f7537ef86619034384fa9ab data/delightful/recipe/knives/stratus_knife.json
 b70ed723699e3159dea758053a05a33e076e1308 data/delightful/recipe/knives/thyrium_knife.json
 14a375a6a4894e62ee29e85b9f2b2e75c0f66d23 data/delightful/recipe/knives/tin_knife.json
 d47f26f7827cb64cf6747b69bc71df88c4b07cde data/delightful/recipe/knives/utherium_knife.json

@@ -1,34 +1,27 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "prickly_pear_juice"
-        },
-        {
-          "type": "neoforge:item_exists",
-          "item": "ecologics:cooked_prickly_pear"
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:crafting_shapeless",
-        "ingredients": [
-          {
-            "item": "ecologics:cooked_prickly_pear"
-          },
-          {
-            "item": "minecraft:sugar"
-          },
-          {
-            "item": "minecraft:glass_bottle"
-          }
-        ],
-        "result": {
-          "id": "delightful:prickly_pear_juice"
-        }
-      }
+      "type": "delightful:enabled",
+      "value": "prickly_pear_juice"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "ecologics:cooked_prickly_pear"
     }
-  ]
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ecologics:cooked_prickly_pear"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    }
+  ],
+  "result": {
+    "id": "delightful:prickly_pear_juice"
+  }
 }

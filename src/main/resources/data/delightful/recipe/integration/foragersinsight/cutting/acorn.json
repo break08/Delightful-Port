@@ -1,37 +1,30 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:item_exists",
-          "item": "foragersinsight:acorn_meal"
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:tag_empty",
-            "tag": "c:tools/mallets"
-          }
-        }
-      ],
-      "recipe": {
-        "type": "farmersdelight:cutting",
-        "ingredients": [
-          {
-            "item": "delightful:acorn"
-          }
-        ],
-        "result": [
-          {
-            "count": 1,
-            "item": "foragersinsight:acorn_meal"
-          }
-        ],
-        "tool": {
-          "tag": "c:tools/mallets"
-        }
+      "type": "neoforge:item_exists",
+      "item": "foragersinsight:acorn_meal"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:tools/mallets"
       }
     }
-  ]
+  ],
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "delightful:acorn"
+    }
+  ],
+  "result": [
+    {
+      "count": 1,
+      "item": "foragersinsight:acorn_meal"
+    }
+  ],
+  "tool": {
+    "tag": "c:tools/mallets"
+  }
 }

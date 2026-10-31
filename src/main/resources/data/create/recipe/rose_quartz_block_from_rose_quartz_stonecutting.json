@@ -1,28 +1,21 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "modid": "create",
-          "type": "neoforge:mod_loaded"
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:tag_empty",
-            "tag": "c:gems/rose_quartz"
-          }
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:stonecutting",
-        "ingredient": {
-          "tag": "c:gems/rose_quartz"
-        },
-        "result": "create:rose_quartz_block",
-        "count": 2
+      "modid": "create",
+      "type": "neoforge:mod_loaded"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:gems/rose_quartz"
       }
     }
-  ]
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "c:gems/rose_quartz"
+  },
+  "result": "create:rose_quartz_block",
+  "count": 2
 }

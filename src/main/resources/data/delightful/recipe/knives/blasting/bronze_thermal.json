@@ -1,26 +1,19 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "value": "bronze_knife",
-          "type": "delightful:enabled"
-        },
-        {
-          "item": "thermal:bronze_nugget",
-          "type": "neoforge:item_exists"
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:blasting",
-        "ingredient": {
-          "item": "delightful:bronze_knife"
-        },
-        "result": "thermal:bronze_nugget",
-        "experience": 0.1,
-        "cookingtime": 100
-      }
+      "value": "bronze_knife",
+      "type": "delightful:enabled"
+    },
+    {
+      "item": "thermal:bronze_nugget",
+      "type": "neoforge:item_exists"
     }
-  ]
+  ],
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "delightful:bronze_knife"
+  },
+  "result": "thermal:bronze_nugget",
+  "experience": 0.1,
+  "cookingtime": 100
 }

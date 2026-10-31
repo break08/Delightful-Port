@@ -1,34 +1,27 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:mod_loaded",
-          "modid": "brewinandchewin"
-        },
-        {
-          "type": "delightful:enabled",
-          "value": "matcha_latte"
-        },
-        {
-          "type": "delightful:enabled",
-          "value": "ender_nectar"
-        }
-      ],
-      "recipe": {
-        "type": "brewinandchewin:keg_pouring",
-        "container": {
-          "item": "minecraft:glass_bottle"
-        },
-        "amount": 250,
-        "filling": true,
-        "fluid": "delightful:ender_nectar",
-        "output": {
-          "item": "delightful:ender_nectar"
-        },
-        "strict": false
-      }
+      "type": "neoforge:mod_loaded",
+      "modid": "brewinandchewin"
+    },
+    {
+      "type": "delightful:enabled",
+      "value": "matcha_latte"
+    },
+    {
+      "type": "delightful:enabled",
+      "value": "ender_nectar"
     }
-  ]
+  ],
+  "type": "brewinandchewin:keg_pouring",
+  "container": {
+    "item": "minecraft:glass_bottle"
+  },
+  "amount": 250,
+  "filling": true,
+  "fluid": "delightful:ender_nectar",
+  "output": {
+    "item": "delightful:ender_nectar"
+  },
+  "strict": false
 }

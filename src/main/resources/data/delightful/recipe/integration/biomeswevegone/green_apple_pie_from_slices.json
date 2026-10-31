@@ -1,37 +1,30 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "green_apple_pie_slice"
-        },
-        {
-          "type": "neoforge:item_exists",
-          "item": "biomeswevegone:green_apple_pie"
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:crafting_shapeless",
-        "ingredients": [
-          {
-            "item": "delightful:green_apple_pie_slice"
-          },
-          {
-            "item": "delightful:green_apple_pie_slice"
-          },
-          {
-            "item": "delightful:green_apple_pie_slice"
-          },
-          {
-            "item": "delightful:green_apple_pie_slice"
-          }
-        ],
-        "result": {
-          "id": "biomeswevegone:green_apple_pie"
-        }
-      }
+      "type": "delightful:enabled",
+      "value": "green_apple_pie_slice"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "biomeswevegone:green_apple_pie"
     }
-  ]
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "delightful:green_apple_pie_slice"
+    },
+    {
+      "item": "delightful:green_apple_pie_slice"
+    },
+    {
+      "item": "delightful:green_apple_pie_slice"
+    },
+    {
+      "item": "delightful:green_apple_pie_slice"
+    }
+  ],
+  "result": {
+    "id": "biomeswevegone:green_apple_pie"
+  }
 }

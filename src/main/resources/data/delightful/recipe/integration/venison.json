@@ -1,50 +1,43 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "venison_chops"
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:mod_loaded",
-            "modid": "twilightdelight"
-          }
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:tag_empty",
-            "tag": "c:raw_venison_compat"
-          }
-        }
-      ],
-      "recipe": {
-        "type": "farmersdelight:cutting",
-        "ingredients": [
-          {
-            "tag": "c:raw_venison_compat"
-          }
-        ],
-        "result": [
-          {
-            "count": 2,
-            "item": "delightful:venison_chops"
-          }
-        ],
-        "tool": [
-          {
-            "type": "farmersdelight:tool_action",
-            "action": "knife_dig"
-          },
-          {
-            "tag": "c:tools/knives"
-          }
-        ]
+      "type": "delightful:enabled",
+      "value": "venison_chops"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "twilightdelight"
       }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:raw_venison_compat"
+      }
+    }
+  ],
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "tag": "c:raw_venison_compat"
+    }
+  ],
+  "result": [
+    {
+      "count": 2,
+      "item": "delightful:venison_chops"
+    }
+  ],
+  "tool": [
+    {
+      "type": "farmersdelight:tool_action",
+      "action": "knife_dig"
+    },
+    {
+      "tag": "c:tools/knives"
     }
   ]
 }

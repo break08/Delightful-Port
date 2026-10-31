@@ -1,94 +1,44 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "gravitite_knife"
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:tag_empty",
-            "tag": "aether:enchanted_gravitite"
-          }
-        },
-        {
-          "type": "neoforge:mod_loaded",
-          "modid": "aether"
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:mod_loaded",
-            "modid": "aether_redux"
-          }
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:crafting_shaped",
-        "category": "equipment",
-        "key": {
-          "m": {
-            "tag": "aether:enchanted_gravitite"
-          },
-          "s": {
-            "tag": "aether:skyroot_stick"
-          }
-        },
-        "pattern": [
-          "m",
-          "s"
-        ],
-        "result": {
-          "id": "delightful:gravitite_knife"
-        },
-        "show_notification": true
+      "type": "delightful:enabled",
+      "value": "gravitite_knife"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "aether:enchanted_gravitite"
       }
     },
     {
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "gravitite_knife"
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:tag_empty",
-            "tag": "c:ingots/gravitite"
-          }
-        },
-        {
-          "type": "neoforge:mod_loaded",
-          "modid": "aether"
-        },
-        {
-          "type": "neoforge:mod_loaded",
-          "modid": "aether_redux"
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:crafting_shaped",
-        "category": "equipment",
-        "key": {
-          "m": {
-            "tag": "c:ingots/gravitite"
-          },
-          "s": {
-            "tag": "aether:skyroot_stick"
-          }
-        },
-        "pattern": [
-          "m",
-          "s"
-        ],
-        "result": {
-          "id": "delightful:gravitite_knife"
-        },
-        "show_notification": true
+      "type": "neoforge:mod_loaded",
+      "modid": "aether"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "aether_redux"
       }
     }
-  ]
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "m": {
+      "tag": "aether:enchanted_gravitite"
+    },
+    "s": {
+      "tag": "aether:skyroot_stick"
+    }
+  },
+  "pattern": [
+    "m",
+    "s"
+  ],
+  "result": {
+    "id": "delightful:gravitite_knife"
+  },
+  "show_notification": true
 }

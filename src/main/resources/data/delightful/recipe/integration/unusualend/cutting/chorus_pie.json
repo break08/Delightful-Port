@@ -1,40 +1,33 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "chorus_pie_slice"
-        },
-        {
-          "type": "neoforge:item_exists",
-          "item": "unusualend:chorus_pie"
-        }
-      ],
-      "recipe": {
-        "type": "farmersdelight:cutting",
-        "ingredients": [
-          {
-            "item": "unusualend:chorus_pie"
-          }
-        ],
-        "result": [
-          {
-            "count": 4,
-            "item": "delightful:chorus_pie_slice"
-          }
-        ],
-        "tool": [
-          {
-            "type": "farmersdelight:tool_action",
-            "action": "knife_dig"
-          },
-          {
-            "tag": "c:tools/knives"
-          }
-        ]
-      }
+      "type": "delightful:enabled",
+      "value": "chorus_pie_slice"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "unusualend:chorus_pie"
+    }
+  ],
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "unusualend:chorus_pie"
+    }
+  ],
+  "result": [
+    {
+      "count": 4,
+      "item": "delightful:chorus_pie_slice"
+    }
+  ],
+  "tool": [
+    {
+      "type": "farmersdelight:tool_action",
+      "action": "knife_dig"
+    },
+    {
+      "tag": "c:tools/knives"
     }
   ]
 }

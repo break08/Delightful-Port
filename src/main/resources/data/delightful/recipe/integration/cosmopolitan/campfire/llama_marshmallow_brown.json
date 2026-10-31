@@ -1,23 +1,16 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:item_exists",
-          "item": "cosmopolitan:llama_marshmallow_brown"
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:campfire_cooking",
-        "category": "food",
-        "cookingtime": 600,
-        "experience": 0.5,
-        "ingredient": {
-          "item": "cosmopolitan:llama_marshmallow_brown"
-        },
-        "result": "delightful:cooked_marshmallow_stick"
-      }
+      "type": "neoforge:item_exists",
+      "item": "cosmopolitan:llama_marshmallow_brown"
     }
-  ]
+  ],
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 600,
+  "experience": 0.5,
+  "ingredient": {
+    "item": "cosmopolitan:llama_marshmallow_brown"
+  },
+  "result": "delightful:cooked_marshmallow_stick"
 }

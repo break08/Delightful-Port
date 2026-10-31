@@ -1,42 +1,35 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:item_exists",
-          "item": "habitat:kabloom_fruit"
-        },
-        {
-          "type": "neoforge:item_exists",
-          "item": "habitat:kabloom_pulp"
-        }
-      ],
-      "recipe": {
-        "type": "farmersdelight:cutting",
-        "ingredients": [
-          {
-            "item": "habitat:kabloom_fruit"
-          }
-        ],
-        "result": [
-          {
-            "item": "habitat:kabloom_pulp"
-          },
-          {
-            "item": "minecraft:green_dye"
-          }
-        ],
-        "tool": [
-          {
-            "type": "farmersdelight:tool_action",
-            "action": "knife_dig"
-          },
-          {
-            "tag": "c:tools/knives"
-          }
-        ]
-      }
+      "type": "neoforge:item_exists",
+      "item": "habitat:kabloom_fruit"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "habitat:kabloom_pulp"
+    }
+  ],
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "habitat:kabloom_fruit"
+    }
+  ],
+  "result": [
+    {
+      "item": "habitat:kabloom_pulp"
+    },
+    {
+      "item": "minecraft:green_dye"
+    }
+  ],
+  "tool": [
+    {
+      "type": "farmersdelight:tool_action",
+      "action": "knife_dig"
+    },
+    {
+      "tag": "c:tools/knives"
     }
   ]
 }

@@ -1,38 +1,31 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "nut_milk"
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:mod_loaded",
-            "modid": "farmersrespite"
-          }
-        }
-      ],
-      "recipe": {
-        "type": "farmersdelight:cooking",
-        "container": {
-          "type": "neoforge:nbt",
-          "item": "minecraft:potion",
-          "nbt": "{Potion:\"minecraft:water\"}"
-        },
-        "cookingtime": 200,
-        "experience": 0.35,
-        "ingredients": [
-          {
-            "tag": "c:nut_butter"
-          }
-        ],
-        "result": {
-          "id": "farmersdelight:milk_bottle"
-        }
+      "type": "delightful:enabled",
+      "value": "nut_milk"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "farmersrespite"
       }
     }
-  ]
+  ],
+  "type": "farmersdelight:cooking",
+  "container": {
+    "type": "neoforge:nbt",
+    "item": "minecraft:potion",
+    "nbt": "{Potion:\"minecraft:water\"}"
+  },
+  "cookingtime": 200,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "tag": "c:nut_butter"
+    }
+  ],
+  "result": {
+    "id": "farmersdelight:milk_bottle"
+  }
 }

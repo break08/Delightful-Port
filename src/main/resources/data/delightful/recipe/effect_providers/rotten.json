@@ -1,26 +1,19 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:mod_loaded",
-          "modid": "jeed"
-        },
-        {
-          "type": "neoforge:mod_loaded",
-          "modid": "casualness_delight"
-        }
-      ],
-      "recipe": {
-        "type": "jeed:effect_provider",
-        "effect": "casualness_delight:rotten",
-        "providers": [
-          {
-            "tag": "delightful:rotten"
-          }
-        ]
-      }
+      "type": "neoforge:mod_loaded",
+      "modid": "jeed"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "casualness_delight"
+    }
+  ],
+  "type": "jeed:effect_provider",
+  "effect": "casualness_delight:rotten",
+  "providers": [
+    {
+      "tag": "delightful:rotten"
     }
   ]
 }

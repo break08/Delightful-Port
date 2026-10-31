@@ -1,52 +1,45 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:or",
+      "values": [
         {
           "type": "neoforge:mod_loaded",
-          "modid": "create"
+          "modid": "farmersrespite"
         },
         {
-          "type": "neoforge:or",
-          "values": [
-            {
-              "type": "neoforge:mod_loaded",
-              "modid": "farmersrespite"
-            },
-            {
-              "type": "neoforge:mod_loaded",
-              "modid": "brewinandchewin"
-            }
-          ]
-        },
-        {
-          "type": "delightful:enabled",
-          "value": "matcha_latte"
-        },
-        {
-          "type": "delightful:enabled",
-          "value": "ender_nectar"
+          "type": "neoforge:mod_loaded",
+          "modid": "brewinandchewin"
         }
-      ],
-      "recipe": {
-        "type": "create:filling",
-        "ingredients": [
-          {
-            "item": "minecraft:glass_bottle"
-          },
-          {
-            "amount": 250,
-            "fluid": "delightful:ender_nectar",
-            "nbt": {}
-          }
-        ],
-        "results": [
-          {
-            "item": "delightful:ender_nectar"
-          }
-        ]
-      }
+      ]
+    },
+    {
+      "type": "delightful:enabled",
+      "value": "matcha_latte"
+    },
+    {
+      "type": "delightful:enabled",
+      "value": "ender_nectar"
+    }
+  ],
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "amount": 250,
+      "fluid": "delightful:ender_nectar",
+      "nbt": {}
+    }
+  ],
+  "results": [
+    {
+      "item": "delightful:ender_nectar"
     }
   ]
 }

@@ -1,46 +1,39 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:item_exists",
-          "item": "habitat:pink_ball_cactus"
-        },
-        {
-          "type": "neoforge:item_exists",
-          "item": "habitat:pink_ball_cactus_flower"
-        },
-        {
-          "type": "delightful:enabled",
-          "value": "cactus_flesh"
-        }
-      ],
-      "recipe": {
-        "type": "farmersdelight:cutting",
-        "ingredients": [
-          {
-            "item": "habitat:pink_ball_cactus"
-          }
-        ],
-        "result": [
-          {
-            "item": "delightful:cactus_flesh"
-          },
-          {
-            "item": "habitat:pink_ball_cactus_flower"
-          }
-        ],
-        "tool": [
-          {
-            "type": "farmersdelight:tool_action",
-            "action": "knife_dig"
-          },
-          {
-            "tag": "c:tools/knives"
-          }
-        ]
-      }
+      "type": "neoforge:item_exists",
+      "item": "habitat:pink_ball_cactus"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "habitat:pink_ball_cactus_flower"
+    },
+    {
+      "type": "delightful:enabled",
+      "value": "cactus_flesh"
+    }
+  ],
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "habitat:pink_ball_cactus"
+    }
+  ],
+  "result": [
+    {
+      "item": "delightful:cactus_flesh"
+    },
+    {
+      "item": "habitat:pink_ball_cactus_flower"
+    }
+  ],
+  "tool": [
+    {
+      "type": "farmersdelight:tool_action",
+      "action": "knife_dig"
+    },
+    {
+      "tag": "c:tools/knives"
     }
   ]
 }

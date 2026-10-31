@@ -1,50 +1,43 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "forgotten_knife"
-        },
-        {
-          "type": "neoforge:mod_loaded",
-          "modid": "undergarden"
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:tag_empty",
-            "tag": "c:ingots/forgotten_metal"
-          }
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:mod_loaded",
-            "modid": "undergardendelight"
-          }
-        },
-        {
-          "type": "neoforge:item_exists",
-          "item": "undergarden:forgotten_upgrade_smithing_template"
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:smithing_transform",
-        "addition": {
-          "tag": "c:ingots/forgotten_metal"
-        },
-        "base": {
-          "item": "delightful:cloggrum_knife"
-        },
-        "result": {
-          "id": "delightful:forgotten_knife"
-        },
-        "template": {
-          "item": "undergarden:forgotten_upgrade_smithing_template"
-        }
+      "type": "delightful:enabled",
+      "value": "forgotten_knife"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "undergarden"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/forgotten_metal"
       }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "undergardendelight"
+      }
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "undergarden:forgotten_upgrade_smithing_template"
     }
-  ]
+  ],
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "tag": "c:ingots/forgotten_metal"
+  },
+  "base": {
+    "item": "delightful:cloggrum_knife"
+  },
+  "result": {
+    "id": "delightful:forgotten_knife"
+  },
+  "template": {
+    "item": "undergarden:forgotten_upgrade_smithing_template"
+  }
 }

@@ -1,34 +1,27 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:mod_loaded",
-          "modid": "immersiveengineering"
-        },
-        {
-          "type": "delightful:enabled",
-          "value": "cantaloupe_seeds"
-        }
-      ],
-      "recipe": {
-        "conditions": [
-          {
-            "type": "neoforge:mod_loaded",
-            "modid": "immersiveengineering"
-          }
-        ],
-        "type": "immersiveengineering:squeezer",
-        "energy": 6400,
-        "fluid": {
-          "amount": 20,
-          "fluid": "immersiveengineering:plantoil"
-        },
-        "input": {
-          "item": "delightful:cantaloupe_seeds"
-        }
-      }
+      "type": "neoforge:mod_loaded",
+      "modid": "immersiveengineering"
+    },
+    {
+      "type": "delightful:enabled",
+      "value": "cantaloupe_seeds"
     }
-  ]
+  ],
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ],
+  "type": "immersiveengineering:squeezer",
+  "energy": 6400,
+  "fluid": {
+    "amount": 20,
+    "fluid": "immersiveengineering:plantoil"
+  },
+  "input": {
+    "item": "delightful:cantaloupe_seeds"
+  }
 }

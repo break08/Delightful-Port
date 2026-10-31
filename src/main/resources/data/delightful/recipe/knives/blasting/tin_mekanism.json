@@ -1,26 +1,19 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "value": "tin_knife",
-          "type": "delightful:enabled"
-        },
-        {
-          "item": "mekanism:nugget_tin",
-          "type": "neoforge:item_exists"
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:blasting",
-        "ingredient": {
-          "item": "delightful:tin_knife"
-        },
-        "result": "mekanism:nugget_tin",
-        "experience": 0.1,
-        "cookingtime": 100
-      }
+      "value": "tin_knife",
+      "type": "delightful:enabled"
+    },
+    {
+      "item": "mekanism:nugget_tin",
+      "type": "neoforge:item_exists"
     }
-  ]
+  ],
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "delightful:tin_knife"
+  },
+  "result": "mekanism:nugget_tin",
+  "experience": 0.1,
+  "cookingtime": 100
 }

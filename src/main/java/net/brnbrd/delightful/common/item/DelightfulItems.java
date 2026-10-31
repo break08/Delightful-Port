@@ -248,6 +248,7 @@ public class DelightfulItems {
      */
 
     // Debug Items
+    /*
     public static final DeferredItem<Item> DEBUG_GLOOMGOURD_PIE = registerItem("debug_gloomgourd_pie",
             () -> new BlockItem(DelightfulBlocks.GLOOMGOURD_PIE.get(), (new Item.Properties())) {
                 @Override
@@ -308,6 +309,8 @@ public class DelightfulItems {
                     tooltip.add(TextUtils.DEBUG_ITEM);
                 }
             });
+
+     */
 
     public static DeferredItem<Item> registerFood(String name, FoodProperties food, Item... remainder) {
         if (remainder.length > 0) {

@@ -1,56 +1,49 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "animal_fat"
-        },
-        {
-          "type": "neoforge:item_exists",
-          "item": "supplementaries:soap"
-        },
-        {
-          "type": "supplementaries:flag",
-          "flag": "soap"
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:crafting_shapeless",
-        "ingredients": [
-          [
-            {
-              "tag": "c:water"
-            },
-            {
-              "count": 1,
-              "type": "neoforge:nbt",
-              "item": "minecraft:potion",
-              "nbt": "{Potion:\"minecraft:water\"}"
-            }
-          ],
-          {
-            "tag": "c:ash"
-          },
-          {
-            "tag": "c:ash"
-          },
-          {
-            "tag": "c:ash"
-          },
-          {
-            "tag": "c:ash"
-          },
-          {
-            "item": "delightful:animal_fat"
-          }
-        ],
-        "result": {
-          "count": 6,
-          "id": "supplementaries:soap"
-        }
-      }
+      "type": "delightful:enabled",
+      "value": "animal_fat"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "supplementaries:soap"
+    },
+    {
+      "type": "supplementaries:flag",
+      "flag": "soap"
     }
-  ]
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    [
+      {
+        "tag": "c:water"
+      },
+      {
+        "count": 1,
+        "type": "neoforge:nbt",
+        "item": "minecraft:potion",
+        "nbt": "{Potion:\"minecraft:water\"}"
+      }
+    ],
+    {
+      "tag": "c:ash"
+    },
+    {
+      "tag": "c:ash"
+    },
+    {
+      "tag": "c:ash"
+    },
+    {
+      "tag": "c:ash"
+    },
+    {
+      "item": "delightful:animal_fat"
+    }
+  ],
+  "result": {
+    "count": 6,
+    "id": "supplementaries:soap"
+  }
 }

@@ -1,48 +1,41 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:item_exists",
-          "item": "ars_nouveau:magebloom"
-        },
-        {
-          "type": "neoforge:item_exists",
-          "item": "ars_nouveau:magebloom_fiber"
-        }
-      ],
-      "recipe": {
-        "type": "farmersdelight:cutting",
-        "ingredients": [
-          {
-            "item": "ars_nouveau:magebloom"
-          }
-        ],
-        "result": [
-          {
-            "item": "ars_nouveau:magebloom_fiber",
-            "count": 3
-          },
-          {
-            "count": 1,
-            "chance": 0.25,
-            "item": "ars_nouveau:magebloom_fiber"
-          },
-          {
-            "item": "minecraft:purple_dye"
-          }
-        ],
-        "tool": [
-          {
-            "type": "farmersdelight:tool_action",
-            "action": "knife_dig"
-          },
-          {
-            "tag": "c:tools/knives"
-          }
-        ]
-      }
+      "type": "neoforge:item_exists",
+      "item": "ars_nouveau:magebloom"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "ars_nouveau:magebloom_fiber"
+    }
+  ],
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "ars_nouveau:magebloom"
+    }
+  ],
+  "result": [
+    {
+      "item": "ars_nouveau:magebloom_fiber",
+      "count": 3
+    },
+    {
+      "count": 1,
+      "chance": 0.25,
+      "item": "ars_nouveau:magebloom_fiber"
+    },
+    {
+      "item": "minecraft:purple_dye"
+    }
+  ],
+  "tool": [
+    {
+      "type": "farmersdelight:tool_action",
+      "action": "knife_dig"
+    },
+    {
+      "tag": "c:tools/knives"
     }
   ]
 }

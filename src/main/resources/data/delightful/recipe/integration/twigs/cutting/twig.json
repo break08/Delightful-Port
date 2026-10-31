@@ -1,36 +1,29 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:item_exists",
-          "item": "twigs:twig"
-        }
-      ],
-      "recipe": {
-        "type": "farmersdelight:cutting",
-        "ingredients": [
-          {
-            "item": "twigs:twig"
-          }
-        ],
-        "tool": [
-          {
-            "type": "farmersdelight:tool_action",
-            "action": "axe_dig"
-          },
-          {
-            "tag": "minecraft:axes"
-          }
-        ],
-        "result": [
-          {
-            "item": "minecraft:stick",
-            "count": 2
-          }
-        ]
-      }
+      "type": "neoforge:item_exists",
+      "item": "twigs:twig"
+    }
+  ],
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "twigs:twig"
+    }
+  ],
+  "tool": [
+    {
+      "type": "farmersdelight:tool_action",
+      "action": "axe_dig"
+    },
+    {
+      "tag": "minecraft:axes"
+    }
+  ],
+  "result": [
+    {
+      "item": "minecraft:stick",
+      "count": 2
     }
   ]
 }

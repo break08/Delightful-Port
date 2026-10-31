@@ -1,28 +1,21 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "matcha_latte"
-        },
-        {
-          "type": "neoforge:mod_loaded",
-          "modid": "farmersrespite"
-        }
-      ],
-      "recipe": {
-        "type": "farmersrespite:kettle_pouring",
-        "amount": 250,
-        "container": {
-          "item": "minecraft:glass_bottle"
-        },
-        "fluid": "delightful:matcha_latte",
-        "output": {
-          "item": "delightful:matcha_latte"
-        }
-      }
+      "type": "delightful:enabled",
+      "value": "matcha_latte"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "farmersrespite"
     }
-  ]
+  ],
+  "type": "farmersrespite:kettle_pouring",
+  "amount": 250,
+  "container": {
+    "item": "minecraft:glass_bottle"
+  },
+  "fluid": "delightful:matcha_latte",
+  "output": {
+    "item": "delightful:matcha_latte"
+  }
 }

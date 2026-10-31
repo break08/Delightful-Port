@@ -1,50 +1,43 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "source_berry_cookie"
-        },
-        {
-          "type": "neoforge:mod_loaded",
-          "modid": "ars_nouveau"
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:mod_loaded",
-            "modid": "arsdelight"
-          }
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:tag_empty",
-            "tag": "c:fruits/sourceberry"
-          }
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:crafting_shapeless",
-        "category": "misc",
-        "ingredients": [
-          {
-            "tag": "c:fruits/sourceberry"
-          },
-          {
-            "tag": "c:grain/wheat"
-          },
-          {
-            "tag": "c:grain/wheat"
-          }
-        ],
-        "result": {
-          "count": 8,
-          "id": "delightful:source_berry_cookie"
-        }
+      "type": "delightful:enabled",
+      "value": "source_berry_cookie"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ars_nouveau"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "arsdelight"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:fruits/sourceberry"
       }
     }
-  ]
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:fruits/sourceberry"
+    },
+    {
+      "tag": "c:grain/wheat"
+    },
+    {
+      "tag": "c:grain/wheat"
+    }
+  ],
+  "result": {
+    "count": 8,
+    "id": "delightful:source_berry_cookie"
+  }
 }

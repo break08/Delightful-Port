@@ -1,40 +1,33 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:item_exists",
-          "item": "windswept:cooked_goat"
-        },
-        {
-          "type": "neoforge:item_exists",
-          "item": "extra_compat:cooked_chevon_chop"
-        }
-      ],
-      "recipe": {
-        "type": "farmersdelight:cutting",
-        "ingredients": [
-          {
-            "item": "windswept:cooked_goat"
-          }
-        ],
-        "tool": [
-          {
-            "type": "farmersdelight:tool_action",
-            "action": "knife_dig"
-          },
-          {
-            "tag": "c:tools/knives"
-          }
-        ],
-        "result": [
-          {
-            "item": "extra_compat:cooked_chevon_chop",
-            "count": 2
-          }
-        ]
-      }
+      "type": "neoforge:item_exists",
+      "item": "windswept:cooked_goat"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "extra_compat:cooked_chevon_chop"
+    }
+  ],
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "windswept:cooked_goat"
+    }
+  ],
+  "tool": [
+    {
+      "type": "farmersdelight:tool_action",
+      "action": "knife_dig"
+    },
+    {
+      "tag": "c:tools/knives"
+    }
+  ],
+  "result": [
+    {
+      "item": "extra_compat:cooked_chevon_chop",
+      "count": 2
     }
   ]
 }

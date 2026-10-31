@@ -1,35 +1,28 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:mod_loaded",
-          "modid": "farmersrespite"
-        },
-        {
-          "type": "delightful:enabled",
-          "value": "prickly_pear_juice"
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:tag_empty",
-            "tag": "c:fruits/prickly_pear"
-          }
-        }
-      ],
-      "recipe": {
-        "type": "farmersrespite:kettle_pouring",
-        "amount": 250,
-        "container": {
-          "item": "minecraft:glass_bottle"
-        },
-        "fluid": "delightful:prickly_pear_juice",
-        "output": {
-          "item": "delightful:prickly_pear_juice"
-        }
+      "type": "neoforge:mod_loaded",
+      "modid": "farmersrespite"
+    },
+    {
+      "type": "delightful:enabled",
+      "value": "prickly_pear_juice"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:fruits/prickly_pear"
       }
     }
-  ]
+  ],
+  "type": "farmersrespite:kettle_pouring",
+  "amount": 250,
+  "container": {
+    "item": "minecraft:glass_bottle"
+  },
+  "fluid": "delightful:prickly_pear_juice",
+  "output": {
+    "item": "delightful:prickly_pear_juice"
+  }
 }

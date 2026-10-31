@@ -32,7 +32,6 @@ public class FluixKnifeItem extends DKnifeItem {
 	public List<Component> getTools() {
 		/*
 		return List.of(Component.literal("Always has at least ").append(Enchantments.LOOTING.getFullname(1)));
-
 		 */
         return List.of();
     }

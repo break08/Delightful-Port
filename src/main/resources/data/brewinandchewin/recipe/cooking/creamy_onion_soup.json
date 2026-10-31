@@ -1,39 +1,32 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:item_exists",
-          "item": "brewinandchewin:creamy_onion_soup"
-        }
-      ],
-      "recipe": {
-        "type": "farmersdelight:cooking",
-        "container": {
-          "item": "minecraft:bowl"
-        },
-        "cookingtime": 200,
-        "experience": 1.0,
-        "ingredients": [
-          {
-            "tag": "c:cheese/mild"
-          },
-          {
-            "tag": "c:crops/onion"
-          },
-          {
-            "tag": "c:vegetables"
-          },
-          {
-            "tag": "c:bread"
-          }
-        ],
-        "recipe_book_tab": "meals",
-        "result": {
-          "id": "brewinandchewin:creamy_onion_soup"
-        }
-      }
+      "type": "neoforge:item_exists",
+      "item": "brewinandchewin:creamy_onion_soup"
     }
-  ]
+  ],
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:cheese/mild"
+    },
+    {
+      "tag": "c:crops/onion"
+    },
+    {
+      "tag": "c:vegetables"
+    },
+    {
+      "tag": "c:bread"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "id": "brewinandchewin:creamy_onion_soup"
+  }
 }

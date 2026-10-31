@@ -1,26 +1,19 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "value": "steel_knife",
-          "type": "delightful:enabled"
-        },
-        {
-          "item": "mekanism:nugget_steel",
-          "type": "neoforge:item_exists"
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:smelting",
-        "ingredient": {
-          "item": "delightful:steel_knife"
-        },
-        "result": "mekanism:nugget_steel",
-        "experience": 0.1,
-        "cookingtime": 200
-      }
+      "value": "steel_knife",
+      "type": "delightful:enabled"
+    },
+    {
+      "item": "mekanism:nugget_steel",
+      "type": "neoforge:item_exists"
     }
-  ]
+  ],
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "delightful:steel_knife"
+  },
+  "result": "mekanism:nugget_steel",
+  "experience": 0.1,
+  "cookingtime": 200
 }

@@ -1,29 +1,22 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:item_exists",
-          "item": "thermal:machine_insolator"
-        },
-        {
-          "type": "neoforge:mod_loaded",
-          "modid": "thermal_expansion"
-        }
-      ],
-      "recipe": {
-        "type": "thermal:insolator",
-        "ingredient": {
-          "item": "delightful:salmonberries"
-        },
-        "result": [
-          {
-            "item": "delightful:salmonberries",
-            "chance": 2.5
-          }
-        ]
-      }
+      "type": "neoforge:item_exists",
+      "item": "thermal:machine_insolator"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "thermal_expansion"
+    }
+  ],
+  "type": "thermal:insolator",
+  "ingredient": {
+    "item": "delightful:salmonberries"
+  },
+  "result": [
+    {
+      "item": "delightful:salmonberries",
+      "chance": 2.5
     }
   ]
 }

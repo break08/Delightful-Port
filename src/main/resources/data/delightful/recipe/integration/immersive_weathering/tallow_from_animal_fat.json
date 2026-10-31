@@ -1,32 +1,25 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "value": "animal_fat",
-          "type": "delightful:enabled"
-        },
-        {
-          "item": "immersive_weathering:tallow",
-          "type": "neoforge:item_exists"
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:crafting_shapeless",
-        "ingredients": [
-          {
-            "item": "delightful:animal_fat"
-          },
-          {
-            "item": "delightful:animal_fat"
-          }
-        ],
-        "result": {
-          "count": 1,
-          "id": "immersive_weathering:tallow"
-        }
-      }
+      "value": "animal_fat",
+      "type": "delightful:enabled"
+    },
+    {
+      "item": "immersive_weathering:tallow",
+      "type": "neoforge:item_exists"
     }
-  ]
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "delightful:animal_fat"
+    },
+    {
+      "item": "delightful:animal_fat"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "immersive_weathering:tallow"
+  }
 }

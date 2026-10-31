@@ -1,56 +1,49 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:item_exists",
-          "item": "supplementaries:pancake"
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:tag_empty",
-            "tag": "c:batter"
-          }
-        }
-      ],
-      "recipe": {
-        "global_conditions": [
-          {
-            "type": "supplementaries:flag",
-            "flag": "pancake"
-          }
-        ],
-        "type": "farmersdelight:cooking",
-        "cookingtime": 400,
-        "experience": 2.0,
-        "ingredients": [
-          {
-            "tag": "c:batter"
-          },
-          {
-            "tag": "c:batter"
-          },
-          {
-            "tag": "c:batter"
-          },
-          {
-            "item": "minecraft:sugar"
-          },
-          {
-            "item": "minecraft:sugar"
-          },
-          {
-            "item": "minecraft:sugar"
-          }
-        ],
-        "recipe_book_tab": "misc",
-        "result": {
-          "count": 6,
-          "id": "supplementaries:pancake"
-        }
+      "type": "neoforge:item_exists",
+      "item": "supplementaries:pancake"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:batter"
       }
     }
-  ]
+  ],
+  "global_conditions": [
+    {
+      "type": "supplementaries:flag",
+      "flag": "pancake"
+    }
+  ],
+  "type": "farmersdelight:cooking",
+  "cookingtime": 400,
+  "experience": 2.0,
+  "ingredients": [
+    {
+      "tag": "c:batter"
+    },
+    {
+      "tag": "c:batter"
+    },
+    {
+      "tag": "c:batter"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "recipe_book_tab": "misc",
+  "result": {
+    "count": 6,
+    "id": "supplementaries:pancake"
+  }
 }

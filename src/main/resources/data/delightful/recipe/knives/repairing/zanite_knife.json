@@ -1,25 +1,18 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "zanite_knife"
-        },
-        {
-          "type": "neoforge:mod_loaded",
-          "modid": "aether"
-        }
-      ],
-      "recipe": {
-        "type": "aether:repairing",
-        "group": "altar_sword_repair",
-        "ingredient": {
-          "item": "delightful:zanite_knife"
-        },
-        "repairTime": 750
-      }
+      "type": "delightful:enabled",
+      "value": "zanite_knife"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether"
     }
-  ]
+  ],
+  "type": "aether:repairing",
+  "group": "altar_sword_repair",
+  "ingredient": {
+    "item": "delightful:zanite_knife"
+  },
+  "repairTime": 750
 }

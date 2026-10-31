@@ -1,42 +1,35 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:item_exists",
-          "item": "brewinandchewin:vegetable_omelet"
-        }
-      ],
-      "recipe": {
-        "type": "farmersdelight:cooking",
-        "container": {
-          "item": "minecraft:bowl"
-        },
-        "cookingtime": 200,
-        "experience": 1.0,
-        "ingredients": [
-          {
-            "tag": "c:cheese"
-          },
-          {
-            "tag": "c:eggs"
-          },
-          {
-            "tag": "c:eggs"
-          },
-          {
-            "tag": "c:crops/onion"
-          },
-          {
-            "tag": "c:crops/carrot"
-          }
-        ],
-        "recipe_book_tab": "meals",
-        "result": {
-          "id": "brewinandchewin:vegetable_omelet"
-        }
-      }
+      "type": "neoforge:item_exists",
+      "item": "brewinandchewin:vegetable_omelet"
     }
-  ]
+  ],
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:cheese"
+    },
+    {
+      "tag": "c:eggs"
+    },
+    {
+      "tag": "c:eggs"
+    },
+    {
+      "tag": "c:crops/onion"
+    },
+    {
+      "tag": "c:crops/carrot"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "id": "brewinandchewin:vegetable_omelet"
+  }
 }

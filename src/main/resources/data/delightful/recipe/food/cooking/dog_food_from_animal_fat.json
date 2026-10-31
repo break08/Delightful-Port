@@ -1,36 +1,29 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "animal_fat"
-        }
-      ],
-      "recipe": {
-        "type": "farmersdelight:cooking",
-        "cookingtime": 200,
-        "experience": 1.0,
-        "ingredients": [
-          {
-            "item": "delightful:animal_fat"
-          },
-          {
-            "item": "minecraft:bone_meal"
-          },
-          {
-            "tag": "farmersdelight:wolf_prey"
-          },
-          {
-            "tag": "c:crops/rice"
-          }
-        ],
-        "recipe_book_tab": "misc",
-        "result": {
-          "id": "farmersdelight:dog_food"
-        }
-      }
+      "type": "delightful:enabled",
+      "value": "animal_fat"
     }
-  ]
+  ],
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "delightful:animal_fat"
+    },
+    {
+      "item": "minecraft:bone_meal"
+    },
+    {
+      "tag": "farmersdelight:wolf_prey"
+    },
+    {
+      "tag": "c:crops/rice"
+    }
+  ],
+  "recipe_book_tab": "misc",
+  "result": {
+    "id": "farmersdelight:dog_food"
+  }
 }

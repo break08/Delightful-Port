@@ -1,50 +1,43 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "gilded_quartz_knife"
-        },
-        {
-          "type": "neoforge:mod_loaded",
-          "modid": "create_sa"
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:tag_empty",
-            "tag": "create:polished_rose_quartz"
-          }
-        }
-      ],
-      "recipe": {
-        "type": "create:mechanical_crafting",
-        "pattern": [
-          " R ",
-          "CGC",
-          " Z "
-        ],
-        "key": {
-          "Z": {
-            "tag": "create_sa:zinc_handle"
-          },
-          "R": {
-            "tag": "create:polished_rose_quartz"
-          },
-          "C": {
-            "tag": "c:plates/iron"
-          },
-          "G": {
-            "tag": "c:ingots/gold"
-          }
-        },
-        "result": {
-          "count": 1,
-          "id": "delightful:gilded_quartz_knife"
-        }
+      "type": "delightful:enabled",
+      "value": "gilded_quartz_knife"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create_sa"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "create:polished_rose_quartz"
       }
     }
-  ]
+  ],
+  "type": "create:mechanical_crafting",
+  "pattern": [
+    " R ",
+    "CGC",
+    " Z "
+  ],
+  "key": {
+    "Z": {
+      "tag": "create_sa:zinc_handle"
+    },
+    "R": {
+      "tag": "create:polished_rose_quartz"
+    },
+    "C": {
+      "tag": "c:plates/iron"
+    },
+    "G": {
+      "tag": "c:ingots/gold"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "delightful:gilded_quartz_knife"
+  }
 }

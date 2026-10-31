@@ -1,84 +1,41 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "cantaloupe_popsicle"
-        },
-        {
-          "type": "delightful:enabled",
-          "value": "cantaloupe"
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:tag_empty",
-            "tag": "c:ice_cubes"
-          }
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:crafting_shaped",
-        "category": "misc",
-        "key": {
-          "c": {
-            "tag": "c:fruits/cantaloupe"
-          },
-          "i": {
-            "tag": "c:ice_cubes"
-          },
-          "s": {
-            "tag": "c:rods/wooden"
-          }
-        },
-        "pattern": [
-          " cc",
-          "icc",
-          "si "
-        ],
-        "result": {
-          "id": "delightful:cantaloupe_popsicle"
-        },
-        "show_notification": true
-      }
+      "type": "delightful:enabled",
+      "value": "cantaloupe_popsicle"
     },
     {
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "cantaloupe_popsicle"
-        },
-        {
-          "type": "neoforge:tag_empty",
-          "tag": "c:ice_cubes"
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:crafting_shaped",
-        "category": "misc",
-        "key": {
-          "c": {
-            "tag": "c:fruits/cantaloupe"
-          },
-          "i": {
-            "item": "minecraft:ice"
-          },
-          "s": {
-            "tag": "c:rods/wooden"
-          }
-        },
-        "pattern": [
-          " cc",
-          "icc",
-          "si "
-        ],
-        "result": {
-          "id": "delightful:cantaloupe_popsicle"
-        },
-        "show_notification": true
+      "type": "delightful:enabled",
+      "value": "cantaloupe"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ice_cubes"
       }
     }
-  ]
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "c": {
+      "tag": "c:fruits/cantaloupe"
+    },
+    "i": {
+      "tag": "c:ice_cubes"
+    },
+    "s": {
+      "tag": "c:rods/wooden"
+    }
+  },
+  "pattern": [
+    " cc",
+    "icc",
+    "si "
+  ],
+  "result": {
+    "id": "delightful:cantaloupe_popsicle"
+  },
+  "show_notification": true
 }

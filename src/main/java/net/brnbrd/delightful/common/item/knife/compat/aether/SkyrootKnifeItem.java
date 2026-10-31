@@ -4,6 +4,8 @@ import net.brnbrd.delightful.common.item.DelightfulTiers;
 import net.brnbrd.delightful.data.tags.DelightfulItemTags;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
+import org.jetbrains.annotations.NotNull;
+
 import javax.annotation.Nullable;
 
 public class SkyrootKnifeItem extends AetherKnifeItem {
@@ -12,7 +14,7 @@ public class SkyrootKnifeItem extends AetherKnifeItem {
 	}
 
 	@Override
-	public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
+	public int getBurnTime(@NotNull ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
 		return 200;
 	}
 }

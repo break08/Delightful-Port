@@ -111,16 +111,25 @@ dependencies {
     compileOnly "maven.modrinth:WKsNOKFh:oV8w25It"
 
     // undergarden
-    implementation "maven.modrinth:Ejfl5qDL:sY4KZ9q3"
+    compileOnly "maven.modrinth:Ejfl5qDL:sY4KZ9q3"
 
     // jade
-    implementation "maven.modrinth:nvQzSEkH:eYz2YBGT"
+    compileOnly "maven.modrinth:nvQzSEkH:eYz2YBGT"
 
     // jei
-    implementation "maven.modrinth:u6dRKJwZ:4SbkkJ5m"
+    compileOnly "maven.modrinth:u6dRKJwZ:4SbkkJ5m"
 
     // mezz config
-    implementation "maven.modrinth:7tEfOcA7:RdGonQpr"
+    compileOnly "maven.modrinth:7tEfOcA7:RdGonQpr"
+
+    // Deep Aether
+    compileOnly "maven.modrinth:gcHIih5B:MSW5emg8"
+
+    // Aether
+    compileOnly "maven.modrinth:YhmgMVyu:K5X5qMwG"
+
+    // TerraBlender
+    compileOnly "maven.modrinth:kkmrDlKT:6e8GCrLb"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

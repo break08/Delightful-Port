@@ -1,42 +1,35 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:mod_loaded",
-          "modid": "create"
-        },
-        {
-          "type": "neoforge:mod_loaded",
-          "modid": "brewinandchewin"
-        },
-        {
-          "type": "neoforge:mod_loaded",
-          "modid": "letfishlove"
-        },
-        {
-          "type": "delightful:enabled",
-          "value": "aged_roe"
-        }
-      ],
-      "recipe": {
-        "type": "create:emptying",
-        "ingredients": [
-          {
-            "item": "delightful:aged_roe"
-          }
-        ],
-        "results": [
-          {
-            "item": "minecraft:glass_bottle"
-          },
-          {
-            "amount": 250,
-            "fluid": "delightful:aged_roe"
-          }
-        ]
-      }
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "brewinandchewin"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "letfishlove"
+    },
+    {
+      "type": "delightful:enabled",
+      "value": "aged_roe"
+    }
+  ],
+  "type": "create:emptying",
+  "ingredients": [
+    {
+      "item": "delightful:aged_roe"
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "amount": 250,
+      "fluid": "delightful:aged_roe"
     }
   ]
 }

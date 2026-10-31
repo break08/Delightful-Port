@@ -1,26 +1,19 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:mod_loaded",
-          "modid": "jeed"
-        },
-        {
-          "type": "neoforge:mod_loaded",
-          "modid": "sob"
-        }
-      ],
-      "recipe": {
-        "type": "jeed:effect_provider",
-        "effect": "sob:spite",
-        "providers": [
-          {
-            "tag": "delightful:spite"
-          }
-        ]
-      }
+      "type": "neoforge:mod_loaded",
+      "modid": "jeed"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "sob"
+    }
+  ],
+  "type": "jeed:effect_provider",
+  "effect": "sob:spite",
+  "providers": [
+    {
+      "tag": "delightful:spite"
     }
   ]
 }

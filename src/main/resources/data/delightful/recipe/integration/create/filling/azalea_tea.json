@@ -1,46 +1,39 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "azalea_tea"
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:tag_empty",
-            "tag": "minecraft:flowers/azalea"
-          }
-        },
-        {
-          "type": "neoforge:mod_loaded",
-          "modid": "farmersrespite"
-        },
-        {
-          "type": "neoforge:mod_loaded",
-          "modid": "create"
-        }
-      ],
-      "recipe": {
-        "type": "create:filling",
-        "ingredients": [
-          {
-            "item": "minecraft:glass_bottle"
-          },
-          {
-            "amount": 250,
-            "fluid": "delightful:azalea_tea",
-            "nbt": {}
-          }
-        ],
-        "results": [
-          {
-            "item": "delightful:azalea_tea"
-          }
-        ]
+      "type": "delightful:enabled",
+      "value": "azalea_tea"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "minecraft:flowers/azalea"
       }
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "farmersrespite"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "amount": 250,
+      "fluid": "delightful:azalea_tea",
+      "nbt": {}
+    }
+  ],
+  "results": [
+    {
+      "item": "delightful:azalea_tea"
     }
   ]
 }

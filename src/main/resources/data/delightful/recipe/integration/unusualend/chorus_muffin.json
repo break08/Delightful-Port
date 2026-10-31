@@ -1,39 +1,32 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "chorus_muffin"
-        },
-        {
-          "type": "neoforge:item_exists",
-          "item": "unusualend:ender_firefly_egg"
-        },
-        {
-          "type": "neoforge:item_exists",
-          "item": "unusualend:chorus_petal"
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:crafting_shapeless",
-        "category": "misc",
-        "ingredients": [
-          {
-            "tag": "c:fruits/chorus"
-          },
-          {
-            "item": "unusualend:ender_firefly_egg"
-          },
-          {
-            "item": "unusualend:chorus_petal"
-          }
-        ],
-        "result": {
-          "id": "delightful:chorus_muffin"
-        }
-      }
+      "type": "delightful:enabled",
+      "value": "chorus_muffin"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "unusualend:ender_firefly_egg"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "unusualend:chorus_petal"
     }
-  ]
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:fruits/chorus"
+    },
+    {
+      "item": "unusualend:ender_firefly_egg"
+    },
+    {
+      "item": "unusualend:chorus_petal"
+    }
+  ],
+  "result": {
+    "id": "delightful:chorus_muffin"
+  }
 }

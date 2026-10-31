@@ -1,29 +1,22 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:item_exists",
-          "item": "biomeswevegone:yucca_fruit"
-        },
-        {
-          "type": "delightful:enabled",
-          "value": "yucca_fruit_crate"
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:crafting_shapeless",
-        "ingredients": [
-          {
-            "item": "delightful:yucca_fruit_crate"
-          }
-        ],
-        "result": {
-          "count": 9,
-          "id": "biomeswevegone:yucca_fruit"
-        }
-      }
+      "type": "neoforge:item_exists",
+      "item": "biomeswevegone:yucca_fruit"
+    },
+    {
+      "type": "delightful:enabled",
+      "value": "yucca_fruit_crate"
     }
-  ]
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "delightful:yucca_fruit_crate"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "biomeswevegone:yucca_fruit"
+  }
 }

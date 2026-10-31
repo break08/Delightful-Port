@@ -1,40 +1,33 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:item_exists",
-          "item": "culturaldelights:cooked_squid"
-        },
-        {
-          "type": "neoforge:item_exists",
-          "item": "culturaldelights:cooked_calamari"
-        }
-      ],
-      "recipe": {
-        "type": "farmersdelight:cutting",
-        "ingredients": [
-          {
-            "item": "culturaldelights:cooked_squid"
-          }
-        ],
-        "result": [
-          {
-            "count": 2,
-            "item": "culturaldelights:cooked_calamari"
-          }
-        ],
-        "tool": [
-          {
-            "type": "farmersdelight:tool_action",
-            "action": "knife_dig"
-          },
-          {
-            "tag": "c:tools/knives"
-          }
-        ]
-      }
+      "type": "neoforge:item_exists",
+      "item": "culturaldelights:cooked_squid"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "culturaldelights:cooked_calamari"
+    }
+  ],
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "culturaldelights:cooked_squid"
+    }
+  ],
+  "result": [
+    {
+      "count": 2,
+      "item": "culturaldelights:cooked_calamari"
+    }
+  ],
+  "tool": [
+    {
+      "type": "farmersdelight:tool_action",
+      "action": "knife_dig"
+    },
+    {
+      "tag": "c:tools/knives"
     }
   ]
 }

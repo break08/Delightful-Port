@@ -1,31 +1,24 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:false"
-        },
-        {
-          "type": "neoforge:item_exists",
-          "item": "autumnity:pumpkin_bread"
-        },
-        {
-          "type": "neoforge:item_exists",
-          "item": "this_item:does_not_exist"
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:crafting_shapeless",
-        "ingredients": [
-          {
-            "item": "this_item:does_not_exist"
-          }
-        ],
-        "result": {
-          "id": "this_item:does_not_exist"
-        }
-      }
+      "type": "neoforge:false"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "autumnity:pumpkin_bread"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "this_item:does_not_exist"
     }
-  ]
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "this_item:does_not_exist"
+    }
+  ],
+  "result": {
+    "id": "this_item:does_not_exist"
+  }
 }

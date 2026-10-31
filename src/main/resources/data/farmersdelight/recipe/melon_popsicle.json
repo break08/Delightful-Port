@@ -1,72 +1,30 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:tag_empty",
-          "tag": "c:ice_cubes"
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:crafting_shaped",
-        "category": "misc",
-        "key": {
-          "-": {
-            "item": "minecraft:stick"
-          },
-          "i": {
-            "item": "minecraft:ice"
-          },
-          "m": {
-            "item": "minecraft:melon_slice"
-          }
-        },
-        "pattern": [
-          " mm",
-          "imm",
-          "-i "
-        ],
-        "result": {
-          "id": "farmersdelight:melon_popsicle"
-        },
-        "show_notification": true
-      }
-    },
-    {
-      "conditions": [
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:tag_empty",
-            "tag": "c:ice_cubes"
-          }
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:crafting_shaped",
-        "category": "misc",
-        "key": {
-          "-": {
-            "tag": "c:rods/wooden"
-          },
-          "i": {
-            "tag": "c:ice_cubes"
-          },
-          "m": {
-            "item": "minecraft:melon_slice"
-          }
-        },
-        "pattern": [
-          " mm",
-          "imm",
-          "-i "
-        ],
-        "result": {
-          "id": "farmersdelight:melon_popsicle"
-        },
-        "show_notification": true
-      }
+      "type": "neoforge:tag_empty",
+      "tag": "c:ice_cubes"
     }
-  ]
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "-": {
+      "item": "minecraft:stick"
+    },
+    "i": {
+      "item": "minecraft:ice"
+    },
+    "m": {
+      "item": "minecraft:melon_slice"
+    }
+  },
+  "pattern": [
+    " mm",
+    "imm",
+    "-i "
+  ],
+  "result": {
+    "id": "farmersdelight:melon_popsicle"
+  },
+  "show_notification": true
 }

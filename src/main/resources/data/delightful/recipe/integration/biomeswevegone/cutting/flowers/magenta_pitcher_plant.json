@@ -1,36 +1,29 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:item_exists",
-          "item": "biomeswevegone:magenta_pitcher_plant"
-        }
-      ],
-      "recipe": {
-        "type": "farmersdelight:cutting",
-        "ingredients": [
-          {
-            "item": "biomeswevegone:magenta_pitcher_plant"
-          }
-        ],
-        "tool": [
-          {
-            "type": "farmersdelight:tool_action",
-            "action": "knife_dig"
-          },
-          {
-            "tag": "c:tools/knives"
-          }
-        ],
-        "result": [
-          {
-            "count": 2,
-            "item": "minecraft:magenta_dye"
-          }
-        ]
-      }
+      "type": "neoforge:item_exists",
+      "item": "biomeswevegone:magenta_pitcher_plant"
+    }
+  ],
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "biomeswevegone:magenta_pitcher_plant"
+    }
+  ],
+  "tool": [
+    {
+      "type": "farmersdelight:tool_action",
+      "action": "knife_dig"
+    },
+    {
+      "tag": "c:tools/knives"
+    }
+  ],
+  "result": [
+    {
+      "count": 2,
+      "item": "minecraft:magenta_dye"
     }
   ]
 }

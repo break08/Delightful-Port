@@ -1,35 +1,28 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:item_exists",
-          "item": "mynethersdelight:chilidog"
-        },
-        {
-          "type": "neoforge:item_exists",
-          "item": "mynethersdelight:hotdog"
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:crafting_shapeless",
-        "ingredients": [
-          {
-            "item": "delightful:cactus_chili"
-          },
-          {
-            "item": "mynethersdelight:hotdog"
-          },
-          {
-            "item": "mynethersdelight:hotdog"
-          }
-        ],
-        "result": {
-          "count": 2,
-          "id": "mynethersdelight:chilidog"
-        }
-      }
+      "type": "neoforge:item_exists",
+      "item": "mynethersdelight:chilidog"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "mynethersdelight:hotdog"
     }
-  ]
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "delightful:cactus_chili"
+    },
+    {
+      "item": "mynethersdelight:hotdog"
+    },
+    {
+      "item": "mynethersdelight:hotdog"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "id": "mynethersdelight:chilidog"
+  }
 }

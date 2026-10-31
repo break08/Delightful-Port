@@ -1,58 +1,51 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "ironwood_knife"
-        },
-        {
-          "type": "neoforge:mod_loaded",
-          "modid": "twilightforest"
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:tag_empty",
-            "tag": "c:ingots/ironwood"
-          }
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:mod_loaded",
-            "modid": "twilightdelight"
-          }
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:mod_loaded",
-            "modid": "dungeonsdelight"
-          }
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:crafting_shaped",
-        "key": {
-          "m": {
-            "tag": "c:ingots/ironwood"
-          },
-          "s": {
-            "tag": "c:rods/wooden"
-          }
-        },
-        "pattern": [
-          "m",
-          "s"
-        ],
-        "result": {
-          "nbt": "{Enchantments:[{lvl:1s,id:\"farmersdelight:backstabbing\"}]}",
-          "type": "minecraft:item_nbt",
-          "id": "delightful:ironwood_knife"
-        }
+      "type": "delightful:enabled",
+      "value": "ironwood_knife"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "twilightforest"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/ironwood"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "twilightdelight"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "dungeonsdelight"
       }
     }
-  ]
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "m": {
+      "tag": "c:ingots/ironwood"
+    },
+    "s": {
+      "tag": "c:rods/wooden"
+    }
+  },
+  "pattern": [
+    "m",
+    "s"
+  ],
+  "result": {
+    "nbt": "{Enchantments:[{lvl:1s,id:\"farmersdelight:backstabbing\"}]}",
+    "type": "minecraft:item_nbt",
+    "id": "delightful:ironwood_knife"
+  }
 }

@@ -1,25 +1,18 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "item": "atmospheric:aloe_leaves",
-          "type": "neoforge:item_exists"
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:crafting_shapeless",
-        "ingredients": [
-          {
-            "item": "atmospheric:aloe_leaves"
-          }
-        ],
-        "result": {
-          "count": 1,
-          "id": "minecraft:lime_dye"
-        }
-      }
+      "item": "atmospheric:aloe_leaves",
+      "type": "neoforge:item_exists"
     }
-  ]
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "atmospheric:aloe_leaves"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:lime_dye"
+  }
 }

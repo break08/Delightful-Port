@@ -1,78 +1,33 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:item_exists",
-          "item": "biomeswevegone:rose"
-        },
-        {
-          "type": "neoforge:item_exists",
-          "item": "farmersrespite:rose_hips"
-        }
-      ],
-      "recipe": {
-        "type": "farmersdelight:cutting",
-        "ingredients": [
-          {
-            "item": "biomeswevegone:rose"
-          }
-        ],
-        "tool": [
-          {
-            "type": "farmersdelight:tool_action",
-            "action": "knife_dig"
-          },
-          {
-            "tag": "c:tools/knives"
-          }
-        ],
-        "result": [
-          {
-            "count": 1,
-            "item": "farmersrespite:rose_hips"
-          }
-        ]
-      }
+      "type": "neoforge:item_exists",
+      "item": "biomeswevegone:rose"
     },
     {
-      "conditions": [
-        {
-          "type": "neoforge:item_exists",
-          "item": "biomeswevegone:rose"
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:item_exists",
-            "item": "farmersrespite:rose_hips"
-          }
-        }
-      ],
-      "recipe": {
-        "type": "farmersdelight:cutting",
-        "ingredients": [
-          {
-            "item": "biomeswevegone:rose"
-          }
-        ],
-        "tool": [
-          {
-            "type": "farmersdelight:tool_action",
-            "action": "knife_dig"
-          },
-          {
-            "tag": "c:tools/knives"
-          }
-        ],
-        "result": [
-          {
-            "count": 2,
-            "item": "minecraft:red_dye"
-          }
-        ]
-      }
+      "type": "neoforge:item_exists",
+      "item": "farmersrespite:rose_hips"
+    }
+  ],
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "biomeswevegone:rose"
+    }
+  ],
+  "tool": [
+    {
+      "type": "farmersdelight:tool_action",
+      "action": "knife_dig"
+    },
+    {
+      "tag": "c:tools/knives"
+    }
+  ],
+  "result": [
+    {
+      "count": 1,
+      "item": "farmersrespite:rose_hips"
     }
   ]
 }

@@ -1,33 +1,26 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "animal_fat"
-        }
-      ],
-      "recipe": {
-        "type": "farmersdelight:cooking",
-        "cookingtime": 200,
-        "experience": 1.0,
-        "ingredients": [
-          {
-            "tag": "c:raw_fishes"
-          },
-          {
-            "item": "farmersdelight:tomato_sauce"
-          },
-          {
-            "item": "delightful:animal_fat"
-          }
-        ],
-        "recipe_book_tab": "meals",
-        "result": {
-          "id": "farmersdelight:fish_stew"
-        }
-      }
+      "type": "delightful:enabled",
+      "value": "animal_fat"
     }
-  ]
+  ],
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:raw_fishes"
+    },
+    {
+      "item": "farmersdelight:tomato_sauce"
+    },
+    {
+      "item": "delightful:animal_fat"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "id": "farmersdelight:fish_stew"
+  }
 }

@@ -1,46 +1,39 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "lavender_tea"
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:tag_empty",
-            "tag": "minecraft:flowers/lavender"
-          }
-        },
-        {
-          "type": "neoforge:mod_loaded",
-          "modid": "farmersrespite"
-        },
-        {
-          "type": "neoforge:item_exists",
-          "item": "farmersrespite:black_tea"
-        }
-      ],
-      "recipe": {
-        "type": "farmersrespite:brewing",
-        "base": {
-          "count": 1000,
-          "fluid": "farmersrespite:black_tea"
-        },
-        "cookingtime": 1200,
-        "experience": 0.35,
-        "ingredients": [
-          {
-            "tag": "minecraft:flowers/lavender"
-          }
-        ],
-        "result": {
-          "count": 1000,
-          "fluid": "delightful:lavender_tea"
-        }
+      "type": "delightful:enabled",
+      "value": "lavender_tea"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "minecraft:flowers/lavender"
       }
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "farmersrespite"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "farmersrespite:black_tea"
     }
-  ]
+  ],
+  "type": "farmersrespite:brewing",
+  "base": {
+    "count": 1000,
+    "fluid": "farmersrespite:black_tea"
+  },
+  "cookingtime": 1200,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "tag": "minecraft:flowers/lavender"
+    }
+  ],
+  "result": {
+    "count": 1000,
+    "fluid": "delightful:lavender_tea"
+  }
 }

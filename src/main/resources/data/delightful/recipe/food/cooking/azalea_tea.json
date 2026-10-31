@@ -1,120 +1,54 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "azalea_tea"
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:tag_empty",
-            "tag": "minecraft:flowers/azalea"
-          }
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:mod_loaded",
-            "modid": "farmersrespite"
-          }
-        },
-        {
-          "type": "delightful:enabled",
-          "value": "cantaloupe_slice"
-        }
-      ],
-      "recipe": {
-        "type": "farmersdelight:cooking",
-        "cookingtime": 200,
-        "experience": 0.35,
-        "ingredients": [
-          [
-            {
-              "tag": "c:water"
-            },
-            {
-              "count": 1,
-              "type": "neoforge:nbt",
-              "item": "minecraft:potion",
-              "nbt": "{Potion:\"minecraft:water\"}"
-            }
-          ],
-          {
-            "tag": "c:tea_leaves"
-          },
-          {
-            "tag": "minecraft:flowers/azalea"
-          },
-          {
-            "tag": "c:fruits/cantaloupe"
-          }
-        ],
-        "result": {
-          "id": "delightful:azalea_tea"
-        }
+      "type": "delightful:enabled",
+      "value": "azalea_tea"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "minecraft:flowers/azalea"
       }
     },
     {
-      "conditions": [
-        {
-          "type": "delightful:enabled",
-          "value": "azalea_tea"
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:tag_empty",
-            "tag": "minecraft:flowers/azalea"
-          }
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:mod_loaded",
-            "modid": "farmersrespite"
-          }
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "delightful:enabled",
-            "value": "cantaloupe_slice"
-          }
-        }
-      ],
-      "recipe": {
-        "type": "farmersdelight:cooking",
-        "cookingtime": 200,
-        "experience": 0.35,
-        "ingredients": [
-          [
-            {
-              "tag": "c:water"
-            },
-            {
-              "count": 1,
-              "type": "neoforge:nbt",
-              "item": "minecraft:potion",
-              "nbt": "{Potion:\"minecraft:water\"}"
-            }
-          ],
-          {
-            "tag": "c:tea_leaves"
-          },
-          {
-            "tag": "minecraft:flowers/azalea"
-          },
-          {
-            "item": "minecraft:sugar"
-          }
-        ],
-        "result": {
-          "id": "delightful:azalea_tea"
-        }
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "farmersrespite"
       }
+    },
+    {
+      "type": "delightful:enabled",
+      "value": "cantaloupe_slice"
     }
-  ]
+  ],
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "ingredients": [
+    [
+      {
+        "tag": "c:water"
+      },
+      {
+        "count": 1,
+        "type": "neoforge:nbt",
+        "item": "minecraft:potion",
+        "nbt": "{Potion:\"minecraft:water\"}"
+      }
+    ],
+    {
+      "tag": "c:tea_leaves"
+    },
+    {
+      "tag": "minecraft:flowers/azalea"
+    },
+    {
+      "tag": "c:fruits/cantaloupe"
+    }
+  ],
+  "result": {
+    "id": "delightful:azalea_tea"
+  }
 }

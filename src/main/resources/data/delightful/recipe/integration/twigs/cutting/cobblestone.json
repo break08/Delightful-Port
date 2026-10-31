@@ -1,36 +1,29 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:item_exists",
-          "item": "twigs:pebble"
-        }
-      ],
-      "recipe": {
-        "type": "farmersdelight:cutting",
-        "ingredients": [
-          {
-            "item": "minecraft:cobblestone"
-          }
-        ],
-        "tool": [
-          {
-            "type": "farmersdelight:tool_action",
-            "action": "pickaxe_dig"
-          },
-          {
-            "tag": "minecraft:pickaxes"
-          }
-        ],
-        "result": [
-          {
-            "item": "twigs:pebble",
-            "count": 2
-          }
-        ]
-      }
+      "type": "neoforge:item_exists",
+      "item": "twigs:pebble"
+    }
+  ],
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "minecraft:cobblestone"
+    }
+  ],
+  "tool": [
+    {
+      "type": "farmersdelight:tool_action",
+      "action": "pickaxe_dig"
+    },
+    {
+      "tag": "minecraft:pickaxes"
+    }
+  ],
+  "result": [
+    {
+      "item": "twigs:pebble",
+      "count": 2
     }
   ]
 }

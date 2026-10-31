@@ -59,10 +59,13 @@ public class Delightful {
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MAIN = TABS.register("main",
             () -> CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup." + Delightful.MODID))
+                    .title(Component.literal("Delightful"))
                     .icon(() -> new ItemStack(DelightfulItems.MINI_MELON.get()))
                     .displayItems((parameters, output) ->
-                            DelightfulItems.ITEMS.getEntries().forEach(item -> output.accept(item.get())))
+                            DelightfulItems.ITEMS.getEntries()
+                                    .forEach(item -> output.accept(item.get())
+                                    )
+                    )
                     .build());
 
     public static final DeferredRegister<MapCodec<? extends ICondition>> CONDITIONS =

@@ -1,39 +1,32 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:item_exists",
-          "item": "thermal:machine_press"
-        },
-        {
-          "type": "neoforge:mod_loaded",
-          "modid": "thermal_expansion"
-        },
-        {
-          "type": "delightful:enabled",
-          "value": "cantaloupe"
-        }
-      ],
-      "recipe": {
-        "type": "thermal:press",
-        "ingredients": [
-          {
-            "item": "delightful:cantaloupe_slice",
-            "count": 4
-          },
-          {
-            "item": "thermal:press_packing_2x2_die"
-          }
-        ],
-        "result": [
-          {
-            "item": "delightful:cantaloupe"
-          }
-        ],
-        "energy": 400
-      }
+      "type": "neoforge:item_exists",
+      "item": "thermal:machine_press"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "thermal_expansion"
+    },
+    {
+      "type": "delightful:enabled",
+      "value": "cantaloupe"
     }
-  ]
+  ],
+  "type": "thermal:press",
+  "ingredients": [
+    {
+      "item": "delightful:cantaloupe_slice",
+      "count": 4
+    },
+    {
+      "item": "thermal:press_packing_2x2_die"
+    }
+  ],
+  "result": [
+    {
+      "item": "delightful:cantaloupe"
+    }
+  ],
+  "energy": 400
 }

@@ -1,52 +1,45 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:item_exists",
-          "item": "unusualend:chorus_pie"
-        },
-        {
-          "type": "neoforge:item_exists",
-          "item": "unusualend:ender_firefly_egg"
-        },
-        {
-          "type": "neoforge:item_exists",
-          "item": "unusualend:chorus_petal"
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:crafting_shaped",
-        "key": {
-          "#": {
-            "tag": "c:grain/wheat"
-          },
-          "a": {
-            "tag": "c:fruits/chorus"
-          },
-          "m": {
-            "item": "unusualend:ender_firefly_egg"
-          },
-          "p": {
-            "item": "unusualend:chorus_petal"
-          },
-          "O": {
-            "item": "farmersdelight:pie_crust"
-          },
-          "x": {
-            "item": "minecraft:sugar"
-          }
-        },
-        "pattern": [
-          "###",
-          "map",
-          "xOx"
-        ],
-        "result": {
-          "id": "unusualend:chorus_pie"
-        }
-      }
+      "type": "neoforge:item_exists",
+      "item": "unusualend:chorus_pie"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "unusualend:ender_firefly_egg"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "unusualend:chorus_petal"
     }
-  ]
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "tag": "c:grain/wheat"
+    },
+    "a": {
+      "tag": "c:fruits/chorus"
+    },
+    "m": {
+      "item": "unusualend:ender_firefly_egg"
+    },
+    "p": {
+      "item": "unusualend:chorus_petal"
+    },
+    "O": {
+      "item": "farmersdelight:pie_crust"
+    },
+    "x": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "pattern": [
+    "###",
+    "map",
+    "xOx"
+  ],
+  "result": {
+    "id": "unusualend:chorus_pie"
+  }
 }

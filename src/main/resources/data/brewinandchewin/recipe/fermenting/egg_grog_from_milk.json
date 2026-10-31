@@ -1,43 +1,36 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:item_exists",
-          "item": "brewinandchewin:egg_grog"
-        },
-        {
-          "type": "neoforge:tag_empty",
-          "tag": "c:crops/ginger"
-        }
-      ],
-      "recipe": {
-        "type": "brewinandchewin:fermenting",
-        "basefluid": {
-          "count": 1000,
-          "fluid": "minecraft:milk"
-        },
-        "experience": 1.0,
-        "fermentingtime": 9600,
-        "ingredients": [
-          {
-            "tag": "c:eggs"
-          },
-          {
-            "tag": "c:crops/cabbage"
-          },
-          {
-            "item": "minecraft:sugar"
-          }
-        ],
-        "recipe_book_tab": "drinks",
-        "result": {
-          "count": 1000,
-          "fluid": "brewinandchewin:egg_grog"
-        },
-        "temperature": 3
-      }
+      "type": "neoforge:item_exists",
+      "item": "brewinandchewin:egg_grog"
+    },
+    {
+      "type": "neoforge:tag_empty",
+      "tag": "c:crops/ginger"
     }
-  ]
+  ],
+  "type": "brewinandchewin:fermenting",
+  "basefluid": {
+    "count": 1000,
+    "fluid": "minecraft:milk"
+  },
+  "experience": 1.0,
+  "fermentingtime": 9600,
+  "ingredients": [
+    {
+      "tag": "c:eggs"
+    },
+    {
+      "tag": "c:crops/cabbage"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "count": 1000,
+    "fluid": "brewinandchewin:egg_grog"
+  },
+  "temperature": 3
 }

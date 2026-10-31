@@ -1,41 +1,34 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:item_exists",
-          "item": "ars_nouveau:blue_archwood_log"
-        },
-        {
-          "type": "neoforge:not",
-          "value": {
-            "type": "neoforge:mod_loaded",
-            "modid": "arsdelight"
-          }
-        }
-      ],
-      "recipe": {
-        "type": "farmersdelight:cutting",
-        "ingredients": [
-          {
-            "item": "ars_nouveau:blue_archwood_log"
-          }
-        ],
-        "result": [
-          {
-            "item": "ars_nouveau:stripped_blue_archwood_log"
-          },
-          {
-            "item": "farmersdelight:tree_bark"
-          }
-        ],
-        "sound": "minecraft:item.axe.strip",
-        "tool": {
-          "type": "farmersdelight:tool_action",
-          "action": "axe_strip"
-        }
+      "type": "neoforge:item_exists",
+      "item": "ars_nouveau:blue_archwood_log"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "arsdelight"
       }
     }
-  ]
+  ],
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "ars_nouveau:blue_archwood_log"
+    }
+  ],
+  "result": [
+    {
+      "item": "ars_nouveau:stripped_blue_archwood_log"
+    },
+    {
+      "item": "farmersdelight:tree_bark"
+    }
+  ],
+  "sound": "minecraft:item.axe.strip",
+  "tool": {
+    "type": "farmersdelight:tool_action",
+    "action": "axe_strip"
+  }
 }

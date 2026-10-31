@@ -1,24 +1,17 @@
 {
-  "type": "neoforge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "neoforge:item_exists",
-          "item": "ecologics:coconut_husk"
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:crafting_shapeless",
-        "ingredients": [
-          {
-            "item": "ecologics:coconut_husk"
-          }
-        ],
-        "result": {
-          "id": "minecraft:bowl"
-        }
-      }
+      "type": "neoforge:item_exists",
+      "item": "ecologics:coconut_husk"
     }
-  ]
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ecologics:coconut_husk"
+    }
+  ],
+  "result": {
+    "id": "minecraft:bowl"
+  }
 }
