@@ -1,6 +1,0 @@
-{
-  "parent": "brewinandchewin:block/coaster_flat",
-  "textures": {
-    "flat": "delightful:block/coaster/farmersrespite/rose_hips"
-  }
-}

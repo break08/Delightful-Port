@@ -1,9 +1,0 @@
-{
-  "values": [
-    "farmersdelight:melon_juice",
-    {
-      "id": "farmersrespite:strong_melon_juice",
-      "required": false
-    }
-  ]
-}

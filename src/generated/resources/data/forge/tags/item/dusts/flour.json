@@ -1,9 +1,0 @@
-{
-  "values": [
-    "#forge:dusts/flour/wheat",
-    {
-      "id": "#forge:dusts/flour/nut",
-      "required": false
-    }
-  ]
-}

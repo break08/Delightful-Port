@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "delightful:item/honey_glazed_walnut"
-  }
-}

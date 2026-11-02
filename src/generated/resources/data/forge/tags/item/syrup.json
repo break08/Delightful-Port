@@ -1,9 +1,0 @@
-{
-  "values": [
-    "#forge:syrup/syrup_bottle",
-    {
-      "id": "thermal:syrup_bucket",
-      "required": false
-    }
-  ]
-}

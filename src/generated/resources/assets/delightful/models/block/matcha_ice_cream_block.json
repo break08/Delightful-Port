@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "delightful:block/matcha_ice_cream_block"
-  }
-}
