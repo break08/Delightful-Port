@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "additionaladditions:fried_egg",
+      "required": false
+    },
+    {
+      "id": "incubation:fried_egg",
+      "required": false
+    },
+    {
+      "id": "naturalist:cooked_egg",
+      "required": false
+    }
+  ]
+}

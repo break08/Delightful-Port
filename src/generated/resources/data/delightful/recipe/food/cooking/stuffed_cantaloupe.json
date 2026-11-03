@@ -1,0 +1,40 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "stuffed_cantaloupe"
+    },
+    {
+      "type": "delightful:enabled",
+      "value": "cantaloupe"
+    }
+  ],
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "delightful:cantaloupe"
+  },
+  "cookingtime": 400,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "tag": "c:crops/grain"
+    },
+    {
+      "tag": "c:foods/cooked_mutton"
+    },
+    {
+      "tag": "c:crops/onion"
+    },
+    {
+      "tag": "c:foods/berry"
+    },
+    {
+      "tag": "c:seeds"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "delightful:stuffed_cantaloupe_block"
+  }
+}

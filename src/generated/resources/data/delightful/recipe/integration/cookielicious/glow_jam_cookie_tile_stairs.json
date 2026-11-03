@@ -1,0 +1,36 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "glow_jam_cookie_tile_stairs"
+    },
+    {
+      "type": "delightful:enabled",
+      "value": "glow_jam_cookie_tiles"
+    },
+    {
+      "type": "delightful:enabled",
+      "value": "glow_jam_cookie"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "cookielicious"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "t": {
+      "item": "delightful:glow_jam_cookie_tiles"
+    }
+  },
+  "pattern": [
+    "t  ",
+    "tt ",
+    "ttt"
+  ],
+  "result": {
+    "count": 4,
+    "id": "delightful:glow_jam_cookie_tile_stairs"
+  }
+}

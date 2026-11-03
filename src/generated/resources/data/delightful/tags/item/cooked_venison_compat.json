@@ -1,0 +1,24 @@
+{
+  "values": [
+    {
+      "id": "environmental:cooked_venison",
+      "required": false
+    },
+    {
+      "id": "naturalist:cooked_venison",
+      "required": false
+    },
+    {
+      "id": "twilightforest:cooked_venison",
+      "required": false
+    },
+    {
+      "id": "goodall:cooked_venison",
+      "required": false
+    },
+    {
+      "id": "blue_skies:cooked_venison",
+      "required": false
+    }
+  ]
+}

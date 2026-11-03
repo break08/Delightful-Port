@@ -1,0 +1,15 @@
+{
+  "values": [
+    "#forge:cheese/mild",
+    "#forge:cheese/spicy",
+    "#forge:cheese/sweet",
+    {
+      "id": "#forge:cheeses",
+      "required": false
+    },
+    {
+      "id": "#brewinandchewin:cheese_wedges",
+      "required": false
+    }
+  ]
+}

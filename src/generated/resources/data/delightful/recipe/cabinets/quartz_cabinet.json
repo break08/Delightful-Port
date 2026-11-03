@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "quartz_cabinet"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "tag": "forge:gems/quartz"
+    },
+    "c": {
+      "item": "farmersdelight:warped_cabinet"
+    },
+    "t": {
+      "item": "minecraft:polished_blackstone"
+    }
+  },
+  "pattern": [
+    "ttt",
+    "bcb",
+    "bbb"
+  ],
+  "result": {
+    "count": 1,
+    "id": "delightful:quartz_cabinet"
+  }
+}

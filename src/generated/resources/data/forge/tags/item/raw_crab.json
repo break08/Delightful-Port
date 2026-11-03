@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "crabbersdelight:crab",
+      "required": false
+    },
+    {
+      "id": "#finsandtails:spindly_gem_crabs",
+      "required": false
+    }
+  ]
+}

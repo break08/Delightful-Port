@@ -1,0 +1,55 @@
+{
+  "values": [
+    "delightful:mini_melon",
+    "delightful:sliced_mini_melon",
+    "delightful:cantaloupe",
+    "delightful:sliced_cantaloupe",
+    "delightful:stuffed_cantaloupe_block",
+    "delightful:sliced_melon",
+    "delightful:sliced_pumpkin",
+    "delightful:sliced_gloomgourd",
+    "delightful:mendosteen_crate",
+    "delightful:bastion_fruit_crate",
+    "delightful:frostaya_crate",
+    "delightful:bombegranate_crate",
+    "delightful:green_apple_crate",
+    "delightful:yucca_fruit_crate",
+    "delightful:baobab_fruit_crate",
+    {
+      "id": "culturaldelights:avocado_crate",
+      "required": false
+    },
+    {
+      "id": "culturaldelights:cucumber_crate",
+      "required": false
+    },
+    {
+      "id": "culturaldelights:pickle_crate",
+      "required": false
+    },
+    {
+      "id": "culturaldelights:corn_cob_crate",
+      "required": false
+    },
+    {
+      "id": "culturaldelights:eggplant_crate",
+      "required": false
+    },
+    {
+      "id": "culturaldelights:white_eggplant_crate",
+      "required": false
+    },
+    {
+      "id": "mynethersdelight:powdery_cabinet",
+      "required": false
+    },
+    {
+      "id": "fruittrees:citrus_cabinet",
+      "required": false
+    },
+    {
+      "id": "fruittrees:cherry_cabinet",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "values": [
+    {
+      "id": "biomeswevegone:prairie_grass",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:tall_prairie_grass",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:beach_grass",
+      "required": false
+    },
+    {
+      "id": "sprout:sprouts",
+      "required": false
+    }
+  ]
+}

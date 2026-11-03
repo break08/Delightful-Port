@@ -1,0 +1,52 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "crab_rangoon"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "forge:cooked_crab_meat"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "forge:cheese/mild/cream"
+      }
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cooked_crab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#forge:cooked_crab_meat"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "delightful:food/cooking/crab_rangoon_from_cream_cheese"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cooked_crab"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "delightful:food/cooking/crab_rangoon_from_cream_cheese"
+    ]
+  }
+}

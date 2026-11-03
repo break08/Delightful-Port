@@ -1,0 +1,28 @@
+{
+  "values": [
+    {
+      "id": "deeperdarker:sculk_bone",
+      "required": false
+    },
+    {
+      "id": "tide:fish_bone",
+      "required": false
+    },
+    {
+      "id": "netherdepthsupgrade:bonefish",
+      "required": false
+    },
+    {
+      "id": "upgrade_aquatic:thrasher_tooth",
+      "required": false
+    },
+    {
+      "id": "sullysmod:piranha_tooth",
+      "required": false
+    },
+    {
+      "id": "alexscaves:heavy_bone",
+      "required": false
+    }
+  ]
+}

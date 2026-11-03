@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "abnormals_delight:cooked_venison_shanks",
+      "required": false
+    },
+    {
+      "id": "twilightdelight:cooked_venison_rib",
+      "required": false
+    }
+  ]
+}

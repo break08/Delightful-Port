@@ -1,0 +1,20 @@
+{
+  "values": [
+    {
+      "id": "miners_delight:squid",
+      "required": false
+    },
+    {
+      "id": "miners_delight:glow_squid",
+      "required": false
+    },
+    {
+      "id": "culturaldelights:squid",
+      "required": false
+    },
+    {
+      "id": "culturaldelights:glow_squid",
+      "required": false
+    }
+  ]
+}

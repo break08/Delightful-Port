@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "miners_delight:vegan_patty",
+      "required": false
+    },
+    {
+      "id": "veggiesdelight:cooked_vegetarian_patty",
+      "required": false
+    }
+  ]
+}

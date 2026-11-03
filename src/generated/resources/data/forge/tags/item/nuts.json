@@ -1,0 +1,19 @@
+{
+  "values": [
+    "#forge:nuts/acorn",
+    "#forge:nuts/walnut",
+    "#forge:nuts/peanut",
+    {
+      "id": "windswept:chestnuts",
+      "required": false
+    },
+    {
+      "id": "thicket:hazelnut",
+      "required": false
+    },
+    {
+      "id": "alexscaves:pine_nuts",
+      "required": false
+    }
+  ]
+}

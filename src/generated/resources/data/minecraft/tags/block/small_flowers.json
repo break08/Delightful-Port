@@ -1,0 +1,17 @@
+{
+  "values": [
+    "delightful:wild_salmonberries",
+    {
+      "id": "culturaldelights:wild_cucumbers",
+      "required": false
+    },
+    {
+      "id": "culturaldelights:wild_corn",
+      "required": false
+    },
+    {
+      "id": "culturaldelights:wild_eggplants",
+      "required": false
+    }
+  ]
+}

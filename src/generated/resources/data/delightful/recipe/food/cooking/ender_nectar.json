@@ -1,0 +1,67 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "matcha_latte"
+    },
+    {
+      "type": "delightful:enabled",
+      "value": "ender_nectar"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "farmersrespite"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "brewinandchewin"
+      }
+    }
+  ],
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "minecraft:glass_bottle"
+  },
+  "cookingtime": 400,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "item": "delightful:matcha_latte"
+    },
+    {
+      "item": "minecraft:ender_eye"
+    },
+    {
+      "type": "neoforge:compound",
+      "children": [
+        {
+          "item": "minecraft:chorus_fruit"
+        },
+        {
+          "item": "minecraft:ender_eye"
+        }
+      ]
+    },
+    {
+      "type": "neoforge:compound",
+      "children": [
+        {
+          "item": "minecraft:chorus_fruit"
+        },
+        {
+          "item": "minecraft:ender_eye"
+        }
+      ]
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "delightful:ender_nectar"
+  }
+}

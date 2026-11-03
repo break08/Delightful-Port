@@ -1,0 +1,67 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "roe_blini"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "forge:pancakes"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "forge:cheese/mild/cream"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "forge:roe"
+      }
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "brewinandchewin"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "letfishlove"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aged_roe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#delightful:aged_roes"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "delightful:food/roe_blini"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_aged_roe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "delightful:food/roe_blini"
+    ]
+  }
+}

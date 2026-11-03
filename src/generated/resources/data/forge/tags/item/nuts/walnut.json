@@ -1,0 +1,20 @@
+{
+  "values": [
+    {
+      "id": "#forge:walnut",
+      "required": false
+    },
+    {
+      "id": "#forge:fruits/walnut",
+      "required": false
+    },
+    {
+      "id": "ecologics:walnut",
+      "required": false
+    },
+    {
+      "id": "caupona:walnut",
+      "required": false
+    }
+  ]
+}

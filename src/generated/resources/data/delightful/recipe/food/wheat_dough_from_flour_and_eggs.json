@@ -1,0 +1,31 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "forge:dusts/flour/wheat"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "forge:dusts/flour/wheat"
+    },
+    {
+      "tag": "forge:dusts/flour/wheat"
+    },
+    {
+      "tag": "forge:dusts/flour/wheat"
+    },
+    {
+      "tag": "c:eggs"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "id": "farmersdelight:wheat_dough"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "source_berry_cookie_tile_wall"
+    },
+    {
+      "type": "delightful:enabled",
+      "value": "source_berry_cookie_tiles"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "cookielicious"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ars_nouveau"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_source_berry_cookie_tiles": {
+      "conditions": {
+        "items": [
+          {
+            "items": "delightful:source_berry_cookie_tiles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "delightful:integration/cookielicious/source_berry_cookie_tile_wall"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_source_berry_cookie_tiles"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "delightful:integration/cookielicious/source_berry_cookie_tile_wall"
+    ]
+  }
+}

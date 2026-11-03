@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "#forge:fruits/blackcurrant",
+      "required": false
+    },
+    {
+      "id": "rootsclassic:blackcurrant",
+      "required": false
+    }
+  ]
+}

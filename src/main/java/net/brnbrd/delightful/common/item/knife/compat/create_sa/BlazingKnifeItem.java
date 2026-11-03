@@ -1,0 +1,45 @@
+package net.brnbrd.delightful.common.item.knife.compat.create_sa;
+
+import net.brnbrd.delightful.common.item.DelightfulTiers;
+import net.brnbrd.delightful.common.item.knife.DKnifeItem;
+import net.brnbrd.delightful.compat.Modid;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.level.Level;
+import java.util.List;
+import java.util.function.Consumer;
+
+import net.neoforged.neoforge.common.Tags;
+import org.jetbrains.annotations.Nullable;
+
+public class BlazingKnifeItem extends DKnifeItem {
+	public BlazingKnifeItem(Properties properties) {
+		super(Tags.Items.INGOTS_GOLD, DelightfulTiers.BLAZING, properties, Modid.CSA);
+	}
+
+	// Tool takes no damage in Nether
+	@Override
+	public <T extends LivingEntity> int damageItem(ItemStack stack, int amount, @Nullable T entity, Consumer<Item> onBroken) {
+		if (entity != null && entity.level().dimension() == Level.NETHER) {
+			return 0;
+		}
+		return super.damageItem(stack, amount, entity, onBroken);
+	}
+
+	@Override
+	public @Nullable RecipeType<?> getRecipeType() {
+		return null;
+	}
+
+	@Override
+	public List<Component> getTools() {
+		return List.of(
+			Component.literal("As hot as an authentic blaze!").withStyle(ChatFormatting.DARK_PURPLE),
+			Component.literal("Burns the mob the tool hits").withStyle(ChatFormatting.DARK_PURPLE)
+		);
+	}
+}

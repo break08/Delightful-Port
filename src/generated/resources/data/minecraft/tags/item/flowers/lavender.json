@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "windswept:lavender",
+      "required": false
+    },
+    {
+      "id": "biomesoplenty:lavender",
+      "required": false
+    },
+    {
+      "id": "biomesoplenty:tall_lavender",
+      "required": false
+    }
+  ]
+}

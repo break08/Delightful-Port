@@ -1,0 +1,16 @@
+{
+  "values": [
+    "#forge:crops/cactus",
+    "#forge:fruits/cantaloupe",
+    "minecraft:bamboo",
+    "farmersdelight:pumpkin_slice",
+    {
+      "id": "fruitsdelight:hamimelon_slice",
+      "required": false
+    },
+    {
+      "id": "undergardendelight:gloomgourd_slice",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "refined_obsidian_knife"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "forge:ingots/refined_obsidian"
+      }
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mekanismtools"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ingots/refined_obsidian": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#forge:ingots/refined_obsidian"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "delightful:knives/refined_obsidian_knife"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_ingots/refined_obsidian"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "delightful:knives/refined_obsidian_knife"
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "matcha_ice_cream_block"
+    },
+    {
+      "type": "delightful:enabled",
+      "value": "matcha_ice_cream"
+    },
+    {
+      "type": "delightful:enabled",
+      "value": "matcha"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "neapolitan"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "i": {
+      "item": "delightful:matcha_ice_cream"
+    },
+    "s": {
+      "item": "minecraft:snow_block"
+    }
+  },
+  "pattern": [
+    "sss",
+    "sis",
+    "sss"
+  ],
+  "result": {
+    "count": 8,
+    "id": "delightful:matcha_ice_cream_block"
+  }
+}

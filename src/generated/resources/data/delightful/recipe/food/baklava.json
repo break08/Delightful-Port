@@ -1,0 +1,43 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "baklava"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "forge:fruits/citrus"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "d": {
+      "tag": "c:foods/dough"
+    },
+    "g": {
+      "tag": "delightful:hot_spices"
+    },
+    "h": {
+      "item": "minecraft:honey_bottle"
+    },
+    "n": {
+      "tag": "forge:cooked_nuts"
+    },
+    "s": {
+      "tag": "forge:fruits/citrus"
+    }
+  },
+  "pattern": [
+    " h ",
+    "nnn",
+    "sdg"
+  ],
+  "result": {
+    "count": 1,
+    "id": "delightful:baklava"
+  }
+}

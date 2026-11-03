@@ -1,0 +1,35 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "smore"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "forge:chocolate"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "farmersdelight:honey_cookie"
+    },
+    {
+      "tag": "forge:chocolate"
+    },
+    {
+      "tag": "delightful:roasted_marshmallows"
+    },
+    {
+      "item": "farmersdelight:honey_cookie"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "delightful:smore"
+  }
+}

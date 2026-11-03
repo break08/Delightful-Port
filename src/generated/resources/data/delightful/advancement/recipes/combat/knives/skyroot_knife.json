@@ -1,0 +1,49 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "skyroot_knife"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "aether:skyroot_tool_crafting"
+      }
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_skyroot_tool_crafting": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#aether:skyroot_tool_crafting"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "delightful:knives/skyroot_knife"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_skyroot_tool_crafting"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "delightful:knives/skyroot_knife"
+    ]
+  }
+}

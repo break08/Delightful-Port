@@ -1,0 +1,41 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "forge:dusts/flour/wheat"
+      }
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "delightful:food/wheat_dough_from_flour_and_eggs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wheat_flour": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#forge:dusts/flour/wheat"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_wheat_flour"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "delightful:food/wheat_dough_from_flour_and_eggs"
+    ]
+  }
+}

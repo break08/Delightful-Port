@@ -1,0 +1,18 @@
+{
+  "values": [
+    "minecraft:oak_leaves",
+    "minecraft:dark_oak_leaves",
+    {
+      "id": "minecraft:pale_oak_leaves",
+      "required": false
+    },
+    {
+      "id": "biomesoplenty:flowering_oak_leaves",
+      "required": false
+    },
+    {
+      "id": "blossom:flowering_oak_leaves",
+      "required": false
+    }
+  ]
+}

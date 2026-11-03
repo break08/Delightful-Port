@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "animal_fat"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "f": {
+      "item": "delightful:animal_fat"
+    },
+    "s": {
+      "tag": "c:strings"
+    }
+  },
+  "pattern": [
+    "s",
+    "f",
+    "f"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:candle"
+  }
+}

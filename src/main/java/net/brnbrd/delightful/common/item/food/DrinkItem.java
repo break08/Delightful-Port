@@ -1,0 +1,32 @@
+package net.brnbrd.delightful.common.item.food;
+
+import net.brnbrd.delightful.common.item.IConfigured;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemUtils;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.Level;
+import vectorwing.farmersdelight.common.item.DrinkableItem;
+import java.util.List;
+import org.jetbrains.annotations.NotNull;
+
+public class DrinkItem extends DrinkableItem implements IConfigured {
+	public DrinkItem(Item.Properties properties, boolean hasPotionEffectTooltip, boolean hasCustomTooltip) {
+		super(properties, hasPotionEffectTooltip, hasCustomTooltip);
+	}
+
+	@Override
+	public @NotNull InteractionResultHolder<ItemStack> use(@NotNull Level world, @NotNull Player player, @NotNull InteractionHand hand) {
+		return ItemUtils.startUsingInstantly(world, player, hand);
+	}
+
+	@Override
+	public void appendHoverText(@NotNull ItemStack stack, @NotNull TooltipContext context, @NotNull List<Component> comps, @NotNull TooltipFlag pIsAdvanced) {
+		this.enabledText(comps);
+		super.appendHoverText(stack, context, comps, pIsAdvanced);
+	}
+}

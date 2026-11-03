@@ -1,0 +1,36 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "source_berry_cookie_tile_stairs"
+    },
+    {
+      "type": "delightful:enabled",
+      "value": "source_berry_cookie_tiles"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "cookielicious"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ars_nouveau"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "t": {
+      "item": "delightful:source_berry_cookie_tiles"
+    }
+  },
+  "pattern": [
+    "t  ",
+    "tt ",
+    "ttt"
+  ],
+  "result": {
+    "count": 4,
+    "id": "delightful:source_berry_cookie_tile_stairs"
+  }
+}

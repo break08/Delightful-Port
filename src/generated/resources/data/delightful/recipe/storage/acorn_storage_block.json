@@ -1,0 +1,43 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "acorn_sack"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "delightful:acorn"
+    },
+    {
+      "item": "delightful:acorn"
+    },
+    {
+      "item": "delightful:acorn"
+    },
+    {
+      "item": "delightful:acorn"
+    },
+    {
+      "item": "delightful:acorn"
+    },
+    {
+      "item": "delightful:acorn"
+    },
+    {
+      "item": "delightful:acorn"
+    },
+    {
+      "item": "delightful:acorn"
+    },
+    {
+      "item": "delightful:acorn"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "delightful:acorn_sack"
+  }
+}

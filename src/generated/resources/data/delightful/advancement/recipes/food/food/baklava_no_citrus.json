@@ -1,0 +1,42 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "baklava"
+    },
+    {
+      "type": "neoforge:tag_empty",
+      "tag": "forge:fruits/citrus"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_nuts": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#forge:cooked_nuts"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "delightful:food/baklava_no_citrus"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_nuts"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "delightful:food/baklava_no_citrus"
+    ]
+  }
+}

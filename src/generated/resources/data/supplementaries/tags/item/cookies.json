@@ -1,0 +1,13 @@
+{
+  "values": [
+    "#forge:cookies",
+    {
+      "id": "culturaldelights:tortilla_chips",
+      "required": false
+    },
+    {
+      "id": "corn_delight:tortilla_chip",
+      "required": false
+    }
+  ]
+}

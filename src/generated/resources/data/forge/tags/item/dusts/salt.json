@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "hearthandharvest:salt",
+      "required": false
+    },
+    {
+      "id": "vegandelight:salt",
+      "required": false
+    }
+  ]
+}

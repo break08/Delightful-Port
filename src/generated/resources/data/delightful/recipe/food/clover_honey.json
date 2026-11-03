@@ -1,0 +1,54 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "clover_honey"
+    },
+    {
+      "type": "delightful:enabled",
+      "value": "chopped_clover"
+    },
+    {
+      "type": "neoforge:or",
+      "values": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "buzzier_bees"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "forge:clover"
+          }
+        }
+      ]
+    }
+  ],
+  "type": "farmersdelight:cooking",
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "item": "minecraft:honey_bottle"
+    },
+    {
+      "item": "minecraft:honey_bottle"
+    },
+    {
+      "item": "delightful:chopped_clover"
+    },
+    {
+      "item": "delightful:chopped_clover"
+    },
+    {
+      "item": "delightful:chopped_clover"
+    },
+    {
+      "item": "delightful:chopped_clover"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "id": "minecraft:honey_bottle"
+  }
+}

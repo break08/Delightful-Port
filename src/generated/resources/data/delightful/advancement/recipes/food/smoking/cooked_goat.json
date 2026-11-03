@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "cooked_goat"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "cooked_goat": {
+      "conditions": {
+        "items": [
+          {
+            "items": "delightful:raw_goat"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "delightful:smoking/cooked_goat"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "cooked_goat"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "delightful:smoking/cooked_goat"
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "salmonberry_pie"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "tag": "c:crops/grain"
+    },
+    "O": {
+      "item": "farmersdelight:pie_crust"
+    },
+    "a": {
+      "tag": "forge:fruits/salmonberries"
+    },
+    "x": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "pattern": [
+    "###",
+    "aaa",
+    "xOx"
+  ],
+  "result": {
+    "count": 1,
+    "id": "delightful:salmonberry_pie"
+  }
+}

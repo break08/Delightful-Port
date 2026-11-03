@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "biomeswevegone:oddion_bulb",
+      "required": false
+    },
+    {
+      "id": "some_assembly_required:sliced_onion",
+      "required": false
+    }
+  ]
+}

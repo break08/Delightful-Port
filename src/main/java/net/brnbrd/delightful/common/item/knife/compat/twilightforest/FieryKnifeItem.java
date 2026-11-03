@@ -1,0 +1,61 @@
+package net.brnbrd.delightful.common.item.knife.compat.twilightforest;
+
+import net.brnbrd.delightful.common.item.DelightfulTiers;
+import net.brnbrd.delightful.common.item.knife.DKnifeItem;
+import net.brnbrd.delightful.compat.Modid;
+import net.brnbrd.delightful.data.tags.DelightfulItemTags;
+import net.minecraft.ChatFormatting;
+import net.minecraft.core.Holder;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.Enchantments;
+import java.util.List;
+import org.jetbrains.annotations.NotNull;
+
+public class FieryKnifeItem extends DKnifeItem {
+	public FieryKnifeItem(Properties properties) {
+		super(DelightfulItemTags.ingot("fiery"), DelightfulTiers.FIERY, properties, Modid.TF);
+	}
+
+	@Override
+	public @NotNull Component getName(@NotNull ItemStack stack) {
+		Component name = super.getName(stack);
+		return this.enabled() ? name.copy().withStyle(ChatFormatting.YELLOW) : name;
+	}
+
+	@SuppressWarnings("NoTranslation")
+	@Override
+	public List<Component> getTools() {
+		return List.of(Component.translatable("item.twilightforest.fiery_sword.desc").withStyle(ChatFormatting.GRAY));
+	}
+
+	@Override
+	public Modid[] getConflicts() {
+		return new Modid[]{Modid.TFD, Modid.DUNG};
+	}
+
+	@Override
+	public Ingredient getRod() {
+		return Ingredient.of(Items.BLAZE_ROD);
+	}
+
+	@Override
+	public boolean supportsEnchantment(@NotNull ItemStack stack, Holder<Enchantment> enchantment) {
+		if (enchantment.is(Enchantments.FIRE_ASPECT)) {
+			return false;
+		}
+		return super.supportsEnchantment(stack, enchantment);
+	}
+
+	/*
+	@Override
+	public boolean isBookEnchantable(ItemStack stack, ItemStack book) {
+		return !EnchantmentHelper.get(book).containsKey(Enchantments.FIRE_ASPECT) && super.isBookEnchantable(stack, book);
+	}
+
+	 */
+}

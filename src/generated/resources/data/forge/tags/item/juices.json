@@ -1,0 +1,59 @@
+{
+  "values": [
+    "#forge:juices/melon",
+    "#forge:juices/prickly_pear",
+    "#forge:juices/citrus",
+    {
+      "id": "fruitsdelight:hamimelon_juice",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:pear_juice",
+      "required": false
+    },
+    {
+      "id": "fruitsdelight:kiwi_juice",
+      "required": false
+    },
+    {
+      "id": "hearthandharvest:blueberry_juice",
+      "required": false
+    },
+    {
+      "id": "hearthandharvest:cherry_juice",
+      "required": false
+    },
+    {
+      "id": "hearthandharvest:raspberry_juice",
+      "required": false
+    },
+    {
+      "id": "hearthandharvest:red_grape_juice",
+      "required": false
+    },
+    {
+      "id": "hearthandharvest:green_grape_juice",
+      "required": false
+    },
+    {
+      "id": "veggiesdelight:carrot_juice",
+      "required": false
+    },
+    {
+      "id": "veggiesdelight:dandelion_juice",
+      "required": false
+    },
+    {
+      "id": "veggiesdelight:turnip_water",
+      "required": false
+    },
+    {
+      "id": "windswept_delights:wild_berry_juice",
+      "required": false
+    },
+    {
+      "id": "abnormals_delight:pickerelweed_juice",
+      "required": false
+    }
+  ]
+}

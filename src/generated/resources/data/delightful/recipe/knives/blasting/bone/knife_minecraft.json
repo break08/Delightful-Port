@@ -1,0 +1,28 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:and",
+      "values": [
+        {
+          "type": "delightful:enabled",
+          "value": "bone_knife"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "minecraft:bone_meal"
+        }
+      ]
+    }
+  ],
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "delightful:bone_knife"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:bone_meal"
+  }
+}

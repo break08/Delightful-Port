@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "corn_delight:cornbread",
+      "required": false
+    },
+    {
+      "id": "hearthandharvest:cornbread",
+      "required": false
+    }
+  ]
+}

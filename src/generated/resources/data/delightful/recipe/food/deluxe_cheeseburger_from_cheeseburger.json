@@ -1,0 +1,39 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "delightful:enabled",
+      "value": "deluxe_cheeseburger"
+    },
+    {
+      "type": "delightful:enabled",
+      "value": "cheeseburger"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "forge:cheese"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "delightful:cheeseburger"
+    },
+    {
+      "item": "farmersdelight:beef_patty"
+    },
+    {
+      "tag": "forge:cheese"
+    },
+    {
+      "item": "farmersdelight:cooked_bacon"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "delightful:deluxe_cheeseburger"
+  }
+}

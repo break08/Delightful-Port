@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "forge:flour"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "tag": "c:drinks/milk"
+    },
+    "f": {
+      "tag": "forge:flour"
+    }
+  },
+  "pattern": [
+    "fMf",
+    " f "
+  ],
+  "result": {
+    "count": 1,
+    "id": "farmersdelight:pie_crust"
+  }
+}

@@ -1,0 +1,52 @@
+package net.brnbrd.delightful.common.item.knife.compat.twilightforest;
+
+import net.brnbrd.delightful.common.item.DelightfulTiers;
+import net.brnbrd.delightful.common.item.knife.DKnifeItem;
+import net.brnbrd.delightful.common.item.knife.Knives;
+import net.brnbrd.delightful.compat.Modid;
+import net.brnbrd.delightful.data.tags.DelightfulItemTags;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.game.ClientboundAnimatePacket;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
+
+import java.util.List;
+
+public class KnightmetalKnifeItem extends DKnifeItem {
+	public KnightmetalKnifeItem(Properties properties) {
+		super(DelightfulItemTags.ingot("knightmetal"), DelightfulTiers.KNIGHTMETAL, properties, Modid.TF);
+		NeoForge.EVENT_BUS.addListener(this::onHurt);
+	}
+
+	@Override
+	public Modid[] getConflicts() {
+		return new Modid[]{Modid.TFD, Modid.DUNG};
+	}
+
+	private void onHurt(LivingDamageEvent.Pre e) {
+		LivingEntity target = e.getEntity();
+		if (!target.level().isClientSide() && e.getSource().getDirectEntity() instanceof LivingEntity attacker) {
+			ItemStack weapon = attacker.getMainHandItem();
+			if (!weapon.isEmpty() && target.getArmorValue() > 0 && weapon.is(Knives.KNIGHTMETAL.get())) {
+				if (target.getArmorCoverPercentage() > 0) {
+					int moreBonus = (int) (2 * target.getArmorCoverPercentage());
+					e.setNewDamage(e.getOriginalDamage() + moreBonus);
+				} else {
+					e.setNewDamage(e.getOriginalDamage() + 2);
+				}
+				((ServerLevel) target.level()).getChunkSource().broadcastAndSend(target, new ClientboundAnimatePacket(target, 5));
+			}
+		}
+	}
+
+	@Override
+	public List<Component> getTools() {
+		return List.of(
+				Component.translatable("item." + Modid.TF.get() + ".knightmetal_sword.desc").withStyle(ChatFormatting.GRAY)
+		);
+	}
+}
